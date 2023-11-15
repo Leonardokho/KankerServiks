@@ -4,10 +4,10 @@ import './IsiPage.css';
 import support from '../../../assets/img/support_7569835 1.png';
 import healthcare from '../../../assets/img/healthcare-medical_9387204.png';
 import chatrobot from '../../../assets/img/chatbot_2040946 1.png';
-import doktersatu from '../../../assets/img/asian-female-doctor-physician-medical-uniform-with-stethoscope-cross-arms-chest-smiling-looking-like-professional-white-background-removebg-preview.png';
+import doktersatu from '../../../assets/img/doktersatu.png';
 import dokterdua from '../../../assets/img/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png';
 import doktertiga from '../../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png';
-import feedbackimage from '../../../assets/img/people-emotions-lifestyle-leisure-beauty-concept-upbeat-happy-cheerful-asian-girl-dancing-having-fun-partying-moving-rhythm-music-smiling-yellow-background-removebg-preview 1.png';
+import feedbackimage from '../../../assets/img/reviewImgSatu.png';
 import artikelImgSatu from '../../../assets/img/white-awareness-ribbon-two-hands-with-stethoscope-pink-background.png';
 import artikelImgDua from '../../../assets/img/doctor-vaccinating-patient-clinic.png';
 import artikelImgTiga from '../../../assets/img/close-up-hand-with-food-container 1.png';
@@ -263,7 +263,7 @@ const data = [
   {
     name: 'Nadia Syakira',
     job: 'mahasiswa',
-    img: '../../../assets/img/beautiful-young-woman-showing-okay-sign-smiling-pleased-recommending-smth-approve-like-product-standing-yellow-tshirt-white-background 1.png',
+    img: '../../../assets/img/reviewImg.png',
     review:
       '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
   },
