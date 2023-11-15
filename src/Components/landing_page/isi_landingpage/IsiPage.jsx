@@ -50,52 +50,46 @@ const IsiPage = () => {
           <div className="title_services">
             <h1>SERVICES</h1>
           </div>
-          <div className="desc_services mt-3 mb-5">
+          <div className="desc_services mt-3">
             <h1>Layanan Yang Kami Tawarkan</h1>
           </div>
           <Col md={4}>
-            <div className="box">
-              <div className="boxContainer d-flex justify-content-center align-items-center">
-                <div className="supportImg">
-                  <img src={healthcare} alt="support" className="" />
-                </div>
+            <div className="boxContainer d-flex justify-content-center align-items-center">
+              <div className="supportImg">
+                <img src={healthcare} alt="support" className="" />
               </div>
-              <div className="box_title mt-3">
-                <h1>Layanan Kesehatan</h1>
-              </div>
-              <div className="box_desc">
-                <h1>Ada dua jenis layanan yang kami berikan, yaitu vaksinasi HPV dan skrining rutin.</h1>
-              </div>
+            </div>
+            <div className="box_title mt-3">
+              <h1>Layanan Kesehatan</h1>
+            </div>
+            <div className="box_desc">
+              <h1>Ada dua jenis layanan yang kami berikan, yaitu vaksinasi HPV dan skrining rutin.</h1>
             </div>
           </Col>
           <Col md={4}>
-            <div className="box">
-              <div className="boxContainer d-flex justify-content-center align-items-center">
-                <div className="supportImg mt-2">
-                  <img src={support} alt="support" className="" />
-                </div>
+            <div className="boxContainer d-flex justify-content-center align-items-center">
+              <div className="supportImg mt-2">
+                <img src={support} alt="support" className="" />
               </div>
-              <div className="box_title mt-3">
-                <h1>Konsultasi Online</h1>
-              </div>
-              <div className="box_desc">
-                <h1>Konsultasi online yang dilakukan dengan para dokter spesialis onkologi.</h1>
-              </div>
+            </div>
+            <div className="box_title mt-3">
+              <h1>Konsultasi Online</h1>
+            </div>
+            <div className="box_desc">
+              <h1>Konsultasi online yang dilakukan dengan para dokter spesialis onkologi.</h1>
             </div>
           </Col>
           <Col md={4}>
-            <div className="box">
-              <div className="boxContainer d-flex justify-content-center align-items-center">
-                <div className="supportImg">
-                  <img src={chatrobot} alt="support" className="" />
-                </div>
+            <div className="boxContainer d-flex justify-content-center align-items-center">
+              <div className="supportImg">
+                <img src={chatrobot} alt="support" className="" />
               </div>
-              <div className="box_title mt-3">
-                <h1>Tanya Kami</h1>
-              </div>
-              <div className="box_desc">
-                <h1>Tanya kami merpakan sebuah fitur chatbot yang dapat digunakan oleh user secara gratis.</h1>
-              </div>
+            </div>
+            <div className="box_title mt-3">
+              <h1>Tanya Kami</h1>
+            </div>
+            <div className="box_desc">
+              <h1>Tanya kami merpakan sebuah fitur chatbot yang dapat digunakan oleh user secara gratis.</h1>
             </div>
           </Col>
         </Row>
@@ -112,9 +106,9 @@ const IsiPage = () => {
             <Card style={{ width: '25rem' }} className="shadow_card rounded-3">
               <img src={doktersatu} className="dokterImg" />
               <Card.Body>
-                <Card.Title style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }} className="namaDokter">
+                <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }} className="namaDokter">
                   Dr. Shofiyyah Kamilah
-                </Card.Title>
+                </h3>
                 <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
                 <Card.Text style={{ fontSize: '15px', textAlign: 'center' }} className="d-flex justify-content-center align-items-center">
                   <small>
@@ -130,7 +124,7 @@ const IsiPage = () => {
             <Card style={{ width: '25rem' }} className="shadow_card rounded-3">
               <img src={dokterdua} className="dokterImg" />
               <Card.Body>
-                <Card.Title style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</Card.Title>
+                <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</h3>
                 <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
                 <Card.Text style={{ fontSize: '15px', textAlign: 'center' }} className="d-flex justify-content-center align-items-center">
                   <small>
@@ -146,7 +140,7 @@ const IsiPage = () => {
             <Card style={{ width: '25rem' }} className="shadow_card rounded-3">
               <img src={doktertiga} className="dokterImg" />
               <Card.Body>
-                <Card.Title style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</Card.Title>
+                <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</h3>
                 <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
                 <Card.Text style={{ fontSize: '15px', textAlign: 'center' }} className="d-flex justify-content-center align-items-center">
                   <small>
@@ -188,7 +182,7 @@ const IsiPage = () => {
                       <div className="d-flex align-items-center">
                         <img src={d.img} className="reviewImg" />
                         <Col className="mx-5">
-                          <Card.Title style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</Card.Title>
+                          <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
                           <Card.Text style={{ textAlign: 'start' }}>{d.job}</Card.Text>
                           <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="d-flex justify-content-start align-items-start">
                             <small>
@@ -214,8 +208,8 @@ const IsiPage = () => {
                       </Card.Text>
                     </Row>
                   </div>
-                </Card>)
-              )}
+                </Card>
+              ))}
             </Slider>
           </Col>
         </Row>
@@ -230,7 +224,7 @@ const IsiPage = () => {
             <Card style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgSatu} alt="" />
               <Card.Body>
-                <Card.Title>7 Tips Mencegah Kanker Serviks</Card.Title>
+                <h4>7 Tips Mencegah Kanker Serviks</h4>
                 <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -241,7 +235,7 @@ const IsiPage = () => {
             <Card style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgDua} alt="" />
               <Card.Body>
-                <Card.Title>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</Card.Title>
+                <h4>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h4>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -252,7 +246,7 @@ const IsiPage = () => {
             <Card style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgTiga} alt="" />
               <Card.Body>
-                <Card.Title>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</Card.Title>
+                <h4>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h4>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
