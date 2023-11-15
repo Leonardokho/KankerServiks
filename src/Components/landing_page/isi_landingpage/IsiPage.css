@@ -1,0 +1,101 @@
+.supportImg {
+  background: #fbe5e5;
+  border-radius: 100%;
+  padding: 25px;
+}
+
+.box_title h1 {
+  font-size: 25px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.box_desc h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.title_services h1 {
+  color: #f31559;
+  font-size: 20px;
+  text-align: center;
+}
+
+.desc_services h1 {
+  font-size: 40px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dokterImg {
+  background: #f31559;
+  background: linear-gradient(120deg, #f31559, rgb(253, 246, 246));
+}
+
+.namaDokter {
+  color: #061d4a;
+}
+
+.button_dokter {
+  background: #f31559;
+  color: white;
+  font-weight: bold;
+  padding: 8px 70px;
+  border: none;
+  border-radius: 10px;
+}
+
+.square {
+  height: 120px;
+  width: 100%;
+  background: #f31559;
+  /* display: flex; */
+  /* justify-content: flex-end;  */
+  align-items: flex-end;
+}
+
+.reviewImg {
+  border-radius: 5%;
+  width: 200px;
+  height: 200px;
+}
+
+.reviewCard {
+  padding: 30px;
+}
+
+.title_artikel {
+  color: #061d4a;
+  font-weight: 600;
+}
+
+.shadow_card {
+  box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
+}
+
+.shadow_box{
+    box-shadow: 10px 10px 15px 0px rgba(134, 134, 134, 0.5);
+    transform: translate(100px, -120px);
+}
+
+.starr {
+  color: #f1e805;
+}
+
+.starrBlack {
+  color: #d9d9d9;
+}
+
+.linkArtikel {
+  color: #061d4a;
+}
+
+.title_box{
+    text-align: center;
+    font-size: 50px;
+}
+
+.desc_box{
+    text-align: center;
+    font-size: 25px;
+}

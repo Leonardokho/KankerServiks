@@ -4,18 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Daftar from "./Daftar";
 import Login from "./Components/Login.jsx";
 import Daftar from "./Components/Daftar.jsx";
-import Tes from "./Components/Tes.jsx";
-// // import './App.css';
-
+import HeaderMain from "./Components/landing_page/headermain_landingpage.jsx";
 
 function App() {
   return (
     <>
-   
-
       <Router>
-       
         <Routes>
+          <Route path="/" element={<HeaderMain/>}/>
           <Route path="/login" element={<Login />} />
           <Route path="/Daftar" element={<Daftar />} />
         </Routes>
