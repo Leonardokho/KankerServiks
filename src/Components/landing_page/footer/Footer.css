@@ -1,0 +1,35 @@
+.bg_footer {
+  background: #f31559;
+}
+
+.desc_footer {
+  color: white;
+}
+
+.company_title {
+  color: white;
+}
+
+.company_link {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column-reverse;
+  transform: translate(0, 15px);
+}
+
+.desc_carvicare{
+    font-size: 20px;
+}
+
+.instagram{
+    background: #061d4a;
+}
+
+.connect_button{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: end;
+}
