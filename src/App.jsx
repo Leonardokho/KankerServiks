@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Components/Login.jsx";
 import Daftar from "./Components/Daftar.jsx";
 
-// // import './App.css';
 import HeaderMain from "./Components/landing_page/headermain_landingpage/HeaderMain.jsx";
 
 
