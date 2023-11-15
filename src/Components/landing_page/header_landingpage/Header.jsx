@@ -1,7 +1,7 @@
 // import React from 'react'
 import { Button, Col, Container, Row } from 'react-bootstrap';
 import './Header.css';
-import image from '../../src/assets/doctor-with-his-arms-crossed-white-background-removebg-preview 1.png'
+import image from '../../../assets/img/doctor-with-his-arms-crossed-white-background-removebg-preview 1.png'
 
 const Header = () => {
   return (

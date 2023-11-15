@@ -1,6 +1,6 @@
 // import React from 'react'
 import { Button, Col, Row, Container } from 'react-bootstrap';
-import logo from '../../src/assets/cc-logo-white 1.png';
+import logo from '../../../assets/img/cc-logo-white 1.png';
 import './Footer.css';
 
 const Footer = () => {

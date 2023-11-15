@@ -1,16 +1,16 @@
 // import React from 'react'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap';
 import './IsiPage.css';
-import support from '../../src/assets/support_7569835 1.png';
-import healthcare from '../../src/assets/healthcare-medical_9387204.png';
-import chatrobot from '../../src/assets/chatbot_2040946 1.png';
-import doktersatu from '../../src/assets/asian-female-doctor-physician-medical-uniform-with-stethoscope-cross-arms-chest-smiling-looking-like-professional-white-background-removebg-preview.png';
-import dokterdua from '../../src/assets/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png';
-import doktertiga from '../../src/assets/cheerful-male-doctor-white-gown-portrait-removebg-preview.png';
-import feedbackimage from '../../src/assets/people-emotions-lifestyle-leisure-beauty-concept-upbeat-happy-cheerful-asian-girl-dancing-having-fun-partying-moving-rhythm-music-smiling-yellow-background-removebg-preview 1.png';
-import artikelImgSatu from '../../src/assets/white-awareness-ribbon-two-hands-with-stethoscope-pink-background.png';
-import artikelImgDua from '../../src/assets/doctor-vaccinating-patient-clinic.png';
-import artikelImgTiga from '../../src/assets/close-up-hand-with-food-container 1.png';
+import support from '../../../assets/img/support_7569835 1.png';
+import healthcare from '../../../assets/img/healthcare-medical_9387204.png';
+import chatrobot from '../../../assets/img/chatbot_2040946 1.png';
+import doktersatu from '../../../assets/img/asian-female-doctor-physician-medical-uniform-with-stethoscope-cross-arms-chest-smiling-looking-like-professional-white-background-removebg-preview.png';
+import dokterdua from '../../../assets/img/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png';
+import doktertiga from '../../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png';
+import feedbackimage from '../../../assets/img/people-emotions-lifestyle-leisure-beauty-concept-upbeat-happy-cheerful-asian-girl-dancing-having-fun-partying-moving-rhythm-music-smiling-yellow-background-removebg-preview 1.png';
+import artikelImgSatu from '../../../assets/img/white-awareness-ribbon-two-hands-with-stethoscope-pink-background.png';
+import artikelImgDua from '../../../assets/img/doctor-vaccinating-patient-clinic.png';
+import artikelImgTiga from '../../../assets/img/close-up-hand-with-food-container 1.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -269,14 +269,14 @@ const data = [
   {
     name: 'Nadia Syakira',
     job: 'mahasiswa',
-    img: '../../src/assets/beautiful-young-woman-showing-okay-sign-smiling-pleased-recommending-smth-approve-like-product-standing-yellow-tshirt-white-background 1.png',
+    img: '../../../assets/img/beautiful-young-woman-showing-okay-sign-smiling-pleased-recommending-smth-approve-like-product-standing-yellow-tshirt-white-background 1.png',
     review:
       '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
   },
   {
     name: 'Susi Susanti',
     job: 'ibu rumah tangga',
-    img: '../../src/assets/ibu-rumah-tangga.jpg',
+    img: '../../../assets/img/ibu-rumah-tangga.jpg',
     review: '"Sangat membantu saya dalam menangani masalah kanker serviks"',
   },
 ];
