@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import ccLogo1 from "../assets/img/cc-logo1.png";
-import imgdoctor from "../assets/img/asian-young-main-group-hospital-professional-removebg-preview 1.png";
+import imgdoctor from "../assets/img/3dokter.png";
 import imggoogle from "../assets/img/google.png";
 
 import { useNavigate } from "react-router-dom";

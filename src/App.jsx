@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Daftar from "./Daftar";
 import Login from "./Components/Login.jsx";
 import Daftar from "./Components/Daftar.jsx";
-import Tes from "./Components/Tes.jsx";
 // // import './App.css';
 
 
