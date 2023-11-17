@@ -3,10 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
-import ccLogo1 from "../assets/img/cc-logo1.png";
-import imgdoctor from "../assets/img/3dokter.png";
-import imggoogle from "../assets/img/google.png";
-
+import ccLogo1 from "../../assets/img/cc-logo1.png";
+import imgdoctor from "../../assets/img/3dokter.png";
+import imggoogle from "../../assets/img/google.png";
+import "../../assets/style/daftar.css";
 import { useNavigate } from "react-router-dom";
 
 const Daftar = () => {
@@ -63,7 +63,12 @@ const Daftar = () => {
                   </Button>
                 </Form.Group>
               </Form>
-              <p className="teks-login-daftar">  Sudah punya akun? <a onClick={() => linkLogin("/login")} href="">Login sekarang</a>
+              <p className="teks-login-daftar">
+                {" "}
+                Sudah punya akun?{" "}
+                <a onClick={() => linkLogin("/login")} href="">
+                  Login sekarang
+                </a>
               </p>
             </div>
           </Col>
