@@ -4,6 +4,11 @@
   padding: 25px;
 }
 
+.image_dokter {
+  object-fit: cover;
+  width: 100%;
+}
+
 .box_title h1 {
   font-size: 25px;
   text-align: center;
@@ -73,9 +78,12 @@
   box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
 }
 
-.shadow_box{
-    box-shadow: 10px 10px 15px 0px rgba(134, 134, 134, 0.5);
-    transform: translate(100px, -120px);
+.shadow_box {
+  background: white;
+  box-shadow: 5px 5px 15px 5px rgba(134, 134, 134, 0.5);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin-left: 90px;
 }
 
 .starr {
@@ -90,12 +98,12 @@
   color: #061d4a;
 }
 
-.title_box{
-    text-align: center;
-    font-size: 50px;
+.title_box {
+  text-align: center;
+  font-size: 50px;
 }
 
-.desc_box{
-    text-align: center;
-    font-size: 25px;
+.desc_box {
+  text-align: center;
+  font-size: 25px;
 }

@@ -12,9 +12,13 @@
     color: #F31559;
 }
 
-.h_main_navbar{
+.main_navbar{
     height: 100%;
     width: 100%;
     background: #FBE5E5;
     background: linear-gradient(29deg, #FBE5E5, rgb(253, 246, 246));
+}
+
+.page:hover{
+    color: #F31559;
 }

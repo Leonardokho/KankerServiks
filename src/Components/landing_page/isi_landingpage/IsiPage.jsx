@@ -26,31 +26,32 @@ const IsiPage = () => {
     autoplaySpeed: 5000,
   };
   return (
-    <div className="mt-5">
+    <div>
       <Container>
-        <Card style={{ width: '70rem' }} className="border-0 rounded-5 shadow_box">
+        <div style={{ width: '70rem' }} className="border-0 shadow_box">
           <Card.Body>
             <Row className="px-5">
               <Col md={4}>
-                <h1 className="title_box">100+</h1>
+                {/* <h1 className="title_box">100+</h1> */}
                 <h1 className="desc_box">Dokter Spesialis</h1>
               </Col>
               <Col md={4}>
-                <h1 className="title_box">40+</h1>
+                {/* <h1 className="title_box">40+</h1> */}
                 <h1 className="desc_box">Mitra Rumah Sakit dan Puskesmas</h1>
               </Col>
               <Col md={4}>
-                <h1 className="title_box">2k+</h1>
+                {/* <h1 className="title_box">2k+</h1> */}
                 <h1 className="desc_box">Wanita terhindar dari kanker serviks</h1>
               </Col>
             </Row>
           </Card.Body>
-        </Card>
+        </div>
+        
         <Row>
-          <div className="title_services">
+          <div className="title_services mt-5">
             <h1>SERVICES</h1>
           </div>
-          <div className="desc_services mt-3">
+          <div className="desc_services mt-3 mb-5">
             <h1>Layanan Yang Kami Tawarkan</h1>
           </div>
           <Col md={4}>
@@ -103,8 +104,8 @@ const IsiPage = () => {
 
         <Row>
           <Col md={4}>
-            <Card style={{ width: '25rem' }} className="shadow_card rounded-3">
-              <img src={doktersatu} className="dokterImg" />
+            <div style={{ width: '25rem' }} className="shadow_card rounded-3">
+              <img src={doktersatu} className="dokterImg image_dokter" />
               <Card.Body>
                 <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }} className="namaDokter">
                   Dr. Shofiyyah Kamilah
@@ -117,12 +118,12 @@ const IsiPage = () => {
                   5.0 (300+review)
                 </Card.Text>
               </Card.Body>
-            </Card>
+            </div>
           </Col>
 
           <Col md={4}>
-            <Card style={{ width: '25rem' }} className="shadow_card rounded-3">
-              <img src={dokterdua} className="dokterImg" />
+            <div style={{ width: '25rem' }} className="shadow_card rounded-3">
+              <img src={dokterdua} className="dokterImg image_dokter" />
               <Card.Body>
                 <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</h3>
                 <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
@@ -133,12 +134,12 @@ const IsiPage = () => {
                   5.0 (300+review)
                 </Card.Text>
               </Card.Body>
-            </Card>
+            </div>
           </Col>
 
           <Col md={4}>
-            <Card style={{ width: '25rem' }} className="shadow_card rounded-3">
-              <img src={doktertiga} className="dokterImg" />
+            <div style={{ width: '25rem' }} className="shadow_card rounded-3">
+              <img src={doktertiga} className="dokterImg image_dokter" />
               <Card.Body>
                 <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</h3>
                 <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
@@ -149,7 +150,7 @@ const IsiPage = () => {
                   5.0 (300+review)
                 </Card.Text>
               </Card.Body>
-            </Card>
+            </div>
           </Col>
         </Row>
 
@@ -176,7 +177,7 @@ const IsiPage = () => {
           <Col md={6} className="my-5">
             <Slider {...settings}>
               {data.map((d) => (
-                <Card key={d} style={{ width: '35rem', height: '25rem' }} className="rounded-5 border-1">
+                <div key={d} style={{ width: '35rem', height: '25rem', background:"white" }} className="rounded-5 border-1">
                   <div className="reviewCard">
                     <Row>
                       <div className="d-flex align-items-center">
@@ -208,7 +209,7 @@ const IsiPage = () => {
                       </Card.Text>
                     </Row>
                   </div>
-                </Card>
+                </div>
               ))}
             </Slider>
           </Col>
@@ -221,37 +222,37 @@ const IsiPage = () => {
 
         <Row className="my-5">
           <Col md={4}>
-            <Card style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-              <img src={artikelImgSatu} alt="" />
-              <Card.Body>
+            <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
+              <img src={artikelImgSatu} alt="" className="image_dokter" />
+              <Card.Body className="p-3">
                 <h4>7 Tips Mencegah Kanker Serviks</h4>
                 <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
               </Card.Body>
-            </Card>
+            </div>
           </Col>
           <Col md={4}>
-            <Card style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-              <img src={artikelImgDua} alt="" />
-              <Card.Body>
+            <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
+              <img src={artikelImgDua} alt="" className="image_dokter" />
+              <Card.Body className="p-3">
                 <h4>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h4>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
               </Card.Body>
-            </Card>
+            </div>
           </Col>
           <Col md={4}>
-            <Card style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-              <img src={artikelImgTiga} alt="" />
-              <Card.Body>
+            <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
+              <img src={artikelImgTiga} alt="" className="image_dokter" />
+              <Card.Body className="p-3">
                 <h4>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h4>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
               </Card.Body>
-            </Card>
+            </div>
           </Col>
         </Row>
       </Container>
