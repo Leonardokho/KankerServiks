@@ -1,0 +1,13 @@
+.bg_search {
+    padding-top: 70px;
+    height: 200px;
+    background: #FBE5E5;
+}
+
+.searchbar{
+    margin-left: 150px;
+    margin-right: 150px;
+    display: flex;
+}
+
+

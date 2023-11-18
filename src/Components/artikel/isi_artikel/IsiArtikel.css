@@ -1,0 +1,36 @@
+.container_topik{
+    height: 50px;
+    width: 1000px;
+}
+
+.bg_topik{
+    background: #FBE5E5;
+    border-radius: 20px;
+    padding: 5px;
+    margin: 5px;
+    text-align: center;
+}
+
+.bg_topik:hover {
+    background: white;
+    color: #F31559;
+}
+
+.image{
+    height: 150px;
+    width: 100%;
+}
+
+.holder {
+    height: 250px;
+    margin: 50px;
+    /* background: red; */
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: red;
+}
+
+.content {
+    text-align: center;
+}
