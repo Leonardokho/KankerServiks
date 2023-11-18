@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div className="h_main_header">
       <Container>
-        <Row>
+        <Row className="mt-5">
           <Col md={6}>
             <div className=" head_left">
               <div className="w-200 mt-5 title">
