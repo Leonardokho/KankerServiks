@@ -1,11 +1,11 @@
 // import React from 'react'
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row, Card } from 'react-bootstrap';
 import './Header.css';
 import image from '../../../assets/img/doctor-with-his-arms-crossed-white-background-removebg-preview 1.png'
 
 const Header = () => {
   return (
-    <div className="h_main_header">
+    <div className="h_main_header mt-5">
       <Container>
         <Row>
           <Col md={6}>
@@ -31,6 +31,24 @@ const Header = () => {
                 </div>
             </div>
           </Col>
+          <div style={{ width: '70rem'}} className="border-0 shadow_box_header">
+          <Card.Body>
+            <Row className="px-5">
+              <Col md={4}>
+                <h1 className="title_box">100+</h1>
+                {/* <h1 className="desc_box">Dokter Spesialis</h1> */}
+              </Col>
+              <Col md={4}>
+                <h1 className="title_box">40+</h1>
+                {/* <h1 className="desc_box">Mitra Rumah Sakit dan Puskesmas</h1> */}
+              </Col>
+              <Col md={4}>
+                <h1 className="title_box">2k+</h1>
+                {/* <h1 className="desc_box">Wanita terhindar dari kanker serviks</h1> */}
+              </Col>
+            </Row>
+          </Card.Body>
+        </div>
         </Row>
       </Container>
     </div>

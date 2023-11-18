@@ -38,3 +38,11 @@
     background: #FBE5E5;
     background: linear-gradient(29deg, #FBE5E5, rgb(253, 246, 246));
 }
+
+.shadow_box_header {
+    background: white;
+    /* box-shadow: 10px 10px 15px px rgba(134, 134, 134, 0.5); */
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-left: 102px;
+  }
