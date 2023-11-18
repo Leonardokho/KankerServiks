@@ -7,8 +7,10 @@ import { Button } from 'react-bootstrap';
 import './Navbar.css';
 import { useNavigate } from "react-router-dom";
 const NavbarHome = () => {
+  const linkHome = useNavigate();
   const linkLogin = useNavigate();
   const linkDaftar = useNavigate();
+    const linkKonsultasiPage = useNavigate();
   return (
     <div className='h_main_navbar'>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -19,8 +21,8 @@ const NavbarHome = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto text-center d-flex justify-content-center align-items-center">
-              <Nav.Link href="#home" className='text-secondary fw-bold'>Home</Nav.Link>
-              <Nav.Link href="#" className='text-secondary fw-bold'>Konsultasi</Nav.Link>
+              <Nav.Link href=""onClick={()=> linkHome("/")} className='text-secondary fw-bold'>Home</Nav.Link>
+              <Nav.Link href="" onClick={()=> linkKonsultasiPage("/konsultasi_page")} className='text-secondary fw-bold'>Konsultasi</Nav.Link>
               <Nav.Link href="#" className='text-secondary fw-bold'>Layanan Kesehatan</Nav.Link>
               <Nav.Link href="#" className='text-secondary fw-bold'>Artikel</Nav.Link>
               <Nav.Link href=""onClick={() => linkLogin("/login")}  className='text-black fw-bold'>Masuk</Nav.Link>
