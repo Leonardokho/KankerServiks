@@ -8,12 +8,12 @@ const IsiArtikel = () => {
   const artikel = [
     {
       id: '1',
-      //   img: '../../../assets/img/image1.png',
+        img: '../../../assets/img/image1.png',
       desc: 'Apa itu kanker serviks?',
     },
     {
       id: '2',
-      //   img: '../../../assets/img/image 3.png',
+        img: '../../../assets/img/image 3.png',
       desc: 'Apakah kanker serviks dapat dicegah?',
     },
     {

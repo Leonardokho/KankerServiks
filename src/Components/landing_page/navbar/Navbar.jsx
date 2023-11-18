@@ -14,7 +14,7 @@ const NavbarHome = () => {
   const linkKonsultasiPage = useNavigate();
 
   return (
-    <div className='h_main_navbar'>
+    <div className='navbar_main'>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">

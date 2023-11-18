@@ -46,7 +46,7 @@ const IsiPage = () => {
             </Row>
           </Card.Body>
         </div>
-        
+
         <Row>
           <div className="title_services mt-5">
             <h1>SERVICES</h1>
@@ -154,9 +154,9 @@ const IsiPage = () => {
           </Col>
         </Row>
 
-        <div className="mt-4 justify-content-center align-items-center">
-          <Button className="button_dokter">Lihat Semuanya</Button>
-        </div>
+        <Col className="card-ceritakan mt-5">
+          <Button className="button_dokter mt-3 mb-4"> Lihat Semuanya</Button>
+        </Col>
 
         <div className="title_services mt-5">
           <h1>FEEDBACK</h1>
@@ -177,7 +177,7 @@ const IsiPage = () => {
           <Col md={6} className="my-5">
             <Slider {...settings}>
               {data.map((d) => (
-                <div key={d} style={{ width: '35rem', height: '25rem', background:"white" }} className="rounded-5 border-1">
+                <div key={d} style={{ width: '35rem', height: '25rem', background: 'white' }} className="rounded-5 border-1">
                   <div className="reviewCard">
                     <Row>
                       <div className="d-flex align-items-center">

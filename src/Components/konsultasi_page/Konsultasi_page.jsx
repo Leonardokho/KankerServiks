@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, Col, Row, Button } from "react-bootstrap";
 import NavbarHome from '../landing_page/navbar/Navbar';
 import Footer from '../landing_page/footer/Footer';
@@ -8,11 +7,9 @@ import Chatpng from "../../assets/img/Chat.png";
 import doktersatu from "../../assets/img/doktersatu.png";
 import dokterdua from "../../assets/img/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png";
 import doktertiga from "../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png";
-
-
 import './Konsultasi_page.css'
 import {useRef} from 'react'
-import { Form } from 'react-router-dom';
+
 const Konsultasi_page = () => {
 
   const linkRef =useRef (null)
@@ -80,7 +77,7 @@ const Konsultasi_page = () => {
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i class="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
                 </h5>
               </div>
 
@@ -95,7 +92,7 @@ const Konsultasi_page = () => {
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i class="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
                 </h5>
               </div>
               <div className="card-image mb-4">
@@ -109,7 +106,7 @@ const Konsultasi_page = () => {
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i class="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
                 </h5>
               </div>
 
@@ -124,7 +121,7 @@ const Konsultasi_page = () => {
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i class="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
                 </h5>
               </div>
               <div className="card-image mb-4">
@@ -138,7 +135,7 @@ const Konsultasi_page = () => {
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i class="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
                 </h5>
               </div>
               <div className="card-image mb-4 ">
@@ -152,7 +149,7 @@ const Konsultasi_page = () => {
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i class="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
                 </h5>
               </div>
             </div>

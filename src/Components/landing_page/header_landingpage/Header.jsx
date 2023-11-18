@@ -1,11 +1,11 @@
 // import React from 'react'
 import { Button, Col, Container, Row, Card } from 'react-bootstrap';
 import './Header.css';
-import image from '../../../assets/img/doctor-with-his-arms-crossed-white-background-removebg-preview 1.png'
+import image from '../../../assets/img/doctor-with-his-arms-crossed-white-background-removebg-preview 1.png';
 
 const Header = () => {
   return (
-    <div className="h_main_header mt-5">
+    <div className="h_main_header">
       <Container>
         <Row>
           <Col md={6}>
@@ -19,36 +19,36 @@ const Header = () => {
                 <h1 style={{ color: '#061D4A' }}>membantu melakukan pencegahan dini terhadap kanker</h1>
                 <h1 style={{ color: '#061D4A' }}>serviks.</h1>
               </div>
-              <div className="mt-5">
-                <Button className="button_konsultasi">Mulai Konsultasi</Button>
-              </div>
+              <Col className=" mt-5">
+                <Button className="button_dokter mt-3 mb-4">Mulai Konsultasi</Button>
+              </Col>
             </div>
           </Col>
           <Col md={6}>
             <div className="head-right">
-                <div className="imageContainer d-flex justify-content-end align-items-center">
-                    <img src={image} alt="doktermuda" className='head_rightImg'/>
-                </div>
+              <div className="imageContainer d-flex justify-content-end align-items-center">
+                <img src={image} alt="doktermuda" className="head_rightImg" />
+              </div>
             </div>
           </Col>
-          <div style={{ width: '70rem'}} className="border-0 shadow_box_header">
-          <Card.Body>
-            <Row className="px-5">
-              <Col md={4}>
-                <h1 className="title_box">100+</h1>
-                {/* <h1 className="desc_box">Dokter Spesialis</h1> */}
-              </Col>
-              <Col md={4}>
-                <h1 className="title_box">40+</h1>
-                {/* <h1 className="desc_box">Mitra Rumah Sakit dan Puskesmas</h1> */}
-              </Col>
-              <Col md={4}>
-                <h1 className="title_box">2k+</h1>
-                {/* <h1 className="desc_box">Wanita terhindar dari kanker serviks</h1> */}
-              </Col>
-            </Row>
-          </Card.Body>
-        </div>
+          <div style={{ width: '70rem' }} className="border-0 shadow_box_header">
+            <Card.Body>
+              <Row className="px-5">
+                <Col md={4}>
+                  <h1 className="title_box">100+</h1>
+                  {/* <h1 className="desc_box">Dokter Spesialis</h1> */}
+                </Col>
+                <Col md={4}>
+                  <h1 className="title_box">40+</h1>
+                  {/* <h1 className="desc_box">Mitra Rumah Sakit dan Puskesmas</h1> */}
+                </Col>
+                <Col md={4}>
+                  <h1 className="title_box">2k+</h1>
+                  {/* <h1 className="desc_box">Wanita terhindar dari kanker serviks</h1> */}
+                </Col>
+              </Row>
+            </Card.Body>
+          </div>
         </Row>
       </Container>
     </div>
