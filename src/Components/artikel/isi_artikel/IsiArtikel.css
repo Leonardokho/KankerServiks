@@ -30,7 +30,7 @@
 
 .shadow_artikel {
   border-radius: 10px;
-  box-shadow: 10px 10px 15px 0px rgba(134, 134, 134, 0.5);
+  box-shadow: 5px 5px 5px 0px rgba(134, 134, 134, 0.5);
 }
 
 .image {
