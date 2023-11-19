@@ -1,179 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap");
-
-
-:root{
-  --primary: #F31559;
-  --teks-primary: #061D4A;
+:root {
+  --primary: #f31559;
+  --teks-primary: #061d4a;
 }
-body{
-    
+body {
 }
 
-.bg-boxs{
-    display: flex;
-    /* height: 608px; */
-    background: linear-gradient(0deg, #FBE5E5 0%, rgba(255, 255, 255, 0.00) 114.56%);
+.bg-boxs {
+  display: flex;
+  /* height: 608px; */
+  background: linear-gradient(0deg, #fbe5e5 0%, rgba(255, 255, 255, 0) 114.56%);
 }
 
-.boxs{
-
+.boxs {
 }
-.judul-title{
-color: #000;
-font-family: Montserrat;
-font-size: 50px;
-font-style: normal;
-font-weight: 700;
-
+.judul-title {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
 }
 
-.logo-cervicare{
-width: 250px;
-height: 56px;
+.logo-cervicare {
+  width: 250px;
+  height: 56px;
 }
 
-.boxs-layanan{
-
- width: 590px;
-color: #000;
-font-family: Montserrat;
-font-size: 25px;
-font-style: normal;
-font-weight: 400;
+.boxs-layanan {
+  width: 590px;
+  color: #000;
+  font-family: Montserrat;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
 }
-.button_mulai{
-border-radius: 20px;
-border: none !important;
-background-color: #F31559 !important;
-box-shadow: 0px 0px 10px 0px #F31559;
-}
-
-.button_mulai:hover{
-
-background-color: #e40447 !important;
-
-}
-.foto-docter{
-   /* width: 837px; */
-height: 533px;
-margin-top: -330px;
-float: right;
-position: relative;
+.button_mulai {
+  border-radius: 20px;
+  border: none !important;
+  background-color: #f31559 !important;
+  box-shadow: 0px 0px 10px 0px #f31559;
 }
 
-.bg-boxs-2{
-/* width: 1440px; */
-height: 144px;
-margin-top: -144px;
-background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+.button_mulai:hover {
+  background-color: #e40447 !important;
+}
+.foto-docter {
+  /* width: 837px; */
+  height: 533px;
+  margin-top: -330px;
+  float: right;
+  position: relative;
+}
+
+.bg-boxs-2 {
+  /* width: 1440px; */
+  height: 144px;
+  margin-top: -144px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
 }
 .card-ceritakan {
- /* background-color: aqua; */
- display: flex;
- align-items: center;
- justify-content: center;
- text-align: center;
-}
-
-.title-merah{
-
-color: var(--primary);
-font-family: Montserrat;
-font-size: 40px;
-font-style: normal;
-font-weight: 700;
-}
-.title-deskripsi{
-  color:var(--teks-primary);
-text-align: center;
-font-family: Montserrat;
-font-size: 28px;
-font-style: normal;
-font-weight: 600;
-}
-
-.text-title-chat-live{
- color: var(--teks-primary);
-font-family: Montserrat;
-font-size: 30px;
-font-style: normal;
-font-weight: 400;
-}
-
-.card-bungkus-image{
   /* background-color: aqua; */
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-merah {
+  color: var(--primary);
+  font-family: Montserrat;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+}
+.title-deskripsi {
+  color: var(--teks-primary);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.text-title-chat-live {
+  color: var(--teks-primary);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.card-bungkus-image {
+  /* background-color: aqua; */
+
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
- 
 }
 
-.card-image{
-width: 335px;
-height: 468px;
-border-radius: 10px;
-background: var(--default, #FFF);
-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
-
-}
-
-.card-image-bayanan{
+.card-image {
   width: 335px;
-height: 348px;
-border-radius: 10px 10px 0px 0px;
-background: linear-gradient(144deg, #F31559 -7.86%, #FBE5E5 98.78%);
+  height: 468px;
+  border-radius: 10px;
+  background: var(--default, #fff);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
 }
 
-.foto-img{
+.card-image-bayanan {
+  width: 335px;
+  height: 348px;
+  border-radius: 10px 10px 0px 0px;
+  background: linear-gradient(144deg, #f31559 -7.86%, #fbe5e5 98.78%);
+}
+
+.foto-img {
   height: 324px;
 }
-.name-docter{
-color:var(--teks-primary);
-text-align: center;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-text-decoration: none;
-}
-.name-docter:hover{
-color: var(--primary);
-transition: 0.10s;
-}
-.name-spesialis{
+.name-docter {
   color: var(--teks-primary);
-text-align: center;
-font-family: Montserrat;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+.name-docter:hover {
+  color: var(--primary);
+  transition: 0.1s;
+}
+.name-spesialis {
+  color: var(--teks-primary);
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.review{
- color: #958C8C;
-text-align: center;
-font-family: Montserrat;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
+.review {
+  color: #958c8c;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.fa-star{
- color: #F68924;
+.fa-star {
+  color: #f68924;
 }
-.button-banyak{
+.button-banyak {
   border-radius: 10px;
   border: none !important;
-background: var(--primary) !important;
+  background: var(--primary) !important;
 }
-.button-banyak:hover{
-
-background-color: #e40447 !important;
-
+.button-banyak:hover {
+  background-color: #e40447 !important;
 }
 @media (max-width: 768px) {
   .foto-docter {
@@ -187,10 +174,8 @@ background-color: #e40447 !important;
     width: 100%; /* Menyesuaikan lebar pada resolusi mobile */
     margin-top: 20px; /* Atur sesuai kebutuhan */
   }
-  
+
   .button_mulai {
     margin-top: 20px; /* Atur sesuai kebutuhan */
   }
- 
-
 }

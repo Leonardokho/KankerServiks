@@ -108,9 +108,8 @@
   font-size: 25px;
 }
 
-
-.button_dokter{
+.button_dokter {
   border-radius: 10px;
   border: none !important;
-background: var(--primary) !important;
+  background: var(--primary) !important;
 }

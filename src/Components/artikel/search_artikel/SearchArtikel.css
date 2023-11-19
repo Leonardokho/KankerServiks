@@ -1,13 +1,18 @@
 .bg_search {
     padding-top: 70px;
-    height: 200px;
-    background: #FBE5E5;
+    height: 500px;
+    /* display: flex; */
+    background: linear-gradient(0deg, #FBE5E5 0%, rgba(255, 255, 255, 0.00) 114.56%);
 }
 
 .searchbar{
     margin-left: 150px;
     margin-right: 150px;
     display: flex;
+}
+
+.header_artikel{
+    text-align: center;
 }
 
 

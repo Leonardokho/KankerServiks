@@ -12,6 +12,7 @@ const NavbarHome = () => {
   const linkLogin = useNavigate();
   const linkDaftar = useNavigate();
   const linkKonsultasiPage = useNavigate();
+  const linkArtikelPage = useNavigate();
 
   return (
     <div className='navbar_main'>
@@ -24,12 +25,12 @@ const NavbarHome = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto text-center d-flex justify-content-center align-items-center">
               <Nav.Link href="" onClick={() => linkHome("/")} className='text-secondary fw-bold'>Home</Nav.Link>
-              <Nav.Link href="" onClick={() => linkKonsultasiPage("/konsultasi_page")} className='text-secondary fw-bold'>Konsultasi</Nav.Link>
-              <Nav.Link href="#" className='text-secondary fw-bold'>Layanan Kesehatan</Nav.Link>
-              <Nav.Link href="#" className='text-secondary fw-bold'>Artikel</Nav.Link>
-              <Nav.Link href="" onClick={() => linkLogin("/login")} className='text-black fw-bold'>Masuk</Nav.Link>
+              <Nav.Link href="" onClick={() => linkKonsultasiPage("/Halaman_Konsultasi")} className='text-secondary fw-bold'>Konsultasi</Nav.Link>
+              <Nav.Link href="" className='text-secondary fw-bold'>Layanan Kesehatan</Nav.Link>
+              <Nav.Link href="" onClick={() => linkArtikelPage("/Halaman_Artikel")} className='text-secondary fw-bold'>Artikel</Nav.Link>
+              <Nav.Link href="" onClick={() => linkLogin("/Masuk")} className='text-black fw-bold'>Masuk</Nav.Link>
               <Nav.Link href="#home" className='text-white fw-bold text-decoration-none'>
-                <Button onClick={() => linkDaftar('/daftar')} className='bg_login'>Daftar</Button>
+                <Button onClick={() => linkDaftar('/Daftar')} className='bg_login'>Daftar</Button>
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
