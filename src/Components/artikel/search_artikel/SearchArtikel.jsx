@@ -8,7 +8,7 @@ const SearchArtikel = () => {
         <Row>
           <Col className="searchbar">
               <Form.Control type="search" placeholder="Cari artikel berdasarkan judul, kategori, atau topik" className="me-2 rounded-pill" aria-label="Search" />
-              <Button className="rounded-pill search_button" variant="outline-primary">
+              <Button className="rounded-pill search_button" variant="outline-danger">
                 {/* <small>
                   <i className="fa-solid fa-magnifying-glass"></i>
                 </small> */}

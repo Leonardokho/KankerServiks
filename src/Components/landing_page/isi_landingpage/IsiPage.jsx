@@ -11,6 +11,8 @@ import feedbackimage from '../../../assets/img/reviewImgSatu.png';
 import artikelImgSatu from '../../../assets/img/white-awareness-ribbon-two-hands-with-stethoscope-pink-background.png';
 import artikelImgDua from '../../../assets/img/doctor-vaccinating-patient-clinic.png';
 import artikelImgTiga from '../../../assets/img/close-up-hand-with-food-container 1.png';
+import reviewSatu from '../../../assets/img/reviewImg.png';
+import reviewDua from '../../../assets/img/ibu-rumah-tangga.jpg';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -169,7 +171,7 @@ const IsiPage = () => {
           <Col md={6}>
             <Row>
               <div className="square">
-                <img src={feedbackimage} alt="" className="" />
+                <img src={feedbackimage} alt="image" className="" />
               </div>
             </Row>
           </Col>
@@ -177,7 +179,7 @@ const IsiPage = () => {
           <Col md={6} className="my-5">
             <Slider {...settings}>
               {data.map((d) => (
-                <div key={d} style={{ width: '35rem', height: '25rem', background: 'white' }} className="rounded-5 border-1">
+                <div key={d.id} style={{ width: '35rem', height: '25rem'}} className="rounded-5 border-1">
                   <div className="reviewCard">
                     <Row>
                       <div className="d-flex align-items-center">
@@ -262,16 +264,18 @@ const IsiPage = () => {
 
 const data = [
   {
+    id: 1,
     name: 'Nadia Syakira',
     job: 'mahasiswa',
-    img: '../../../assets/img/reviewImg.png',
+    img: reviewSatu,
     review:
       '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
   },
   {
+    id: 2,
     name: 'Susi Susanti',
     job: 'ibu rumah tangga',
-    img: '../../../assets/img/ibu-rumah-tangga.jpg',
+    img: reviewDua,
     review: '"Sangat membantu saya dalam menangani masalah kanker serviks"',
   },
 ];
