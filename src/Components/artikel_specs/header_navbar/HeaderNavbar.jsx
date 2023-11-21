@@ -3,7 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../../assets/img/cc-logo2 1.png';
 import { Button } from 'react-bootstrap';
-import './Navbar.css';
+import './HeaderNavbar.css';
 import { useNavigate } from 'react-router-dom';
 
 const HeaderNavbarArtikelSpecs = () => {
@@ -12,6 +12,7 @@ const HeaderNavbarArtikelSpecs = () => {
   const linkDaftar = useNavigate();
   const linkKonsultasiPage = useNavigate();
   const linkArtikelPage = useNavigate();
+  const linkLayananKesehatan = useNavigate();
 
   return (
     <div className='navbar_main'>
@@ -25,7 +26,7 @@ const HeaderNavbarArtikelSpecs = () => {
             <Nav className="ms-auto text-center d-flex justify-content-center align-items-center">
               <Nav.Link href="" onClick={() => linkHome("/")} className='text-secondary fw-bold'>Home</Nav.Link>
               <Nav.Link href="" onClick={() => linkKonsultasiPage("/Halaman_Konsultasi")} className='text-secondary fw-bold'>Konsultasi</Nav.Link>
-              <Nav.Link href="" className='text-secondary fw-bold'>Layanan Kesehatan</Nav.Link>
+              <Nav.Link href="" onClick={() => linkLayananKesehatan("/Layanan_Kesehatan")} className='text-secondary fw-bold'>Layanan Kesehatan</Nav.Link>
               <Nav.Link href="" onClick={() => linkArtikelPage("/Halaman_Artikel")} className='text-secondary fw-bold'>Artikel</Nav.Link>
               <Nav.Link href="" onClick={() => linkLogin("/Masuk")} className='text-black fw-bold'>Masuk</Nav.Link>
               <Nav.Link href="#home" className='text-white fw-bold text-decoration-none'>

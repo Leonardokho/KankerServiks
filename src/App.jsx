@@ -5,6 +5,7 @@ import Konsultasi_page from "./Components/konsultasi_page/Konsultasi_page.jsx";
 import HeaderMain from "./Components/landing_page/headermain_landingpage/HeaderMain.jsx";
 import ArtikelMain from "./Components/artikel/artikel_main/ArtikelMain.jsx";
 import LayananKesehatan from "./Components/layanan_kesehatan/Index.jsx";
+import ArtikelSpecsMain from "./Components/artikel_specs/artikel_specs_main/ArtikelSpecsMain.jsx";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/Masuk" element={<Login />} />
           <Route path="/Daftar" element={<Daftar />} />
           <Route path="/Halaman_Artikel" element={<ArtikelMain/>}></Route>
+          <Route path="Detail_Artikel" element={<ArtikelSpecsMain/>}></Route>
         </Routes>
       </Router>
     </>

@@ -85,7 +85,7 @@ const IsiArtikel = () => {
     },
   ];
 
-  const numberOfPicture = [1, 2, 3, 4, 5, 6];
+  // const numberOfPicture = [1, 2, 3, 4, 5, 6];
 
   return (
     <div>
@@ -192,7 +192,7 @@ const IsiArtikel = () => {
                 <img src={art.img} alt="" className="image_artikel" />
                 <Card.Body className="p-3">
                   <h5>{art.desc}</h5>
-                  <Card.Link href=""  className="d-flex justify-content-end mt-4 linkArtikel">
+                  <Card.Link href="" onClick={() => linkBacaArtikel("/Detail_Artikel")}  className="d-flex justify-content-end mt-4 linkArtikel">
                     Baca selengkapnya...
                   </Card.Link>
                 </Card.Body>
