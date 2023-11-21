@@ -17,7 +17,6 @@ import image10 from '../../../assets/img/image 10.png';
 import { useNavigate } from 'react-router-dom';
 
 const IsiArtikel = () => {
-  const linkBacaArtikel = useNavigate();
   const artikel = [
     {
       id: '1',
@@ -192,7 +191,7 @@ const IsiArtikel = () => {
                 <img src={art.img} alt="" className="image_artikel" />
                 <Card.Body className="p-3">
                   <h5>{art.desc}</h5>
-                  <Card.Link href="" onClick={() => linkBacaArtikel("/Detail_Artikel")}  className="d-flex justify-content-end mt-4 linkArtikel">
+                  <Card.Link className="d-flex justify-content-end mt-4 linkArtikel">
                     Baca selengkapnya...
                   </Card.Link>
                 </Card.Body>
