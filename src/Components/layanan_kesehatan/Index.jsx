@@ -11,7 +11,7 @@ import KlinikAnNisa from '../../assets/img/faskes/klinik-penyakit-kelamin.svg';
 import MedikaKedua from '../../assets/img/faskes/rs-medika-kedua.svg';
 import PuskesmasSambas from '../../assets/img/faskes/puskesmas-desa-sambas.svg';
 
-const Index = () => {
+const LayananKesehatan = () => {
   return (
     <>
       <NavbarHome />
@@ -126,4 +126,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default LayananKesehatan;

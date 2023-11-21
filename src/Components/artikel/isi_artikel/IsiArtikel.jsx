@@ -14,8 +14,10 @@ import image7 from '../../../assets/img/image 7.png';
 import image8 from '../../../assets/img/image 8.png';
 import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
+import { useNavigate } from 'react-router-dom';
 
 const IsiArtikel = () => {
+  const linkBacaArtikel = useNavigate();
   const artikel = [
     {
       id: '1',
@@ -83,9 +85,11 @@ const IsiArtikel = () => {
     },
   ];
 
+  const numberOfPicture = [1, 2, 3, 4, 5, 6];
+
   return (
     <div>
-      <div className='bg-boxs-2'></div>
+      <div className="bg-boxs-2"></div>
       <Container>
         <Row>
           <div className=" my-3">
@@ -173,11 +177,11 @@ const IsiArtikel = () => {
           </Col>
         </Row>
 
-        <Row className='my-5'>
+        <Row className="my-5">
           <div className="d-flex justify-content-center">
             <Col>
-            <h4 className="title-deskripsi">100++ ARTIKEL PENCEGAHAN</h4>
-            <h4 className='title-deskripsi'>KANKER SERVIKS</h4>
+              <h4 className="title-deskripsi">100++ ARTIKEL PENCEGAHAN</h4>
+              <h4 className="title-deskripsi">KANKER SERVIKS</h4>
             </Col>
           </div>
         </Row>
@@ -188,7 +192,7 @@ const IsiArtikel = () => {
                 <img src={art.img} alt="" className="image_artikel" />
                 <Card.Body className="p-3">
                   <h5>{art.desc}</h5>
-                  <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
+                  <Card.Link href=""  className="d-flex justify-content-end mt-4 linkArtikel">
                     Baca selengkapnya...
                   </Card.Link>
                 </Card.Body>
