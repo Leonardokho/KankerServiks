@@ -28,7 +28,7 @@ const Konsultasi_page = () => {
         <Container>
           <Row className=" boxs mt-5">
             <Col md={8}>
-              <h1 className="mt-4 judul-title">
+              <h1 className="mt-5 judul-title">
                 Komunikasi Langsung dengan Dokter <img className="logo-cervicare" src={ccLogo1} alt="" />
               </h1>
               <p className="  boxs-layanan">Layanan live chat yang siap membantu anda dalam mendapatkan informasi pencegahan dini Kanker Serviks dengan lebih mendalam bersama ahlinya.</p>
