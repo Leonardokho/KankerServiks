@@ -1,19 +1,17 @@
-import Footer from "../../landing_page/footer/Footer"
-import NavbarHome from "../../landing_page/navbar/Navbar"
-import IsiArtikel from "../isi_artikel/IsiArtikel"
-import SearchArtikel from "../search_artikel/SearchArtikel"
+import Footer from '../../landing_page/footer/Footer';
+import NavbarNotAuth from '../../landing_page/navbar/NavbarNotAuth';
+import IsiArtikel from '../isi_artikel/IsiArtikel';
+import SearchArtikel from '../search_artikel/SearchArtikel';
 
 const ArtikelMain = () => {
   return (
     <div>
-
-        <NavbarHome/>
-        <SearchArtikel/>
-        <IsiArtikel/>
-        <Footer/>
-
+      <NavbarNotAuth />
+      <SearchArtikel />
+      <IsiArtikel />
+      <Footer />
     </div>
   );
-}
+};
 
-export default ArtikelMain
+export default ArtikelMain;

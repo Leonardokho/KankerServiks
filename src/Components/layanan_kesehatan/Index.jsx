@@ -1,7 +1,6 @@
 import '../landing_page/header_landingpage/Header.css';
 import { Container, Row, Col, Button, Card, Stack } from 'react-bootstrap';
 import femaleDoctorImage from '../../assets/img/female-doctor.png';
-import NavbarHome from '../landing_page/navbar/Navbar';
 import Footer from '../landing_page/footer/Footer';
 import PapSmearIcon from '../../assets/img/pap-smear-icon.svg';
 import IvaTestIcon from '../../assets/img/iva-test-icon.svg';
@@ -10,12 +9,13 @@ import KlinikAnNisa from '../../assets/img/faskes/faskes1.png';
 import MedikaKedua from '../../assets/img/faskes/faskes2.png';
 import PuskesmasSambas from '../../assets/img/faskes/faskes3.png';
 import { useNavigate } from 'react-router-dom';
+import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
 
 const LayananKesehatan = () => {
   const linkDetailLayananKesehatan = useNavigate();
   return (
     <>
-      <NavbarHome />
+      <NavbarNotAuth />
       <div className="h_main_header">
         <Container>
           <Row className="mt-5 py-5">

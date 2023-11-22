@@ -1,15 +1,15 @@
-import Footer from "../../landing_page/footer/Footer"
-import NavbarHome from "../../landing_page/navbar/Navbar"
-import LayananDetail from "../pap_smear1/LayananDetail"
+import Footer from '../../landing_page/footer/Footer';
+import NavbarNotAuth from '../../landing_page/navbar/NavbarNotAuth';
+import LayananDetail from '../pap_smear1/LayananDetail';
 
 const LayananDetailMain = () => {
   return (
     <div>
-        <NavbarHome/>
-        <LayananDetail/>
-        <Footer/>
+      <NavbarNotAuth />
+      <LayananDetail />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default LayananDetailMain
+export default LayananDetailMain;

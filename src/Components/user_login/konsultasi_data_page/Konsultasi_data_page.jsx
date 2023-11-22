@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import './konsultasi_data_page.css';
-import doktersatu from "../../../assets/img/dokter_data_page.png";
-import pria from "../../../assets/img/1.png";
-import wanita from "../../../assets/img/2.png";
+import doktersatu from '../../../assets/img/dokter_data_page.png';
+import pria from '../../../assets/img/1.png';
+import wanita from '../../../assets/img/2.png';
 import Footer from '../../landing_page/footer/Footer';
 const Konsultasi_data_page = () => {
   const [selectedGender, setSelectedGender] = useState(null);
@@ -45,19 +45,23 @@ const Konsultasi_data_page = () => {
                 <Col>
                   <Form>
                     <div className="boxs-jenis-kl">
-                      <div className={`card-jenis-kl ${selectedGender === "pria" ? "selected" : ""}`} onClick={() => handleGenderChange("pria")}>
+                      <div className={`card-jenis-kl ${selectedGender === 'pria' ? 'selected' : ''}`} onClick={() => handleGenderChange('pria')}>
                         <img className="btn img-kl mx-4 mt-4 mb-4" src={pria} alt="" />
                         <Col>
                           <input className="btn-check" type="radio" name="option" id="pria" autoComplete="off" />
-                          <label className={`gender-label mx-4 ${selectedGender === "pria" ? "selected-text" : ""}`} htmlFor="pria">Pria</label>
+                          <label className={`gender-label mx-4 ${selectedGender === 'pria' ? 'selected-text' : ''}`} htmlFor="pria">
+                            Pria
+                          </label>
                         </Col>
                       </div>
 
-                      <div className={`card-jenis-kl ${selectedGender === "wanita" ? "selected" : ""}`} onClick={() => handleGenderChange("wanita")}>
+                      <div className={`card-jenis-kl ${selectedGender === 'wanita' ? 'selected' : ''}`} onClick={() => handleGenderChange('wanita')}>
                         <img className="btn  img-kl mx-4 mt-4 mb-4" src={wanita} alt="" />
                         <Col>
                           <input className="btn-check" type="radio" name="option" id="wanita" autoComplete="off" />
-                          <label className={`gender-label mx-4 ${selectedGender === "wanita" ? "selected-text" : ""}`} htmlFor="wanita">Wanita </label>
+                          <label className={`gender-label mx-4 ${selectedGender === 'wanita' ? 'selected-text' : ''}`} htmlFor="wanita">
+                            Wanita{' '}
+                          </label>
                         </Col>
                       </div>
                     </div>
@@ -74,6 +78,6 @@ const Konsultasi_data_page = () => {
       <Footer />
     </div>
   );
-}
+};
 
 export default Konsultasi_data_page;

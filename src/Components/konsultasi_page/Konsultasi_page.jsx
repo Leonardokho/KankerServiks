@@ -1,30 +1,29 @@
-import { Container, Col, Row, Button } from "react-bootstrap";
-import NavbarHome from '../landing_page/navbar/Navbar';
+import { Container, Col, Row, Button } from 'react-bootstrap';
 import Footer from '../landing_page/footer/Footer';
-import ccLogo1 from "../../assets/img/cc-logo1.png";
-import fotodocter from "../../assets/img/doctors-day-cute-young-handsome-man-lab-coat-glasses-holding-book-removebg-preview 1.png";
-import Chatpng from "../../assets/img/Chat.png";
-import doktersatu from "../../assets/img/doktersatu.png";
-import dokterdua from "../../assets/img/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png";
-import doktertiga from "../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png";
-import './Konsultasi_page.css'
-import {useRef} from 'react'
-import { useNavigate } from "react-router-dom";
+import ccLogo1 from '../../assets/img/cc-logo1.png';
+import fotodocter from '../../assets/img/doctors-day-cute-young-handsome-man-lab-coat-glasses-holding-book-removebg-preview 1.png';
+import Chatpng from '../../assets/img/Chat.png';
+import doktersatu from '../../assets/img/doktersatu.png';
+import dokterdua from '../../assets/img/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png';
+import doktertiga from '../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png';
+import './Konsultasi_page.css';
+import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
+import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
 
 const Konsultasi_page = () => {
-
-  const linkRef =useRef (null)
-  const goto =(ref)=>{
+  const linkRef = useRef(null);
+  const goto = (ref) => {
     window.scrollTo({
       top: ref.offsetTop,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
-  }
-const hal_data_page = useNavigate();
+  };
+  const hal_data_page = useNavigate();
   return (
     <div>
-      <NavbarHome />
+      <NavbarNotAuth />
       <div className="bg-boxs">
         <Container>
           <Row className=" boxs mt-5">
@@ -34,7 +33,7 @@ const hal_data_page = useNavigate();
               </h1>
               <p className="  boxs-layanan">Layanan live chat yang siap membantu anda dalam mendapatkan informasi pencegahan dini Kanker Serviks dengan lebih mendalam bersama ahlinya.</p>
               <Button className="button_mulai" onClick={() => goto(linkRef.current)}>
-                {" "}
+                {' '}
                 Mulai Sekarang
               </Button>
             </Col>
@@ -77,13 +76,13 @@ const hal_data_page = useNavigate();
                   <img className="mt-4 foto-img" src={doktersatu} alt="" />
                 </div>
                 <h3>
-                  <a className="name-docter mt-3" href="#" onClick={() => hal_data_page("/halaman_konsultasi_data_page")}>
+                  <a className="name-docter mt-3" href="#" onClick={() => hal_data_page('/halaman_konsultasi_data_page')}>
                     Dr. Shofiyyah Kamilah
                   </a>
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
                 </h5>
               </div>
 
@@ -98,7 +97,7 @@ const hal_data_page = useNavigate();
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
                 </h5>
               </div>
               <div className="card-image mb-4">
@@ -112,7 +111,7 @@ const hal_data_page = useNavigate();
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
                 </h5>
               </div>
 
@@ -127,7 +126,7 @@ const hal_data_page = useNavigate();
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
                 </h5>
               </div>
               <div className="card-image mb-4">
@@ -141,7 +140,7 @@ const hal_data_page = useNavigate();
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
                 </h5>
               </div>
               <div className="card-image mb-4 ">
@@ -155,7 +154,7 @@ const hal_data_page = useNavigate();
                 </h3>
                 <h3 className="name-spesialis ">Spesialis Onkolog</h3>
                 <h5 className="review ">
-                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){" "}
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
                 </h5>
               </div>
             </div>
@@ -169,6 +168,6 @@ const hal_data_page = useNavigate();
       <Footer />
     </div>
   );
-}
+};
 
-export default Konsultasi_page
+export default Konsultasi_page;

@@ -45,7 +45,7 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3 mx-4 ">
-                  <Button onClick={() => linkLandingPage('/')} className="costum-button ">
+                  <Button onClick={() => linkLandingPage('/Landing_Page_Auth')} className="costum-button ">
                     Masuk
                   </Button>
                 </Form.Group>

@@ -1,0 +1,28 @@
+.bg_login {
+  background: #f31559 !important;
+  color: white;
+  font-weight: bold;
+  padding: 8px 20px;
+  border: none !important;
+  border-radius: 10%;
+}
+
+.bg_login:hover {
+  background: white !important;
+  color: #f31559 !important;
+}
+
+.nav_text .nav_text_change.active {
+  color: #f31559 !important;
+}
+
+.navbar_main {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+}
+
+.profile_name {
+  font-size: 17px;
+  font-weight: bold;
+}
