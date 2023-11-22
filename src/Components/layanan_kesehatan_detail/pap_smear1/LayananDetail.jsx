@@ -2,7 +2,6 @@ import { Tab, Container, Row, Col, Button, Form, Nav } from 'react-bootstrap';
 import klinik1 from '../../../assets/img/place1.png';
 import klinik2 from '../../../assets/img/place2.png';
 import klinik3 from '../../../assets/img/place3.png';
-
 import './LayananDetail.css';
 
 const LayananDetail = () => {

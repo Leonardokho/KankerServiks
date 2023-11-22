@@ -1,4 +1,3 @@
-// import React from 'react';
 import '../landing_page/header_landingpage/Header.css';
 import { Container, Row, Col, Button, Card, Stack } from 'react-bootstrap';
 import femaleDoctorImage from '../../assets/img/female-doctor.png';
@@ -10,12 +9,13 @@ import HpvIcon from '../../assets/img/hpv-icon.svg';
 import KlinikAnNisa from '../../assets/img/faskes/klinik-penyakit-kelamin.svg';
 import MedikaKedua from '../../assets/img/faskes/rs-medika-kedua.svg';
 import PuskesmasSambas from '../../assets/img/faskes/puskesmas-desa-sambas.svg';
+import { useNavigate } from 'react-router-dom';
 
 const LayananKesehatan = () => {
+  const linkDetailLayananKesehatan = useNavigate();
   return (
     <>
       <NavbarHome />
-
       <div className="h_main_header">
         <Container>
           <Row className="mt-5 py-5">
@@ -28,7 +28,7 @@ const LayananKesehatan = () => {
                   <h5 style={{ color: '#061D4A' }}>Skrining dan Vaksinasi HPV Anda di Sini!</h5>
                 </div>
                 <Col className="mt-2">
-                  <Button className="button_dokter mt-3 mb-4">Mulai Sekarang</Button>
+                  <Button onClick={() => linkDetailLayananKesehatan("/Layanan_Kesehatan_Detail")} className="button_dokter mt-3 mb-4">Mulai Sekarang</Button>
                 </Col>
               </div>
             </Col>
