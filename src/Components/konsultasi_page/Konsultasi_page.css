@@ -4,8 +4,6 @@
   --primary: #f31559;
   --teks-primary: #061d4a;
 }
-body {
-}
 
 .bg-boxs {
   display: flex;
@@ -13,8 +11,6 @@ body {
   background: linear-gradient(0deg, #fbe5e5 0%, rgba(255, 255, 255, 0) 114.56%);
 }
 
-.boxs {
-}
 .judul-title {
   color: #000;
   font-family: Montserrat;
