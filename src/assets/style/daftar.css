@@ -1,14 +1,15 @@
 /* Gaya CSS kustom di sini */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap');
 :root {
   /* --merah: #C70039; */
-  --primary: #F31559;
-  --white: #FFF;
-  --text-primary: #061D4A;
-  --secondary :#FBE5E5;
+  --primary: #f31559;
+  --white: #fff;
+  --text-primary: #061d4a;
+  --secondary: #fbe5e5;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
 }
@@ -35,7 +36,7 @@ body, html {
 }
 
 .box-red {
-  background-color: #F31559;
+  background-color: #f31559;
   color: #fff;
 }
 
@@ -49,12 +50,11 @@ body, html {
   width: 570px;
   height: 570px;
   border-radius: 50%;
-  background: linear-gradient(47deg, #FBE5E5 11.84%, #F31559 113.32%);
+  background: linear-gradient(47deg, #fbe5e5 11.84%, #f31559 113.32%);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative; /* Tambahkan properti position: relative */
- 
 }
 
 .img-dc {
@@ -66,7 +66,7 @@ body, html {
   width: 572px;
   height: 111px;
   border-radius: 10px;
-  background: var(--default, #FFF);
+  background: var(--default, #fff);
   box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.25);
   margin-top: -70px;
   position: absolute; /* Tambahkan properti position: absolute */
@@ -74,13 +74,13 @@ body, html {
   justify-content: center;
   align-items: center;
 }
-.card-title > p{
+.card-title > p {
   color: var(--primary);
-font-family: Montserrat;
-font-size: 48px;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 
 .card-2 {
@@ -88,29 +88,26 @@ line-height: normal;
   border-radius: 15px;
   width: 570px;
   height: 664px;
-  
 }
 
-.teks-title-judul{
-color: var(--text-primary);
-font-family: Montserrat;
-font-size: 35px;
-font-weight: 700;
-
-
+.teks-title-judul {
+  color: var(--text-primary);
+  font-family: Montserrat;
+  font-size: 35px;
+  font-weight: 700;
 }
 
-.teks-title{
-color: #000;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+.teks-title {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .hr {
-  border: 1px solid #061D4A; /* Sesuaikan lebar dengan kebutuhan Anda */
+  border: 1px solid #061d4a; /* Sesuaikan lebar dengan kebutuhan Anda */
 }
 
 .custom-input {
@@ -118,114 +115,110 @@ line-height: normal;
   /* background-color: rgb(72, 134, 134); */
 }
 
-.custom-input{
- border-radius: 10px;
-border: 1px solid var(--primary) !important;
-background: var(--secondary, #FBE5E5) !important;
+.custom-input {
+  border-radius: 10px;
+  border: 1px solid var(--primary) !important;
+  background: var(--secondary, #fbe5e5) !important;
 }
 .custom-input:focus {
-border: 1px solid var(--primary)!important;
-    box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25)!important;
+  border: 1px solid var(--primary) !important;
+  box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25) !important;
 }
 
-.texs-persetujuan{
+.texs-persetujuan {
   color: #000;
-text-align: center;
-font-family: Montserrat;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-margin-left: 68px; /* Ganti nilai sesuai yang diinginkan */
-margin-right: 68px; /* Ganti nilai sesuai yang diinginkan */
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 68px; /* Ganti nilai sesuai yang diinginkan */
+  margin-right: 68px; /* Ganti nilai sesuai yang diinginkan */
 }
-.card-2 .costum-button{
-width: 100%;
-height: 50px;
-border-radius: 10px;
-border: 1px solid var(--primary);
-background-color: var(--primary);
+.card-2 .costum-button {
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
 
-color: var(--white);
-font-family: Montserrat ;
-font-size: 25px;
-font-style: normal;
-font-weight: 600;
+  color: var(--white);
+  font-family: Montserrat;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
 }
 
-.costum-button:hover{
-background-color: rgb(184, 10, 62)!important;
+.costum-button:hover {
+  background-color: rgb(184, 10, 62) !important;
 }
 
 .card-2 .costum-button:active {
   background-color: var(--primary) !important;
-
 }
-.row-line{
-   display: flex;
+.row-line {
+  display: flex;
   flex-direction: row;
   gap: 20px;
 }
-.line-1{
- 
+.line-1 {
   background-color: #747272;
   width: 250px;
   height: 1px;
 }
-.atau{
+.atau {
   color: #747272;
-font-family: Montserrat;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-margin-top: -10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: -10px;
 }
 
 .card-2 .costum-button-google {
-width: 100%;
-height: 50px;
-border-radius: 10px;
-border: 1px solid var(--primary);
-background-color: var(--secondary);
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  border: 1px solid var(--primary);
+  background-color: var(--secondary);
 
-color: var(--primary);
-font-family: Montserrat;
-font-size: 25px ;
-font-style: normal;
-font-weight: 600;
+  color: var(--primary);
+  font-family: Montserrat;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
 }
 
-
-
-.costum-button-google:hover{
-background-color: rgb(184, 10, 62)!important;
-transition: 1s;
-color: var(--white);
+.costum-button-google:hover {
+  background-color: rgb(184, 10, 62) !important;
+  transition: 1s;
+  color: var(--white);
 }
 
 .card-2 .costum-button-google:active {
   background-color: var(--primary) !important;
 }
 
-.img-google{
+.img-google {
   width: 40px;
-height: 40px;
-margin-top: -4px;
+  height: 40px;
+  margin-top: -4px;
 }
 
-.teks-login-daftar{
-color: #000;
-text-align: center;
-font-family: Montserrat;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-margin-left: 68px; /* Ganti nilai sesuai yang diinginkan */
-margin-right: 68px; /* Ganti nilai sesuai yang diinginkan */
+.teks-login-daftar {
+  color: #000;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  margin-left: 68px; /* Ganti nilai sesuai yang diinginkan */
+  margin-right: 68px; /* Ganti nilai sesuai yang diinginkan */
 }
-.teks-login-daftar > a{
-color: #00B8E0;
+.teks-login-daftar > a {
+  color: #00b8e0;
 }
 
-.teks-login-daftar > a:hover{
-color: var(--primary);
+.teks-login-daftar > a:hover {
+  color: var(--primary);
 }

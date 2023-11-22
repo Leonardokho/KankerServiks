@@ -6,9 +6,9 @@ import Footer from '../landing_page/footer/Footer';
 import PapSmearIcon from '../../assets/img/pap-smear-icon.svg';
 import IvaTestIcon from '../../assets/img/iva-test-icon.svg';
 import HpvIcon from '../../assets/img/hpv-icon.svg';
-import KlinikAnNisa from '../../assets/img/faskes/klinik-penyakit-kelamin.svg';
-import MedikaKedua from '../../assets/img/faskes/rs-medika-kedua.svg';
-import PuskesmasSambas from '../../assets/img/faskes/puskesmas-desa-sambas.svg';
+import KlinikAnNisa from '../../assets/img/faskes/faskes1.png';
+import MedikaKedua from '../../assets/img/faskes/faskes2.png';
+import PuskesmasSambas from '../../assets/img/faskes/faskes3.png';
 import { useNavigate } from 'react-router-dom';
 
 const LayananKesehatan = () => {
@@ -28,7 +28,9 @@ const LayananKesehatan = () => {
                   <h5 style={{ color: '#061D4A' }}>Skrining dan Vaksinasi HPV Anda di Sini!</h5>
                 </div>
                 <Col className="mt-2">
-                  <Button onClick={() => linkDetailLayananKesehatan("/Layanan_Kesehatan_Detail")} className="button_dokter mt-3 mb-4">Mulai Sekarang</Button>
+                  <Button onClick={() => linkDetailLayananKesehatan('/Layanan_Kesehatan_Detail')} className="button_dokter mt-3 mb-4">
+                    Mulai Sekarang
+                  </Button>
                 </Col>
               </div>
             </Col>
@@ -48,33 +50,35 @@ const LayananKesehatan = () => {
             <h1>Layanan Kesehatan Kami</h1>
             <h5 className="text-center fw-normal">Pilih layanan kesehatan sesuai kebutuhan anda!</h5>
           </div>
-          <Col md={4}>
-            <Card style={{ width: '18rem' }} className="pt-4 pb-2 px-3">
-              <Card.Img variant="left" src={PapSmearIcon} style={{ width: '72px' }} />
-              <Card.Body>
-                <p className="fw-bolder fs-4">Pap Smear</p>
-                <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>metode pemeriksaan yang dilakukan untuk mendeteksi kanker leher rahim (serviks) pada wanita</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card style={{ width: '18rem', backgroundColor: '#F31559' }} className="pt-4 pb-2 px-3 text-white">
-              <Card.Img variant="left" src={IvaTestIcon} style={{ width: '72px' }} />
-              <Card.Body>
-                <p className="fw-bolder fs-4">IVA test</p>
-                <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>Pemeriksaan visual leher rahim dengan asam asetat encer tanpa alat pembesar.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col md={4}>
-            <Card style={{ width: '18rem' }} className="pt-4 pb-2 px-3">
-              <Card.Img variant="left" src={HpvIcon} style={{ width: '72px' }} />
-              <Card.Body>
-                <p className="fw-bolder fs-4">Vaksinasi HPV</p>
-                <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
+          <Row className="mx-5 mt-4">
+            <Col md={4}>
+              <Card style={{ width: '18rem' }} className="pt-4 pb-2 px-3">
+                <Card.Img variant="left" src={PapSmearIcon} style={{ width: '72px' }} />
+                <Card.Body>
+                  <p className="fw-bolder fs-4">Pap Smear</p>
+                  <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>metode pemeriksaan yang dilakukan untuk mendeteksi kanker leher rahim (serviks) pada wanita</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card style={{ width: '18rem', backgroundColor: '#F31559' }} className="pt-4 pb-2 px-3 text-white">
+                <Card.Img variant="left" src={IvaTestIcon} style={{ width: '72px' }} />
+                <Card.Body>
+                  <p className="fw-bolder fs-4">IVA test</p>
+                  <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>Pemeriksaan visual leher rahim dengan asam asetat encer tanpa alat pembesar.</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card style={{ width: '18rem' }} className="pt-4 pb-2 px-3">
+                <Card.Img variant="left" src={HpvIcon} style={{ width: '72px' }} />
+                <Card.Body>
+                  <p className="fw-bolder fs-4">Vaksinasi HPV</p>
+                  <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</Card.Text>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Row>
       </Container>
 
