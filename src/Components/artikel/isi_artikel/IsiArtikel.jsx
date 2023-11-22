@@ -1,4 +1,4 @@
-import { Button, Col, Container, Image, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row, Card } from 'react-bootstrap';
 import './IsiArtikel.css';
 import image4 from '../../../assets/img/image 4.jpg';
 import image1 from '../../../assets/img/image1.png';
@@ -14,6 +14,7 @@ import image7 from '../../../assets/img/image 7.png';
 import image8 from '../../../assets/img/image 8.png';
 import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
+// import { useNavigate } from 'react-router-dom';
 
 const IsiArtikel = () => {
   const artikel = [
@@ -67,34 +68,38 @@ const IsiArtikel = () => {
   const topik = [
     {
       id: 1,
-      name: 'Macam-Macam Kanker',
+      name: 'Pencegahan Kanker Serviks',
     },
     {
       id: 2,
-      name: 'Tes Skrining',
+      name: 'Tentang Tes Skrinning',
     },
     {
       id: 3,
-      name: 'Dampak Kanker',
+      name: 'Tentang Tes HPV',
+    },
+    {
+      id: 4,
+      name: 'Bahaya Kanker Serviks',
     },
   ];
 
+  // const numberOfPicture = [1, 2, 3, 4, 5, 6];
+
   return (
     <div>
+      <div className="bg-boxs-2"></div>
       <Container>
         <Row>
-          <div className="d-flex justify-content-between my-3">
+          <div className=" my-3">
             <h4 className="">Topik Terkini</h4>
-            <a href="" className="topik_link">
-              Lihat Semua
-            </a>
           </div>
           <Col>
             <div className="container_topik">
               <Row>
                 {topik.map((t) => (
-                  <Col md={4} className="card-ceritakan" key={t.id}>
-                    <Button className="button_dokter mt-3 mb-4">{t.name}</Button>
+                  <Col md={3} key={t.id}>
+                    <Button className="button_dokter">{t.name}</Button>
                   </Col>
                 ))}
                 {/* <Col md={4}>
@@ -117,10 +122,7 @@ const IsiArtikel = () => {
           </Col>
         </Row>
 
-        <Row>
-          <div className="d-flex justify-content-between my-5">
-            <h4 className="">Artikel Terpopuler</h4>
-          </div>
+        <Row className="mt-5">
           <Col md={6}>
             <img src={image4} alt="" />
           </Col>
@@ -174,25 +176,31 @@ const IsiArtikel = () => {
           </Col>
         </Row>
 
-        <Row>
-          <div className="d-flex justify-content-between my-5">
-            <h4 className="">Artikel Terbaru</h4>
+        <Row className="my-5">
+          <div className="d-flex justify-content-center">
+            <Col>
+              <h4 className="title-deskripsi">100++ ARTIKEL PENCEGAHAN</h4>
+              <h4 className="title-deskripsi">KANKER SERVIKS</h4>
+            </Col>
           </div>
         </Row>
         <Row className="artikel_terbaru">
           {artikel.map((art) => (
-            <Col md={3} className="holder" key={art.id}>
-              {/* <div className="image"> */}
-              <Image src={art.img} className="image" alt="image" />
-              {/* </div> */}
-              {/* <div className="content"> */}
-              <p className="content">{art.desc}</p>
-              {/* </div> */}
+            <Col key={art.id} md={4} className="mb-5 holder">
+              <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
+                <img src={art.img} alt="" className="image_artikel" />
+                <Card.Body className="p-3">
+                  <h5>{art.desc}</h5>
+                  <Card.Link className="d-flex justify-content-end mt-4 linkArtikel">
+                    Baca selengkapnya...
+                  </Card.Link>
+                </Card.Body>
+              </div>
             </Col>
           ))}
         </Row>
         <Col className="card-ceritakan mb-5">
-          <Button className="button_dokter mt-3 mb-4"> Selanjutnya</Button>
+          <Button className="button_dokter mt-3 mb-4"> Lebih Banyak</Button>
         </Col>
       </Container>
     </div>

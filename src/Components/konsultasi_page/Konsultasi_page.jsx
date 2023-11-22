@@ -9,6 +9,7 @@ import dokterdua from "../../assets/img/woman-doctor-wearing-lab-coat-with-steth
 import doktertiga from "../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png";
 import './Konsultasi_page.css'
 import {useRef} from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Konsultasi_page = () => {
 
@@ -20,7 +21,7 @@ const Konsultasi_page = () => {
       behavior: "smooth",
     });
   }
-
+const hal_data_page = useNavigate();
   return (
     <div>
       <NavbarHome />
@@ -32,7 +33,10 @@ const Konsultasi_page = () => {
                 Komunikasi Langsung dengan Dokter <img className="logo-cervicare" src={ccLogo1} alt="" />
               </h1>
               <p className="  boxs-layanan">Layanan live chat yang siap membantu anda dalam mendapatkan informasi pencegahan dini Kanker Serviks dengan lebih mendalam bersama ahlinya.</p>
-              <Button className="button_mulai" onClick={() => goto(linkRef.current)}> Mulai Sekarang</Button>
+              <Button className="button_mulai" onClick={() => goto(linkRef.current)}>
+                {" "}
+                Mulai Sekarang
+              </Button>
             </Col>
           </Row>
 
@@ -58,7 +62,9 @@ const Konsultasi_page = () => {
           </Col>
 
           <Col md={7} className="mt-4">
-            <h1 className="title-merah mt-5" ref={linkRef}>Berbagai Pilihan dokter spesialis</h1>
+            <h1 className="title-merah mt-5" ref={linkRef}>
+              Berbagai Pilihan dokter spesialis
+            </h1>
           </Col>
           <Col md={12}>
             <p className="title-deskripsi">Konsultasikan Masalah dengan Dokter Pilihanmu</p>
@@ -71,7 +77,7 @@ const Konsultasi_page = () => {
                   <img className="mt-4 foto-img" src={doktersatu} alt="" />
                 </div>
                 <h3>
-                  <a className="name-docter mt-3" href="#">
+                  <a className="name-docter mt-3" href="#" onClick={() => hal_data_page("/halaman_konsultasi_data_page")}>
                     Dr. Shofiyyah Kamilah
                   </a>
                 </h3>
@@ -160,7 +166,7 @@ const Konsultasi_page = () => {
         </Row>
       </Container>
       {/* ////// */}
-      <Footer/>
+      <Footer />
     </div>
   );
 }

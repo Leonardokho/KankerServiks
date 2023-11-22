@@ -1,6 +1,5 @@
 .container_topik {
   height: 50px;
-  width: 800px;
 }
 
 .container_artikel {
@@ -30,24 +29,17 @@
 
 .shadow_artikel {
   border-radius: 10px;
-  box-shadow: 5px 5px 5px 0px rgba(134, 134, 134, 0.5);
+  box-shadow: 10px 10px 15px 0px rgba(134, 134, 134, 0.5);
 }
 
-.image {
-  height: 150px;
+.image_artikel {
+  height: 220px;
   width: 100%;
-  margin-top: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 .holder {
-  height: 250px;
-  margin: 50px;
-  /* background: red; */
-  border-width: 1px;
   border-radius: 20px;
-  border-style: solid;
-  border-color: red;
 }
 
 .content {

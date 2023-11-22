@@ -1,16 +1,17 @@
 // import {Container , Navbar, Nav} from "react-bootstrap"
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from 'react-bootstrap';
 
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
-import ccLogo1 from "../../assets/img/cc-logo1.png";
-import imgdoctor from "../../assets/img/3dokter.png";
-import imggoogle from "../../assets/img/google.png";
-import "../../assets/style/login.css";
-import { useNavigate } from "react-router-dom";
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+import ccLogo1 from '../../assets/img/cc-logo1.png';
+import imgdoctor from '../../assets/img/3dokter.png';
+import imggoogle from '../../assets/img/google.png';
+import '../../assets/style/login.css';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  const linkDaftar= useNavigate();
+  const linkDaftar = useNavigate();
+  const linkLandingPage = useNavigate();
   return (
     <>
       <Container fluid>
@@ -44,7 +45,9 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3 mx-4 ">
-                  <Button className="costum-button ">Masuk</Button>
+                  <Button onClick={() => linkLandingPage('/')} className="costum-button ">
+                    Masuk
+                  </Button>
                 </Form.Group>
                 <div className="mt-4 mx-4 row-line">
                   <div className=" line-1"></div>
@@ -58,12 +61,18 @@ const Login = () => {
                   </Button>
                 </Form.Group>
               </Form>
-              <p className="teks-login-daftar">
-                Belum punya akun?<a onClick={()=> linkDaftar ('/daftar')} href="" >  Daftar sekarang</a>
-              </p>
-              <p className="teks-login-daftar">
-                Lupa password?<a href=""> Reset password sekarang</a>
-              </p>
+              <div className="box-daftar">
+                <p className="teks-login-daftar">
+                  Belum punya akun?
+                  <a onClick={() => linkDaftar('/daftar')} href="">
+                    {' '}
+                    Daftar sekarang
+                  </a>
+                </p>
+                <p className="teks-login-daftar">
+                  Lupa password?<a href=""> Reset password sekarang</a>
+                </p>
+              </div>
             </div>
           </Col>
         </Row>
