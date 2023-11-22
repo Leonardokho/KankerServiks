@@ -49,7 +49,7 @@ const Daftar = () => {
                 <p className="texs-persetujuan">Dengan mendaftar Saya telah membaca dan menyetujui Aturan Penggunaan dan Kebijakan Privasi Cervicare</p>
 
                 <Form.Group className="mb-3 mx-4 ">
-                  <Button className="costum-button ">Daftar</Button>
+                  <Button onClick={() => linkLogin("/login")} className="costum-button ">Daftar</Button>
                 </Form.Group>
                 <div className="mt-4 mx-4 row-line">
                   <div className=" line-1"></div>

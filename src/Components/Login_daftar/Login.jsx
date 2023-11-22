@@ -10,7 +10,8 @@ import "../../assets/style/login.css";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const linkDaftar= useNavigate();
+  const linkDaftar = useNavigate();
+  const linkLandingPage = useNavigate();
   return (
     <>
       <Container fluid>
@@ -44,7 +45,7 @@ const Login = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3 mx-4 ">
-                  <Button className="costum-button ">Masuk</Button>
+                  <Button onClick={() => linkLandingPage('/')} className="costum-button ">Masuk</Button>
                 </Form.Group>
                 <div className="mt-4 mx-4 row-line">
                   <div className=" line-1"></div>

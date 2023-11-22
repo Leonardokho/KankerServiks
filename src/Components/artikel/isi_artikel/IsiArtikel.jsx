@@ -14,7 +14,7 @@ import image7 from '../../../assets/img/image 7.png';
 import image8 from '../../../assets/img/image 8.png';
 import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const IsiArtikel = () => {
   const artikel = [

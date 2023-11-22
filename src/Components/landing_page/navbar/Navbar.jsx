@@ -18,7 +18,7 @@ const NavbarHome = () => {
     <div className='navbar_main'>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand href="/">
             <img src={logo} alt="logoaplikasi" style={{ width: "100%", height: "100%", objectFit: 'cover' }} />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -29,7 +29,7 @@ const NavbarHome = () => {
               <Nav.Link href="" onClick={() => linkLayananKesehatan("/Layanan_Kesehatan")} className='text-secondary fw-bold nav_text_change'>Layanan Kesehatan</Nav.Link>
               <Nav.Link href="" onClick={() => linkArtikelPage("/Halaman_Artikel")} className='text-secondary fw-bold nav_text_change'>Artikel</Nav.Link>
               <Nav.Link href="" onClick={() => linkLogin("/Masuk")} className='text-black fw-bold nav_text_change'>Masuk</Nav.Link>
-              <Nav.Link href="#home" className='text-white fw-bold text-decoration-none'>
+              <Nav.Link href="" className='text-white fw-bold text-decoration-none'>
                 <Button onClick={() => linkDaftar('/Daftar')} className='bg_login'>Daftar</Button>
               </Nav.Link>
             </Nav>
