@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap');
+
+.bg_tabs{
+    background: #F31559;
+}
+
+.nav_pill .nav_item .nav_link.active{
+    background: #F31559 !important;
+    color: white !important;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.nav_pill .nav_item .nav_link{
+    color: #F31559 !important;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.layanan_detail_header {
+  display: flex;
+}
+
+.header_layanan {
+  font-family: Montserrat;
+}
+
+.lokasi_container {
+  padding: 1em;
+  width: 350px;
+  height: 350px;
+  border-radius: 20px;
+  border: 2px solid #a9a9a9;
+}
+
+.container_lokasi {
+  border-bottom: 2px solid #a9a9a9;
+}
+
+.location_dot {
+  color: #f31559;
+}
+
+.text_lokasi {
+  font-family: Montserrat;
+}
+
+.link_detail {
+  color: #f31559;
+  font-size: 15px;
+}
+
+.container_klinik {
+  width: 100%;
+  height: 200px;
+  border-radius: 20px;
+  border: 2px solid #a9a9a9;
+  padding: 1em;
+  margin-bottom: 20px;
+}
+
+.image_klinik {
+  width: 200px;
+  height: 160px;
+}
+
+.name_klinik{
+    font-family: Montserrat;
+    font-size: 25px;
+}
+
+.jenis_klinik{
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #4b4a4a
+}
+
+.lokasi_klinik{
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #4b4a4a
+}
