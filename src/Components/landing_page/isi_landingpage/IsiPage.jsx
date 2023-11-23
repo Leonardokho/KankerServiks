@@ -69,7 +69,7 @@ const IsiPage = () => {
               <h1>Ada dua jenis layanan skrining test yang kami sediakan, yaitu pap smear dan IVA test</h1>
             </div>
           </Col>
-          <Col md={4} >
+          <Col md={4}>
             <div className="boxContainer d-flex justify-content-center align-items-center">
               <div className="supportImg">
                 <img src={support} alt="support" className="image_support" />
@@ -166,55 +166,54 @@ const IsiPage = () => {
         <div className="desc_services mt-3 mb-5">
           <h1>Apa Kata Mereka Tentang Kita</h1>
         </div>
-
-        <Row className="row_review">
-          <Col md={6} className="image_review_left">
-            <div className="square ">
-              <img src={feedbackimage} alt="image" className="mx-5" />
-            </div>
-          </Col>
-
-          <Col md={6} className="my-5">
-            <Slider {...settings}>
-              {data.map((d) => (
-                <div key={d.id} style={{ width: '35rem', height: '25rem' }} className="rounded-5 border-1">
-                  <div className="reviewCard">
-                    <Row>
-                      <div className="d-flex align-items-center">
-                        <img src={d.img} className="reviewImg" />
-                        <Col className="mx-5">
-                          <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
-                          <Card.Text style={{ textAlign: 'start' }}>{d.job}</Card.Text>
-                          <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="d-flex justify-content-start align-items-start">
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starrBlack"></i>
-                            </small>
-                          </Card.Text>
-                        </Col>
-                      </div>
-                      <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="my-4">
-                        {d.review}
-                      </Card.Text>
-                    </Row>
-                  </div>
+      </Container>
+      <Row className="row_review">
+        <Col md={6} className="image_review_left">
+          <div className="square ">
+            <img src={feedbackimage} alt="image" className="image_review" />
+          </div>
+        </Col>
+        <Col md={6} className="my-5">
+          <Slider {...settings}>
+            {data.map((d) => (
+              <div key={d.id} style={{ width: '35rem', height: '25rem' }} className="rounded-5 border-1">
+                <div className="reviewCard">
+                  <Row>
+                    <div className="d-flex align-items-center">
+                      <img src={d.img} className="reviewImg" />
+                      <Col className="mx-5">
+                        <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
+                        <Card.Text style={{ textAlign: 'start' }}>{d.job}</Card.Text>
+                        <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="d-flex justify-content-start align-items-start">
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starrBlack"></i>
+                          </small>
+                        </Card.Text>
+                      </Col>
+                    </div>
+                    <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="my-4">
+                      {d.review}
+                    </Card.Text>
+                  </Row>
                 </div>
-              ))}
-            </Slider>
-          </Col>
-        </Row>
-
+              </div>
+            ))}
+          </Slider>
+        </Col>
+      </Row>
+      <Container>
         <div className="d-flex justify-content-between my-5">
           <h1 className="title_artikel">Baca 100+ Artikel Kesehatan</h1>
           <a className="linkArtikel">Lihat Semua</a>

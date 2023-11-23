@@ -67,6 +67,10 @@
   transform: translateY(450px);
 }
 
+.image_review{
+  transform: translateX(-200px);
+}
+
 .reviewImg {
   border-radius: 5%;
   width: 200px;
