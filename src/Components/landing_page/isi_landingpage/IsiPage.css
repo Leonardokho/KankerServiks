@@ -63,6 +63,13 @@
   align-items: end;
 }
 
+.carousel_card{
+  height: 400px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 20px 5px rgba(134, 134, 134, 0.5);
+}
+
 .image_review_left{
   transform: translateY(450px);
 }
@@ -73,8 +80,8 @@
 
 .reviewImg {
   border-radius: 5%;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
 }
 
 .reviewCard {

@@ -18,8 +18,33 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const IsiPage = () => {
+  const data = [
+    {
+      id: 1,
+      name: 'Nadia Syakira',
+      job: 'mahasiswa',
+      img: reviewSatu,
+      review:
+        '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
+    },
+    {
+      id: 2,
+      name: 'Susi Susanti',
+      job: 'ibu rumah tangga',
+      img: reviewDua,
+      review: '"Sangat membantu saya dalam menangani masalah kanker serviks"',
+    },
+  ];
+
+  function NextArrow(props) {
+    const {style, onClick} = props;
+    return (
+      <div style={{...style, display:"block", background: 'red'}} onClick={onClick}></div>
+    )
+  }
+
   const settings = {
-    dots: true,
+    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -173,18 +198,19 @@ const IsiPage = () => {
             <img src={feedbackimage} alt="image" className="image_review" />
           </div>
         </Col>
-        <Col md={6} className="my-5">
+        <Col md={5} className="my-5 mx-5">
           <Slider {...settings}>
             {data.map((d) => (
-              <div key={d.id} style={{ width: '35rem', height: '25rem' }} className="rounded-5 border-1">
+              <div key={d.id} className='p-4' >
+              <div  className="carousel_card">
                 <div className="reviewCard">
                   <Row>
                     <div className="d-flex align-items-center">
                       <img src={d.img} className="reviewImg" />
                       <Col className="mx-5">
                         <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
-                        <Card.Text style={{ textAlign: 'start' }}>{d.job}</Card.Text>
-                        <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="d-flex justify-content-start align-items-start">
+                        <Card.Text style={{ textAlign: 'start', fontFamily:'Montserrat' }}>{d.job}</Card.Text>
+                        <Card.Text style={{ fontSize: '15px', textAlign: 'start', fontFamily:'Montserrat' }} className="d-flex justify-content-start align-items-start">
                           <small>
                             <i className="fa-solid fa-star starr"></i>
                           </small>
@@ -203,11 +229,12 @@ const IsiPage = () => {
                         </Card.Text>
                       </Col>
                     </div>
-                    <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="my-4">
+                    <Card.Text style={{ fontSize: '18px', textAlign: 'start', fontFamily: 'Montserrat' }} className="my-4">
                       {d.review}
                     </Card.Text>
                   </Row>
                 </div>
+              </div>
               </div>
             ))}
           </Slider>
@@ -259,22 +286,6 @@ const IsiPage = () => {
   );
 };
 
-const data = [
-  {
-    id: 1,
-    name: 'Nadia Syakira',
-    job: 'mahasiswa',
-    img: reviewSatu,
-    review:
-      '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
-  },
-  {
-    id: 2,
-    name: 'Susi Susanti',
-    job: 'ibu rumah tangga',
-    img: reviewDua,
-    review: '"Sangat membantu saya dalam menangani masalah kanker serviks"',
-  },
-];
+
 
 export default IsiPage;
