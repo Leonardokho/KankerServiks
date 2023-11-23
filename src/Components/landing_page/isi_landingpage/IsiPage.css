@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap");
+
 .supportImg {
   background: #fbe5e5;
   border-radius: 100%;
@@ -27,9 +29,10 @@
 }
 
 .desc_services h1 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 600;
   text-align: center;
+  font-family: Montserrat;
 }
 
 .dokterImg {
@@ -54,9 +57,14 @@
   height: 120px;
   width: 100%;
   background: #f31559;
-  /* display: flex; */
-  /* justify-content: flex-end;  */
-  align-items: flex-end;
+  transform: translateY(-100px);
+  display: flex;
+  justify-content: end; 
+  align-items: end;
+}
+
+.image_review_left{
+  transform: translateY(450px);
 }
 
 .reviewImg {
@@ -72,6 +80,7 @@
 .title_artikel {
   color: #061d4a;
   font-weight: 600;
+  font-family: Montserrat;
 }
 
 .shadow_card {
@@ -80,7 +89,7 @@
 
 .shadow_box {
   background: white;
-  box-shadow: 5px 5px 15px 5px rgba(134, 134, 134, 0.5);
+  box-shadow: 13px 4px 20px 1px rgba(134, 134, 134, 0.5);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   margin-left: 90px;
@@ -96,6 +105,7 @@
 
 .linkArtikel {
   color: #061d4a;
+  font-family: Montserrat;
 }
 
 .title_box {
@@ -112,4 +122,9 @@
   border-radius: 10px;
   border: none !important;
   background: var(--primary) !important;
+}
+
+.image_support{
+  width: 55px;
+  height: 55px;
 }

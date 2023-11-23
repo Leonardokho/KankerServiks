@@ -12,7 +12,7 @@ import artikelImgSatu from '../../../assets/img/white-awareness-ribbon-two-hands
 import artikelImgDua from '../../../assets/img/doctor-vaccinating-patient-clinic.png';
 import artikelImgTiga from '../../../assets/img/close-up-hand-with-food-container 1.png';
 import reviewSatu from '../../../assets/img/reviewImg.png';
-import reviewDua from '../../../assets/img/ibu-rumah-tangga.jpg';
+import reviewDua from '../../../assets/img/reviewdua.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -63,16 +63,16 @@ const IsiPage = () => {
               </div>
             </div>
             <div className="box_title mt-3">
-              <h1>Layanan Kesehatan</h1>
+              <h1>Skrining Test </h1>
             </div>
             <div className="box_desc">
-              <h1>Ada dua jenis layanan yang kami berikan, yaitu vaksinasi HPV dan skrining rutin.</h1>
+              <h1>Ada dua jenis layanan skrining test yang kami sediakan, yaitu pap smear dan IVA test</h1>
             </div>
           </Col>
-          <Col md={4}>
+          <Col md={4} >
             <div className="boxContainer d-flex justify-content-center align-items-center">
-              <div className="supportImg mt-2">
-                <img src={support} alt="support" className="" />
+              <div className="supportImg">
+                <img src={support} alt="support" className="image_support" />
               </div>
             </div>
             <div className="box_title mt-3">
@@ -89,10 +89,10 @@ const IsiPage = () => {
               </div>
             </div>
             <div className="box_title mt-3">
-              <h1>Tanya Kami</h1>
+              <h1>Vaksinasi HPV</h1>
             </div>
             <div className="box_desc">
-              <h1>Tanya kami merpakan sebuah fitur chatbot yang dapat digunakan oleh user secara gratis.</h1>
+              <h1>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</h1>
             </div>
           </Col>
         </Row>
@@ -167,19 +167,17 @@ const IsiPage = () => {
           <h1>Apa Kata Mereka Tentang Kita</h1>
         </div>
 
-        <Row>
-          <Col md={6}>
-            <Row>
-              <div className="square">
-                <img src={feedbackimage} alt="image" className="" />
-              </div>
-            </Row>
+        <Row className="row_review">
+          <Col md={6} className="image_review_left">
+            <div className="square ">
+              <img src={feedbackimage} alt="image" className="mx-5" />
+            </div>
           </Col>
 
           <Col md={6} className="my-5">
             <Slider {...settings}>
               {data.map((d) => (
-                <div key={d.id} style={{ width: '35rem', height: '25rem'}} className="rounded-5 border-1">
+                <div key={d.id} style={{ width: '35rem', height: '25rem' }} className="rounded-5 border-1">
                   <div className="reviewCard">
                     <Row>
                       <div className="d-flex align-items-center">
@@ -219,7 +217,7 @@ const IsiPage = () => {
 
         <div className="d-flex justify-content-between my-5">
           <h1 className="title_artikel">Baca 100+ Artikel Kesehatan</h1>
-          <Button className="button_dokter">Lihat Semua</Button>
+          <a className="linkArtikel">Lihat Semua</a>
         </div>
 
         <Row className="my-5">

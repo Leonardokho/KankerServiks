@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap");
+
+.image_layanan{
+    transform: translateY(48px);
+}
+
+.header_bg_layanan{
+    display: flex;
+    background: #FBE5E5;
+    background: linear-gradient(29deg, #FBF2E5, #FBE5E5);
+}
+
+.card_layanan{
+    border-radius: 20px;
+}
+
+.title_faskes{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 45px;
+}
+
+.desc_faskes{
+    font-family: Montserrat;
+    font-size: 20px;
+}
+
+.card_faskes {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 10px 10px 15px 1px rgba(134, 134, 134, 0.5);
+
+}
