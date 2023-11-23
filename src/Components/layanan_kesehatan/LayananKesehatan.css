@@ -10,9 +10,6 @@
     background: linear-gradient(29deg, #FBF2E5, #FBE5E5);
 }
 
-.card_layanan{
-    border-radius: 20px;
-}
 
 .title_faskes{
     font-family: Montserrat;
@@ -26,8 +23,6 @@
 }
 
 .card_faskes {
-    border-radius: 15px;
     border: none;
     box-shadow: 10px 10px 15px 1px rgba(134, 134, 134, 0.5);
-
 }

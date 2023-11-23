@@ -57,7 +57,7 @@ const LayananKesehatan = () => {
 
         <Row className="mt-4 p-5 mx-5">
           <Col>
-            <Card style={{ width: '20rem', height: '20rem' }} className="p-3 card_layanan shadow-none border-2">
+            <Card style={{ width: '20rem', height: '20rem' }} className="p-3 shadow-none border-2 rounded-4">
               <Card.Img className="m-3" variant="left" src={PapSmearIcon} style={{ width: '90px' }} />
               <Card.Body>
                 <p className="fw-bolder fs-4">Pap Smear</p>
@@ -66,7 +66,7 @@ const LayananKesehatan = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '20rem', backgroundColor: '#F31559', height: '20rem' }} className="pt-4 pb-2 px-3 text-white card_layanan shadow-none">
+            <Card style={{ width: '20rem', backgroundColor: '#F31559', height: '20rem' }} className="pt-4 pb-2 px-3 text-white shadow-none rounded-4">
               <Card.Img className="m-3" src={IvaTestIcon} style={{ width: '90px' }} />
               <Card.Body>
                 <p className="fw-bolder fs-4">IVA test</p>
@@ -75,7 +75,7 @@ const LayananKesehatan = () => {
             </Card>
           </Col>
           <Col>
-            <Card style={{ width: '20rem', height: '20rem' }} className="pt-4 pb-2 px-3 card_layanan shadow-none border-2">
+            <Card style={{ width: '20rem', height: '20rem' }} className="pt-4 pb-2 px-3 shadow-none border-2 rounded-4">
               <Card.Img className="m-3" src={HpvIcon} style={{ width: '90px' }} />
               <Card.Body>
                 <p className="fw-bolder fs-4">Vaksinasi HPV</p>
@@ -100,7 +100,7 @@ const LayananKesehatan = () => {
         </Stack>
         <Stack direction="horizontal" className="p-5">
           <div className="p-2">
-            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes">
+            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={PuskesmasSambas} />
               <Card.Body>
                 <h5>Puskesmas Desa Sambas</h5>
@@ -109,7 +109,7 @@ const LayananKesehatan = () => {
             </Card>
           </div>
           <div className="p-2 mx-auto">
-            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes">
+            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={MedikaKedua} />
               <Card.Body>
                 <h5>RS. Medika Kedua</h5>
@@ -118,7 +118,7 @@ const LayananKesehatan = () => {
             </Card>
           </div>
           <div className="p-2">
-            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes">
+            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={KlinikAnNisa} />
               <Card.Body>
                 <h5>Klinik Penyakit Kelamin An-Nisa</h5>
