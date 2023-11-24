@@ -94,7 +94,7 @@ function ModalLogin() {
   return (
     <>
       <Col md={12}>
-        <div className="card-bungkus-image  mt-4  ">
+        <div className="card-bungkus-image mt-4">
           {dokterSpesialis.map((dct) => (
             <div key={dct.id} className="card-image mb-4 " onClick={() => setModalShow(true)}>
               <div className="card-image-bayanan">
