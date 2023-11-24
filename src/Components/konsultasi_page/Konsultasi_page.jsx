@@ -98,7 +98,7 @@ function ModalLogin() {
           {dokterSpesialis.map((dct) => (
             <div key={dct.id} className="card-image mb-4 " onClick={() => setModalShow(true)}>
               <div className="card-image-bayanan">
-                <img className="mt-4 foto-img" src={dct.image} alt="" />
+                <img className="mt-4 foto-img" src={dct.image} alt="gambar" />
               </div>
               <h3>
                 {/* <a className="name-docter mt-3" href="#" onClick={() => hal_data_page('/halaman_konsultasi_data_page')}>

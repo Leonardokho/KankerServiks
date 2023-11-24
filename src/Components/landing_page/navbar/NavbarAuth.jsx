@@ -96,7 +96,7 @@ const NavbarAuth = () => {
               </Nav.Link>
               <div className="d-flex justify-content-center align-items-center mt-2 mx-2">
                 <h1 className="profile_name mx-3">Ratna</h1>
-                <img onClick={() => setOpenProfile((prev) => !prev)} src={profileImage} alt="Profile" />
+                <img onClick={() => setOpenProfile((prev) => !prev)} src={profileImage} alt="Profile" className='profilephoto'/>
               </div>
             </Nav>
           </Navbar.Collapse>

@@ -113,3 +113,7 @@
   border: none !important;
   width: 100px !important;
 }
+
+.profilephoto:hover{
+  cursor: pointer;
+}
