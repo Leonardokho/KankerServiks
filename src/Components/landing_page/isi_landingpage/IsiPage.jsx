@@ -36,15 +36,7 @@ const IsiPage = () => {
     },
   ];
 
-  function NextArrow(props) {
-    const {style, onClick} = props;
-    return (
-      <div style={{...style, display:"block", background: 'red'}} onClick={onClick}></div>
-    )
-  }
-
   const settings = {
-    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -251,7 +243,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgSatu} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h4>7 Tips Mencegah Kanker Serviks</h4>
+                <h5 className='title_art'>7 Tips Mencegah Kanker Serviks</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -262,7 +254,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgDua} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h4>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h4>
+                <h5 className='title_art'>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -273,7 +265,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgTiga} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h4>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h4>
+                <h5 className='title_art'>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>

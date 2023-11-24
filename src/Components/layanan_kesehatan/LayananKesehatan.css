@@ -10,7 +10,6 @@
     background: linear-gradient(29deg, #FBF2E5, #FBE5E5);
 }
 
-
 .title_faskes{
     font-family: Montserrat;
     font-weight: 600;
@@ -25,4 +24,12 @@
 .card_faskes {
     border: none;
     box-shadow: 10px 10px 15px 1px rgba(134, 134, 134, 0.5);
+}
+
+.title_kes{
+    font-family: Montserrat !important;
+}
+
+.desc_kes{
+    font-family: Montserrat !important;
 }

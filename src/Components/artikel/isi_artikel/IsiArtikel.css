@@ -5,9 +5,8 @@
 .container_artikel {
   height: 100%;
   width: 100%;
-  /* background: red; */
   padding-left: 30px;
-  padding-top: 20px;
+  padding-top: 12px;
   padding-right: 150px;
 }
 
@@ -19,12 +18,12 @@
 .bg_topik {
   background: #fbe5e5;
   border-radius: 10px;
-  padding: 3px;
+  padding-top: 5px;
   margin-right: 150px;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  /* display: flex;
-    justify-content: start;
-    align-items: start; */
+  width: 200px;
 }
 
 .shadow_artikel {
@@ -51,4 +50,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.desc_artikel{
+  font-family: Montserrat !important;
 }

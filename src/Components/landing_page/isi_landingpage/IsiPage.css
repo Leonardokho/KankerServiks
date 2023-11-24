@@ -26,6 +26,7 @@
   color: #f31559;
   font-size: 20px;
   text-align: center;
+  font-family: Montserrat;
 }
 
 .desc_services h1 {
@@ -127,12 +128,19 @@
 .desc_box {
   text-align: center;
   font-size: 25px;
+  font-family: Montserrat !important;
 }
 
 .button_dokter {
   border-radius: 10px;
   border: none !important;
   background: var(--primary) !important;
+  font-family: Montserrat !important;
+  font-weight: 500 !important;
+}
+
+.title_art{
+  font-family: Montserrat !important;
 }
 
 .image_support{

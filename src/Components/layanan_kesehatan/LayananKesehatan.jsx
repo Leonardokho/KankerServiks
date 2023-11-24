@@ -26,7 +26,7 @@ const LayananKesehatan = () => {
                   <h1 style={{ color: '#061D4A' }} className="fw-bold">
                     Langkah Awal Melawan Kanker Serviks
                   </h1>
-                  <h5 className="mt-5" style={{ color: '#061D4A' }}>
+                  <h5 className="mt-5" style={{ color: '#061D4A', fontFamily: 'Montserrat' }}>
                     Skrining dan Vaksinasi HPV Anda di Sini!
                   </h5>
                 </div>
@@ -60,8 +60,8 @@ const LayananKesehatan = () => {
             <Card style={{ width: '20rem', height: '20rem' }} className="p-3 shadow-none border-2 rounded-4">
               <Card.Img className="m-3" variant="left" src={PapSmearIcon} style={{ width: '90px' }} />
               <Card.Body>
-                <p className="fw-bolder fs-4">Pap Smear</p>
-                <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>metode pemeriksaan yang dilakukan untuk mendeteksi kanker leher rahim (serviks) pada wanita</Card.Text>
+                <p className="fw-bolder fs-4 title_kes">Pap Smear</p>
+                <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>metode pemeriksaan yang dilakukan untuk mendeteksi kanker leher rahim (serviks) pada wanita</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -69,8 +69,8 @@ const LayananKesehatan = () => {
             <Card style={{ width: '20rem', backgroundColor: '#F31559', height: '20rem' }} className="pt-4 pb-2 px-3 text-white shadow-none rounded-4">
               <Card.Img className="m-3" src={IvaTestIcon} style={{ width: '90px' }} />
               <Card.Body>
-                <p className="fw-bolder fs-4">IVA test</p>
-                <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>Pemeriksaan visual leher rahim dengan asam asetat encer tanpa alat pembesar.</Card.Text>
+                <p className="fw-bolder fs-4 title_kes">IVA test</p>
+                <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>Pemeriksaan visual leher rahim dengan asam asetat encer tanpa alat pembesar.</Card.Text>
               </Card.Body>
             </Card>
           </Col>
@@ -78,8 +78,8 @@ const LayananKesehatan = () => {
             <Card style={{ width: '20rem', height: '20rem' }} className="pt-4 pb-2 px-3 shadow-none border-2 rounded-4">
               <Card.Img className="m-3" src={HpvIcon} style={{ width: '90px' }} />
               <Card.Body>
-                <p className="fw-bolder fs-4">Vaksinasi HPV</p>
-                <Card.Text style={{ textAlign: 'justify', fontSize: '14px' }}>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</Card.Text>
+                <p className="fw-bolder fs-4 title_kes">Vaksinasi HPV</p>
+                <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</Card.Text>
               </Card.Body>
             </Card>
           </Col>

@@ -154,6 +154,8 @@
   border-radius: 10px;
   border: none !important;
   background: var(--primary) !important;
+  font-family: Montserrat !important;
+  font-weight: 500 !important;
 }
 .button-banyak:hover {
   background-color: #e40447 !important;
