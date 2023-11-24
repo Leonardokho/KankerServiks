@@ -5,6 +5,7 @@ import doktersatu from '../../../assets/img/dokter_data_page.png';
 import pria from '../../../assets/img/1.png';
 import wanita from '../../../assets/img/2.png';
 import Footer from '../../landing_page/footer/Footer';
+
 const Konsultasi_data_page = () => {
   const [selectedGender, setSelectedGender] = useState(null);
 

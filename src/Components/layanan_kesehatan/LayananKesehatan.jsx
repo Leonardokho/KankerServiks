@@ -102,7 +102,7 @@ const LayananKesehatan = () => {
           <div className="p-2">
             <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={PuskesmasSambas} />
-              <Card.Body>
+              <Card.Body className='text_fas'>
                 <h5>Puskesmas Desa Sambas</h5>
                 <Card.Text className="text-muted">Puskesmas</Card.Text>
               </Card.Body>
@@ -111,7 +111,7 @@ const LayananKesehatan = () => {
           <div className="p-2 mx-auto">
             <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={MedikaKedua} />
-              <Card.Body>
+              <Card.Body className='text_fas'>
                 <h5>RS. Medika Kedua</h5>
                 <Card.Text className="text-muted">Rumah Sakit</Card.Text>
               </Card.Body>
@@ -120,7 +120,7 @@ const LayananKesehatan = () => {
           <div className="p-2">
             <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={KlinikAnNisa} />
-              <Card.Body>
+              <Card.Body className='text_fas'>
                 <h5>Klinik Penyakit Kelamin An-Nisa</h5>
                 <Card.Text className="text-muted">Klinik</Card.Text>
               </Card.Body>
