@@ -1,25 +1,30 @@
 .bg_login {
   background: #f31559 !important;
   color: white;
-  font-weight: bold;
+  font-weight: 500 !important;
   padding: 8px 20px;
   border: none !important;
   border-radius: 10%;
+  font-family: Montserrat !important;
 }
 
 .bg_login:hover {
   background: white !important;
   color: #f31559 !important;
+  font-family: Montserrat !important;
+  font-weight: 500 !important;
 }
 
-.nav_text .nav_text_change.active {
+.nav_text_change {
   color: #f31559 !important;
+  font-family: Montserrat !important;
 }
 
 .navbar_main {
   position: fixed;
   width: 100%;
   z-index: 99;
+  background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
 }
 
 .profile_name {

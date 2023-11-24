@@ -130,7 +130,7 @@ const IsiArtikel = () => {
             <div className="container_artikel">
               <Row className="mb-4 shadow_artikel">
                 <Col md={4}>
-                  <img src={image2} alt="" />
+                  <img src={image2} alt="gambar" />
                 </Col>
                 <Col md={8} className="desc_artikel">
                   <h6>Apa kanker serviks bisa menular?</h6>
@@ -141,9 +141,9 @@ const IsiArtikel = () => {
               </Row>
               <Row className="mb-4 shadow_artikel">
                 <Col md={4}>
-                  <img src={image11} alt="" />
+                  <img src={image11} alt="gambar" />
                 </Col>
-                <Col md={8}>
+                <Col md={8} className="desc_artikel">
                   <h6>Berapa banyak perempuan di dunia yang mengidap penyakit kanker serviks?</h6>
                   <div className="bg_topik">
                     <h6>Statistik Kanker</h6>
@@ -152,9 +152,9 @@ const IsiArtikel = () => {
               </Row>
               <Row className="mb-4 shadow_artikel">
                 <Col md={4}>
-                  <img src={image12} alt="" />
+                  <img src={image12} alt="gambar" />
                 </Col>
-                <Col md={8}>
+                <Col md={8} className="desc_artikel">
                   <h6>Kapan penyakit kanker serviks dapat diidentifikasi?</h6>
                   <div className="bg_topik">
                     <h6>Identifikasi Kanker</h6>
@@ -163,9 +163,9 @@ const IsiArtikel = () => {
               </Row>
               <Row className="mb-4 shadow_artikel">
                 <Col md={4}>
-                  <img src={image13} alt="" />
+                  <img src={image13} alt="gambar" />
                 </Col>
-                <Col md={8}>
+                <Col md={8} className="desc_artikel">
                   <h6>Dampak kanker serviks pada perempuan</h6>
                   <div className="bg_topik">
                     <h6>Dampak Kanker</h6>
@@ -188,9 +188,9 @@ const IsiArtikel = () => {
           {artikel.map((art) => (
             <Col key={art.id} md={4} className="mb-5 holder">
               <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-                <img src={art.img} alt="" className="image_artikel" />
+                <img src={art.img} alt="gambar" className="image_artikel" />
                 <Card.Body className="p-3">
-                  <h5>{art.desc}</h5>
+                  <h5 style={{fontFamily: 'Montserrat'}}>{art.desc}</h5>
                   <Card.Link className="d-flex justify-content-end mt-4 linkArtikel">
                     Baca selengkapnya...
                   </Card.Link>

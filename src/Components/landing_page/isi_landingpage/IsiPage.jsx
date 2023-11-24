@@ -12,14 +12,31 @@ import artikelImgSatu from '../../../assets/img/white-awareness-ribbon-two-hands
 import artikelImgDua from '../../../assets/img/doctor-vaccinating-patient-clinic.png';
 import artikelImgTiga from '../../../assets/img/close-up-hand-with-food-container 1.png';
 import reviewSatu from '../../../assets/img/reviewImg.png';
-import reviewDua from '../../../assets/img/ibu-rumah-tangga.jpg';
+import reviewDua from '../../../assets/img/reviewdua.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const IsiPage = () => {
+  const data = [
+    {
+      id: 1,
+      name: 'Nadia Syakira',
+      job: 'mahasiswa',
+      img: reviewSatu,
+      review:
+        '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
+    },
+    {
+      id: 2,
+      name: 'Susi Susanti',
+      job: 'ibu rumah tangga',
+      img: reviewDua,
+      review: '"Sangat membantu saya dalam menangani masalah kanker serviks"',
+    },
+  ];
+
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -63,16 +80,16 @@ const IsiPage = () => {
               </div>
             </div>
             <div className="box_title mt-3">
-              <h1>Layanan Kesehatan</h1>
+              <h1>Skrining Test </h1>
             </div>
             <div className="box_desc">
-              <h1>Ada dua jenis layanan yang kami berikan, yaitu vaksinasi HPV dan skrining rutin.</h1>
+              <h1>Ada dua jenis layanan skrining test yang kami sediakan, yaitu pap smear dan IVA test</h1>
             </div>
           </Col>
           <Col md={4}>
             <div className="boxContainer d-flex justify-content-center align-items-center">
-              <div className="supportImg mt-2">
-                <img src={support} alt="support" className="" />
+              <div className="supportImg">
+                <img src={support} alt="support" className="image_support" />
               </div>
             </div>
             <div className="box_title mt-3">
@@ -89,10 +106,10 @@ const IsiPage = () => {
               </div>
             </div>
             <div className="box_title mt-3">
-              <h1>Tanya Kami</h1>
+              <h1>Vaksinasi HPV</h1>
             </div>
             <div className="box_desc">
-              <h1>Tanya kami merpakan sebuah fitur chatbot yang dapat digunakan oleh user secara gratis.</h1>
+              <h1>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</h1>
             </div>
           </Col>
         </Row>
@@ -166,60 +183,59 @@ const IsiPage = () => {
         <div className="desc_services mt-3 mb-5">
           <h1>Apa Kata Mereka Tentang Kita</h1>
         </div>
-
-        <Row>
-          <Col md={6}>
-            <Row>
-              <div className="square">
-                <img src={feedbackimage} alt="image" className="" />
-              </div>
-            </Row>
-          </Col>
-
-          <Col md={6} className="my-5">
-            <Slider {...settings}>
-              {data.map((d) => (
-                <div key={d.id} style={{ width: '35rem', height: '25rem'}} className="rounded-5 border-1">
-                  <div className="reviewCard">
-                    <Row>
-                      <div className="d-flex align-items-center">
-                        <img src={d.img} className="reviewImg" />
-                        <Col className="mx-5">
-                          <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
-                          <Card.Text style={{ textAlign: 'start' }}>{d.job}</Card.Text>
-                          <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="d-flex justify-content-start align-items-start">
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starr"></i>
-                            </small>
-                            <small>
-                              <i className="fa-solid fa-star starrBlack"></i>
-                            </small>
-                          </Card.Text>
-                        </Col>
-                      </div>
-                      <Card.Text style={{ fontSize: '15px', textAlign: 'start' }} className="my-4">
-                        {d.review}
-                      </Card.Text>
-                    </Row>
-                  </div>
+      </Container>
+      <Row className="row_review">
+        <Col md={6} className="image_review_left">
+          <div className="square ">
+            <img src={feedbackimage} alt="image" className="image_review" />
+          </div>
+        </Col>
+        <Col md={5} className="my-5 mx-5">
+          <Slider {...settings}>
+            {data.map((d) => (
+              <div key={d.id} className='p-4' >
+              <div  className="carousel_card">
+                <div className="reviewCard">
+                  <Row>
+                    <div className="d-flex align-items-center">
+                      <img src={d.img} className="reviewImg" />
+                      <Col className="mx-5">
+                        <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
+                        <Card.Text style={{ textAlign: 'start', fontFamily:'Montserrat' }}>{d.job}</Card.Text>
+                        <Card.Text style={{ fontSize: '15px', textAlign: 'start', fontFamily:'Montserrat' }} className="d-flex justify-content-start align-items-start">
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starr"></i>
+                          </small>
+                          <small>
+                            <i className="fa-solid fa-star starrBlack"></i>
+                          </small>
+                        </Card.Text>
+                      </Col>
+                    </div>
+                    <Card.Text style={{ fontSize: '18px', textAlign: 'start', fontFamily: 'Montserrat' }} className="my-4">
+                      {d.review}
+                    </Card.Text>
+                  </Row>
                 </div>
-              ))}
-            </Slider>
-          </Col>
-        </Row>
-
+              </div>
+              </div>
+            ))}
+          </Slider>
+        </Col>
+      </Row>
+      <Container>
         <div className="d-flex justify-content-between my-5">
           <h1 className="title_artikel">Baca 100+ Artikel Kesehatan</h1>
-          <Button className="button_dokter">Lihat Semua</Button>
+          <a className="linkArtikel">Lihat Semua</a>
         </div>
 
         <Row className="my-5">
@@ -227,7 +243,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgSatu} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h4>7 Tips Mencegah Kanker Serviks</h4>
+                <h5 className='title_art'>7 Tips Mencegah Kanker Serviks</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -238,7 +254,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgDua} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h4>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h4>
+                <h5 className='title_art'>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -249,7 +265,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgTiga} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h4>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h4>
+                <h5 className='title_art'>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -262,22 +278,6 @@ const IsiPage = () => {
   );
 };
 
-const data = [
-  {
-    id: 1,
-    name: 'Nadia Syakira',
-    job: 'mahasiswa',
-    img: reviewSatu,
-    review:
-      '“Cervicare sangat membantu saya untuk mencegah salah satu penyakit yang ditakutkan oleh semua wanita, yaitu kanker serviks. Dokter-dokter spesialisnya juga sangat ramah dan sangat membantu, terimakasih Cervicare karena telah hadir dan membantu banyak wanita untuk terhindar dari penyakit kanker serviks.”',
-  },
-  {
-    id: 2,
-    name: 'Susi Susanti',
-    job: 'ibu rumah tangga',
-    img: reviewDua,
-    review: '"Sangat membantu saya dalam menangani masalah kanker serviks"',
-  },
-];
+
 
 export default IsiPage;

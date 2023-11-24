@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap");
+
 .button_konsultasi{
     background: #F31559;
     color: white;
@@ -15,10 +17,13 @@
 .title h1{
     font-weight: 600;
     font-size: 60px;
+    font-family: Montserrat;
 }
 
 .titledua h1{
     font-size: 20px;
+    font-family: Montserrat;
+
 }
 
 .head_right .imageContainer{
