@@ -135,6 +135,7 @@ const Konsultasi_page = () => {
   return (
     <div>
       <NavbarNotAuth />
+      
       <div className="bg-boxs">
         <Container>
           <Row className=" boxs mt-5">
