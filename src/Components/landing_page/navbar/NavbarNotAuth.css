@@ -65,6 +65,10 @@
   font-family: Montserrat;
 }
 
+.dropdownmenu:hover{
+  cursor: pointer;
+}
+
 .bardropdown {
   border: 1px solid rgb(190, 190, 190);
 }
