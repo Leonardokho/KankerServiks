@@ -7,7 +7,6 @@
 
 .bg-boxs {
   display: flex;
-  /* height: 608px; */
   background: linear-gradient(0deg, #fbe5e5 0%, rgba(255, 255, 255, 0) 114.56%);
 }
 
@@ -32,6 +31,7 @@
   font-style: normal;
   font-weight: 400;
 }
+
 .button_mulai {
   border-radius: 20px;
   border: none !important;
@@ -42,8 +42,8 @@
 .button_mulai:hover {
   background-color: #e40447 !important;
 }
+
 .foto-docter {
-  /* width: 837px; */
   height: 533px;
   margin-top: -330px;
   float: right;
@@ -51,13 +51,12 @@
 }
 
 .bg-boxs-2 {
-  /* width: 1440px; */
   height: 144px;
   margin-top: -144px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
 }
+
 .card-ceritakan {
-  /* background-color: aqua; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,6 +70,7 @@
   font-style: normal;
   font-weight: 700;
 }
+
 .title-deskripsi {
   color: var(--teks-primary);
   text-align: center;
@@ -89,8 +89,6 @@
 }
 
 .card-bungkus-image {
-  /* background-color: aqua; */
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,6 +114,7 @@
 .foto-img {
   height: 324px;
 }
+
 .name-docter {
   color: var(--teks-primary);
   text-align: center;
@@ -125,10 +124,12 @@
   font-weight: 600;
   text-decoration: none;
 }
+
 .name-docter:hover {
   color: var(--primary);
   transition: 0.1s;
 }
+
 .name-spesialis {
   color: var(--teks-primary);
   text-align: center;
@@ -150,6 +151,7 @@
 .fa-star {
   color: #f68924;
 }
+
 .button-banyak {
   border-radius: 10px;
   border: none !important;
@@ -157,9 +159,11 @@
   font-family: Montserrat !important;
   font-weight: 500 !important;
 }
+
 .button-banyak:hover {
   background-color: #e40447 !important;
 }
+
 @media (max-width: 768px) {
   .foto-docter {
     width: 100%; /* Menggunakan lebar 100% untuk responsif */
@@ -176,4 +180,36 @@
   .button_mulai {
     margin-top: 20px; /* Atur sesuai kebutuhan */
   }
+}
+
+.modalstext {
+  text-align: center;
+  font-family: Montserrat;
+}
+
+.button_modals {
+  height: 50px;
+  background: #f31559 !important;
+  font-family: Montserrat !important;
+  border: none !important;
+  font-weight: 600 !important;
+}
+
+.box_modals {
+  transform: translateY(200px) !important;
+  max-width: 35vw !important;
+}
+
+.box_modals div {
+  border-radius: 20px !important;
+}
+
+.close_modals {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(565px);
 }
