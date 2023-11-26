@@ -36,7 +36,7 @@
   border-radius: 20px;
   border: none !important;
   background-color: #f31559 !important;
-  box-shadow: 0px 0px 10px 0px #f31559;
+  /* box-shadow: 0px 0px 10px 0px #f31559; */
 }
 
 .button_mulai:hover {

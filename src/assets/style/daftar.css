@@ -222,3 +222,62 @@ html {
 .teks-login-daftar > a:hover {
   color: var(--primary);
 }
+
+
+/* Gaya CSS kustom di sini */
+@media only screen and (max-width: 768px) {
+  .box,
+  .box-2 {
+    /* height: auto;
+    display: block; */
+  }
+  
+
+  .box-white,
+  .box-red {
+    width: 100%;
+  }
+
+  .card-1,
+  .card-2 {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-lingkar {
+    width: 100%;
+    height: auto;
+    margin-top: 20px; /* Atur margin sesuai kebutuhan Anda */
+  }
+
+  .img-dc {
+    width: auto;
+   
+  }
+
+  .card-title {
+   
+    width: 100%;
+    height: auto;
+  margin-top: -20px;
+  }
+  .card-title > p {
+  margin-top: 12px;
+  font-size: 100%;
+  
+}
+
+  .card-2 {
+    background-color: var(--white);
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+  }
+  .card-2 .costum-button-google {
+  
+  font-size: 23px;
+  
+}
+
+ 
+}
