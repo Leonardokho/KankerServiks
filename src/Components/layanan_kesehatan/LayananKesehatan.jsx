@@ -55,35 +55,31 @@ const LayananKesehatan = () => {
           </div>
         </div>
 
-        <Row className="mt-4 p-5 mx-5">
-          <Col>
-            <Card style={{ width: '20rem', height: '20rem' }} className="p-3 shadow-none border-2 rounded-4">
-              <Card.Img className="m-3" variant="left" src={PapSmearIcon} style={{ width: '90px' }} />
-              <Card.Body>
-                <p className="fw-bolder fs-4 title_kes">Pap Smear</p>
-                <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>metode pemeriksaan yang dilakukan untuk mendeteksi kanker leher rahim (serviks) pada wanita</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card style={{ width: '20rem', backgroundColor: '#F31559', height: '20rem' }} className="pt-4 pb-2 px-3 text-white shadow-none rounded-4">
-              <Card.Img className="m-3" src={IvaTestIcon} style={{ width: '90px' }} />
-              <Card.Body>
-                <p className="fw-bolder fs-4 title_kes">IVA test</p>
-                <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>Pemeriksaan visual leher rahim dengan asam asetat encer tanpa alat pembesar.</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card style={{ width: '20rem', height: '20rem' }} className="pt-4 pb-2 px-3 shadow-none border-2 rounded-4">
-              <Card.Img className="m-3" src={HpvIcon} style={{ width: '90px' }} />
-              <Card.Body>
-                <p className="fw-bolder fs-4 title_kes">Vaksinasi HPV</p>
-                <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+        <Stack direction="horizontal" gap={5} className="p-5 mx-auto">
+          <Card style={{ width: '20rem', height: '20rem' }} className="p-3 shadow-none border-2 rounded-4">
+            <Card.Img className="m-3" variant="left" src={PapSmearIcon} style={{ width: '90px' }} />
+            <Card.Body>
+              <p className="fw-bolder fs-4 title_kes">Pap Smear</p>
+              <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>metode pemeriksaan yang dilakukan untuk mendeteksi kanker leher rahim (serviks) pada wanita</Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: '20rem', backgroundColor: '#F31559', height: '20rem' }} className="pt-4 pb-2 px-3 text-white shadow-none rounded-4">
+            <Card.Img className="m-3" src={IvaTestIcon} style={{ width: '90px' }} />
+            <Card.Body>
+              <p className="fw-bolder fs-4 title_kes">IVA test</p>
+              <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>Pemeriksaan visual leher rahim dengan asam asetat encer tanpa alat pembesar.</Card.Text>
+            </Card.Body>
+          </Card>
+
+          <Card style={{ width: '20rem', height: '20rem' }} className="pt-4 pb-2 px-3 shadow-none border-2 rounded-4">
+            <Card.Img className="m-3" src={HpvIcon} style={{ width: '90px' }} />
+            <Card.Body>
+              <p className="fw-bolder fs-4 title_kes">Vaksinasi HPV</p>
+              <Card.Text className='desc_kes' style={{ textAlign: 'justify', fontSize: '14px' }}>program imunisasi untuk melindungi tubuh dari infeksi human papillomavirus (HPV)</Card.Text>
+            </Card.Body>
+          </Card>
+        </Stack>
       </Container>
 
       <Container className="py-5">
@@ -102,7 +98,7 @@ const LayananKesehatan = () => {
           <div className="p-2">
             <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={PuskesmasSambas} />
-              <Card.Body>
+              <Card.Body className='text_fas'>
                 <h5>Puskesmas Desa Sambas</h5>
                 <Card.Text className="text-muted">Puskesmas</Card.Text>
               </Card.Body>
@@ -111,7 +107,7 @@ const LayananKesehatan = () => {
           <div className="p-2 mx-auto">
             <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={MedikaKedua} />
-              <Card.Body>
+              <Card.Body className='text_fas'>
                 <h5>RS. Medika Kedua</h5>
                 <Card.Text className="text-muted">Rumah Sakit</Card.Text>
               </Card.Body>
@@ -120,7 +116,7 @@ const LayananKesehatan = () => {
           <div className="p-2">
             <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={KlinikAnNisa} />
-              <Card.Body>
+              <Card.Body className='text_fas'>
                 <h5>Klinik Penyakit Kelamin An-Nisa</h5>
                 <Card.Text className="text-muted">Klinik</Card.Text>
               </Card.Body>

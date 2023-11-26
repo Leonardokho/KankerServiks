@@ -36,6 +36,27 @@ const IsiPage = () => {
     },
   ];
 
+  const dokterSpesialis = [
+    {
+      id: 1,
+      name: 'Dr. Shofiyyah Kamilah',
+      image: doktersatu,
+      specialist: 'Spesialis Onkologi',
+    },
+    {
+      id: 2,
+      name: 'Dr. Anastasya',
+      image: dokterdua,
+      specialist: 'Spesialis Onkologi',
+    },
+    {
+      id: 3,
+      name: 'Dr. Smith Rowe',
+      image: doktertiga,
+      specialist: 'Spesialis Onkologi',
+    },
+  ];
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -121,57 +142,24 @@ const IsiPage = () => {
           <h1>Dokter Spesialis Kami</h1>
         </div>
 
-        <Row>
-          <Col md={4}>
-            <div style={{ width: '25rem' }} className="shadow_card rounded-3">
-              <img src={doktersatu} className="dokterImg image_dokter" />
-              <Card.Body>
-                <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }} className="namaDokter">
-                  Dr. Shofiyyah Kamilah
+        <Col md={12}>
+          <div className="card-bungkus-dokter mt-4">
+            {dokterSpesialis.map((dct) => (
+              <div key={dct.id} className="card-box-dokter ">
+                <div className="card-image-dokter">
+                  <img className="mt-4 foto-dokter" src={dct.image} alt="gambar" />
+                </div>
+                <h3>
+                  <a className="name-dokter">{dct.name}</a>
                 </h3>
-                <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
-                <Card.Text style={{ fontSize: '15px', textAlign: 'center' }} className="d-flex justify-content-center align-items-center">
-                  <small>
-                    <i className="fa-solid fa-star starr"></i>
-                  </small>{' '}
-                  5.0 (300+review)
-                </Card.Text>
-              </Card.Body>
-            </div>
-          </Col>
-
-          <Col md={4}>
-            <div style={{ width: '25rem' }} className="shadow_card rounded-3">
-              <img src={dokterdua} className="dokterImg image_dokter" />
-              <Card.Body>
-                <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</h3>
-                <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
-                <Card.Text style={{ fontSize: '15px', textAlign: 'center' }} className="d-flex justify-content-center align-items-center">
-                  <small>
-                    <i className="fa-solid fa-star starr"></i>
-                  </small>{' '}
-                  5.0 (300+review)
-                </Card.Text>
-              </Card.Body>
-            </div>
-          </Col>
-
-          <Col md={4}>
-            <div style={{ width: '25rem' }} className="shadow_card rounded-3">
-              <img src={doktertiga} className="dokterImg image_dokter" />
-              <Card.Body>
-                <h3 style={{ fontSize: '20px', textAlign: 'center', fontWeight: '600' }}>Dr. Shofiyyah Kamilah</h3>
-                <Card.Text style={{ textAlign: 'center' }}>Spesialis Onkologi</Card.Text>
-                <Card.Text style={{ fontSize: '15px', textAlign: 'center' }} className="d-flex justify-content-center align-items-center">
-                  <small>
-                    <i className="fa-solid fa-star starr"></i>
-                  </small>{' '}
-                  5.0 (300+review)
-                </Card.Text>
-              </Card.Body>
-            </div>
-          </Col>
-        </Row>
+                <h3 className="name-spesialis ">{dct.specialist}</h3>
+                <h5 className="review ">
+                  <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
+                </h5>
+              </div>
+            ))}
+          </div>
+        </Col>
 
         <Col className="card-ceritakan mt-5">
           <Button className="button_dokter mt-3 mb-4"> Lihat Semuanya</Button>
@@ -193,40 +181,40 @@ const IsiPage = () => {
         <Col md={5} className="my-5 mx-5">
           <Slider {...settings}>
             {data.map((d) => (
-              <div key={d.id} className='p-4' >
-              <div  className="carousel_card">
-                <div className="reviewCard">
-                  <Row>
-                    <div className="d-flex align-items-center">
-                      <img src={d.img} className="reviewImg" />
-                      <Col className="mx-5">
-                        <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
-                        <Card.Text style={{ textAlign: 'start', fontFamily:'Montserrat' }}>{d.job}</Card.Text>
-                        <Card.Text style={{ fontSize: '15px', textAlign: 'start', fontFamily:'Montserrat' }} className="d-flex justify-content-start align-items-start">
-                          <small>
-                            <i className="fa-solid fa-star starr"></i>
-                          </small>
-                          <small>
-                            <i className="fa-solid fa-star starr"></i>
-                          </small>
-                          <small>
-                            <i className="fa-solid fa-star starr"></i>
-                          </small>
-                          <small>
-                            <i className="fa-solid fa-star starr"></i>
-                          </small>
-                          <small>
-                            <i className="fa-solid fa-star starrBlack"></i>
-                          </small>
-                        </Card.Text>
-                      </Col>
-                    </div>
-                    <Card.Text style={{ fontSize: '18px', textAlign: 'start', fontFamily: 'Montserrat' }} className="my-4">
-                      {d.review}
-                    </Card.Text>
-                  </Row>
+              <div key={d.id} className="p-4">
+                <div className="carousel_card">
+                  <div className="reviewCard">
+                    <Row>
+                      <div className="d-flex align-items-center">
+                        <img src={d.img} className="reviewImg" />
+                        <Col className="mx-5">
+                          <h2 style={{ fontSize: '20px', textAlign: 'start', fontWeight: '600' }}>{d.name}</h2>
+                          <Card.Text style={{ textAlign: 'start', fontFamily: 'Montserrat' }}>{d.job}</Card.Text>
+                          <Card.Text style={{ fontSize: '15px', textAlign: 'start', fontFamily: 'Montserrat' }} className="d-flex justify-content-start align-items-start">
+                            <small>
+                              <i className="fa-solid fa-star starr"></i>
+                            </small>
+                            <small>
+                              <i className="fa-solid fa-star starr"></i>
+                            </small>
+                            <small>
+                              <i className="fa-solid fa-star starr"></i>
+                            </small>
+                            <small>
+                              <i className="fa-solid fa-star starr"></i>
+                            </small>
+                            <small>
+                              <i className="fa-solid fa-star starrBlack"></i>
+                            </small>
+                          </Card.Text>
+                        </Col>
+                      </div>
+                      <Card.Text style={{ fontSize: '18px', textAlign: 'start', fontFamily: 'Montserrat' }} className="my-4">
+                        {d.review}
+                      </Card.Text>
+                    </Row>
+                  </div>
                 </div>
-              </div>
               </div>
             ))}
           </Slider>
@@ -243,7 +231,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgSatu} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h5 className='title_art'>7 Tips Mencegah Kanker Serviks</h5>
+                <h5 className="title_art">7 Tips Mencegah Kanker Serviks</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -254,7 +242,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgDua} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h5 className='title_art'>Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h5>
+                <h5 className="title_art">Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -265,7 +253,7 @@ const IsiPage = () => {
             <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
               <img src={artikelImgTiga} alt="" className="image_dokter" />
               <Card.Body className="p-3">
-                <h5 className='title_art'>Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h5>
+                <h5 className="title_art">Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h5>
                 <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
                   Baca selengkapnya...
                 </Card.Link>
@@ -277,7 +265,5 @@ const IsiPage = () => {
     </div>
   );
 };
-
-
 
 export default IsiPage;

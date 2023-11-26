@@ -104,6 +104,10 @@
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
 }
 
+.card-image:hover{
+  cursor: pointer;
+}
+
 .card-image-bayanan {
   width: 335px;
   height: 348px;
@@ -212,4 +216,8 @@
   border-radius: 50px;
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
   transform: translateX(565px);
+}
+
+.close_modals:hover{
+  cursor: pointer;
 }
