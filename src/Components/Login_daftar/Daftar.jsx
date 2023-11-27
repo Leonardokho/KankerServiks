@@ -46,7 +46,7 @@ const Daftar = () => {
                   <Form.Label className="teks-title">Password</Form.Label>
                   <Form.Control className="custom-input" type="password" placeholder="Password" />
                 </Form.Group>
-                <p className="texs-persetujuan">Dengan mendaftar Saya telah membaca dan menyetujui Aturan Penggunaan dan Kebijakan Privasi Cervicare</p>
+                <p className="texs-persetujuan mx-4">Dengan mendaftar Saya telah membaca dan menyetujui Aturan Penggunaan dan Kebijakan Privasi Cervicare</p>
 
                 <Form.Group className="mb-3 mx-4 ">
                   <Button onClick={() => linkLogin("/login")} className="costum-button ">Daftar</Button>

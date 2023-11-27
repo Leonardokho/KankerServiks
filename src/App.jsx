@@ -8,6 +8,8 @@ import ArtikelMain from './Components/artikel/artikel_main/ArtikelMain.jsx';
 import Konsultasi_data_page from './Components/user_login/konsultasi_data_page/Konsultasi_data_page.jsx';
 import LayananKesehatan from './Components/layanan_kesehatan/LayananKesehatan.jsx';
 import LayananDetailMain from './Components/layanan_kesehatan_detail/layanan_detail_main/LayananDetailMain.jsx';
+import Profile from './Components/profile/Profile.jsx';
+import Janji_saya from './Components/profile/Janji_saya.jsx';
 // import PemberitahuanLogin from './Components/pop_up/PemberitahuanLogin.jsx';
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
           <Route path="/Layanan_Kesehatan" element={<LayananKesehatan />} />
           <Route path="/Layanan_Kesehatan_Detail" element={<LayananDetailMain />}></Route>
           <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/janji_saya" element={<Janji_saya />} />
           <Route path="/Halaman_Konsultasi" element={<Konsultasi_page />} />
           <Route path="/Halaman_Konsultasi_data_page" element={<Konsultasi_data_page />} />
           <Route path="/Masuk" element={<Login />} />
