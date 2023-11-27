@@ -92,21 +92,22 @@ function ModalLogin() {
   const [modalShow, setModalShow] = useState(false);
   const [detailDokter, setDetailDokter] = useState(false);
 
-
   return (
     <>
       <Col md={12}>
         <div className="card-bungkus-image mt-4">
           {dokterSpesialis.map((dct) => (
-            <div key={dct.id} className="card-image mb-4 " >
+            <div key={dct.id} className="card-image mb-4 ">
               <div className="card-image-bayanan">
-                <img className="mt-4 foto-img" src={dct.image} alt="gambar" onClick={() => setModalShow(true)}/>
+                <img className="mt-4 foto-img" src={dct.image} alt="gambar" onClick={() => setModalShow(true)} />
               </div>
               <h3>
                 {/* <a className="name-docter mt-3" href="#" onClick={() => hal_data_page('/halaman_konsultasi_data_page')}>
                       {dct.name}
                     </a> */}
-                <a className="name-docter mt-3" onClick={() => setDetailDokter(true)}>{dct.name}</a>
+                <a className="name-docter mt-3" onClick={() => setDetailDokter(true)}>
+                  {dct.name}
+                </a>
               </h3>
               <h3 className="name-spesialis ">{dct.specialist}</h3>
               <h5 className="review ">
@@ -119,25 +120,64 @@ function ModalLogin() {
 
       <PemberitahuanLogin show={modalShow} onHide={() => setModalShow(false)} />
       <DetailDokter show={detailDokter} onHide={() => setDetailDokter(false)} />
-
     </>
   );
 }
 
 function DetailDokter(props) {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_detail">
       {/* <Modal.Header closeButton/> */}
       <div>
         <Modal.Body className="grid-example">
           <Container>
             <Row>
               <Col>
-                <img src='' alt="" />
+                <img className="bg-detail-dokter" src={doktersatu} alt="gambar" />
+                <h1 className="name-dok mb-3">Dr. Shofiyyah Kamilah</h1>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+              </Col>
+              <Col className=" mt-2">
+                <Row className="detail_title_desc">
+                  <Col>
+                    <h1>Nomor STR</h1>
+                    <p>100100020020002</p>
+                  </Col>
+                  <Col>
+                    <h1 className="close_modals_detail" onClick={props.onHide}>
+                      x
+                    </h1>
+                  </Col>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>Lulusan</h1>
+                  <p>Universitas andalas, 2016</p>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>Lokasi Praktik</h1>
+                  <p>depok, jawa barat</p>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>lama bekerja</h1>
+                  <p>7 tahun</p>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>Status</h1>
+                  <div className="bg-status">
+                    <h1>Online</h1>
+                  </div>
+                </Row>
               </Col>
             </Row>
-            <Row>
-              
+            <Row className="mt-5">
+              <h1 className="harga_dokter">Rp. 20.000</h1>
+              <Button className="button_modals" onClick={{}}>
+                Chat Sekarang
+              </Button>
             </Row>
           </Container>
         </Modal.Body>
@@ -161,7 +201,7 @@ const Konsultasi_page = () => {
   return (
     <div>
       <NavbarNotAuth />
-      
+
       <div className="bg-boxs">
         <Container>
           <Row className=" boxs mt-5">
