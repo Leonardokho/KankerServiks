@@ -24,7 +24,7 @@ function PemberitahuanLogin(props) {
           <Container>
             <Row>
               <div>
-                <h1 className="close-modals" onClick={props.onHide}>
+                <h1 className="close_modals" onClick={props.onHide}>
                   x
                 </h1>
               </div>
@@ -60,35 +60,34 @@ function ModalLogin() {
     },
     {
       id: 2,
-      name: "Dr. Anastasya",
+      name: 'Dr. Anastasya',
       image: dokterdua,
-      specialist: "Spesialis Onkologi",
+      specialist: 'Spesialis Onkologi',
     },
     {
       id: 3,
-      name: "Dr. Smith Rowe",
+      name: 'Dr. Smith Rowe',
       image: doktertiga,
-      specialist: "Spesialis Onkologi",
+      specialist: 'Spesialis Onkologi',
     },
     {
       id: 4,
-      name: "Dr. Diana Ayu Pratiwi",
+      name: 'Dr. Diana Ayu Pratiwi',
       image: dokterempat,
-      specialist: "Spesialis Onkologi",
+      specialist: 'Spesialis Onkologi',
     },
     {
       id: 5,
-      name: "Dr. Anastasya",
+      name: 'Dr. Anastasya',
       image: dokterlima,
-      specialist: "Spesialis Onkologi",
+      specialist: 'Spesialis Onkologi',
     },
     {
       id: 6,
-      name: "Dr. Raden Sanjaya",
+      name: 'Dr. Raden Sanjaya',
       image: dokterenam,
-      specialist: "Spesialis gi",
+      specialist: 'Spesialis Onkologi',
     },
-    
   ];
   const [modalShow, setModalShow] = useState(false);
   const [detailDokter, setDetailDokter] = useState(false);
