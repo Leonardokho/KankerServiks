@@ -15,7 +15,7 @@ import { useRef, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
 
-function MydModalWithGrid(props) {
+function PemberitahuanLogin(props) {
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
       {/* <Modal.Header closeButton/> */}
@@ -90,21 +90,23 @@ function ModalLogin() {
     },
   ];
   const [modalShow, setModalShow] = useState(false);
+  const [detailDokter, setDetailDokter] = useState(false);
+
 
   return (
     <>
       <Col md={12}>
         <div className="card-bungkus-image mt-4">
           {dokterSpesialis.map((dct) => (
-            <div key={dct.id} className="card-image mb-4 " onClick={() => setModalShow(true)}>
+            <div key={dct.id} className="card-image mb-4 " >
               <div className="card-image-bayanan">
-                <img className="mt-4 foto-img" src={dct.image} alt="gambar" />
+                <img className="mt-4 foto-img" src={dct.image} alt="gambar" onClick={() => setModalShow(true)}/>
               </div>
               <h3>
                 {/* <a className="name-docter mt-3" href="#" onClick={() => hal_data_page('/halaman_konsultasi_data_page')}>
                       {dct.name}
                     </a> */}
-                <a className="name-docter mt-3">{dct.name}</a>
+                <a className="name-docter mt-3" onClick={() => setDetailDokter(true)}>{dct.name}</a>
               </h3>
               <h3 className="name-spesialis ">{dct.specialist}</h3>
               <h5 className="review ">
@@ -115,8 +117,32 @@ function ModalLogin() {
         </div>
       </Col>
 
-      <MydModalWithGrid show={modalShow} onHide={() => setModalShow(false)} />
+      <PemberitahuanLogin show={modalShow} onHide={() => setModalShow(false)} />
+      <DetailDokter show={detailDokter} onHide={() => setDetailDokter(false)} />
+
     </>
+  );
+}
+
+function DetailDokter(props) {
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
+      {/* <Modal.Header closeButton/> */}
+      <div>
+        <Modal.Body className="grid-example">
+          <Container>
+            <Row>
+              <Col>
+                <img src='' alt="" />
+              </Col>
+            </Row>
+            <Row>
+              
+            </Row>
+          </Container>
+        </Modal.Body>
+      </div>
+    </Modal>
   );
 }
 
