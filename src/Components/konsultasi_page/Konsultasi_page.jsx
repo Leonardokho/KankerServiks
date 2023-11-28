@@ -1,16 +1,17 @@
-import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
 import Footer from '../landing_page/footer/Footer';
 import ccLogo1 from '../../assets/img/cc-logo1.png';
 import fotodocter from '../../assets/img/doctors-day-cute-young-handsome-man-lab-coat-glasses-holding-book-removebg-preview 1.png';
 import Chatpng from '../../assets/img/Chat.png';
 import loginimgmodals from '../../assets/img/Group 111.png';
-import './Konsultasi_page.css';
-import { useRef, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
+import VerificationInput from 'react-verification-input';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
+import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
+import { useRef, useState, useEffect } from 'react';
 import { dokterSpesialist } from '../../model/model_dokter';
 import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
+import './Konsultasi_page.css';
+import 'react-phone-input-2/lib/style.css';
 
 function PemberitahuanLogin(props) {
   return (
@@ -148,6 +149,7 @@ function DetailDokter(props) {
 }
 
 function InputNomorPonsel(props) {
+  const [verification, setVerification] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [valid, setValid] = useState(true);
 
@@ -176,7 +178,7 @@ function InputNomorPonsel(props) {
             </Row>
             <Row>
               <Row className="modalstext">
-                <h1 className='title_telepon mb-4'>Masukkan Nomor Ponsel</h1>
+                <h1 className="title_telepon mb-4">Masukkan Nomor Ponsel</h1>
                 <h6>
                   <span className="text-1">Masukkan Nomor Ponsel</span> Untuk Melanjutkan Proses Konsultasi Di <span className="text-2">Cervicare+</span>{' '}
                 </h6>
@@ -193,11 +195,116 @@ function InputNomorPonsel(props) {
                   Dengan ini, Saya Menyetujui <a href="">ketentuan Pengguna</a> Dan <a href="">Kebijakan Privasi</a> <span className="text-2">Cervicare+</span>{' '}
                 </h6>
               </Row>
-              <Button className="button_modals mt-3" onClick={{}}>
-              <i className="fa-brands fa-whatsapp fa-2xl whatsapp-icon"></i> Kirim Kode Melalui WhatsApp
+              <Button className="button_modals mt-3" onClick={() => setVerification(true)}>
+                <i className="fa-brands fa-whatsapp fa-2xl whatsapp-icon"></i> Kirim Kode Melalui WhatsApp
               </Button>
               <Button className="button_modals mt-3" onClick={{}}>
-              <i className="fa-regular fa-envelope fa-xl envelope-icon"></i> Kirim Kode Melalui Pesan
+                <i className="fa-regular fa-envelope fa-xl envelope-icon"></i> Kirim Kode Melalui Pesan
+              </Button>
+            </Row>
+          </Container>
+        </Modal.Body>
+      </div>
+      <VerificationModals show={verification} onHide={() => setVerification(false)} />
+    </Modal>
+  );
+}
+
+function VerificationModals(props) {
+  const [otp, setOtp] = useState('');
+  // const [minutes, setMinutes] = useState(1);
+  const [seconds, setSeconds] = useState(30);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (seconds > 0) {
+        setSeconds(seconds - 1);
+      }
+
+      if (seconds === 0) {
+        // if (minutes === 0) {
+        //   clearInterval(interval);
+        // } else {
+        //   setSeconds(59);
+        //   setMinutes(minutes - 1);
+        // }
+      }
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [seconds]);
+
+  const resendOTP = () => {
+    // setMinutes(1);
+    setSeconds(30);
+  };
+
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
+      {/* <Modal.Header closeButton/> */}
+      <div>
+        <Modal.Body className="grid-example">
+          <Container>
+            <Row>
+              <div>
+                <h1 className="close_modals" onClick={props.onHide}>
+                  x
+                </h1>
+              </div>
+            </Row>
+            <Row className="modalstext">
+              <h1 className="title_verif mb-3">Masukkan Kode Verifikasi</h1>
+              <h6>
+                <span className="text-1">Masukkan 6 Digit Kode </span> Yang Dikirim Ke Nomor Yang Kamu Masukkan
+              </h6>
+
+              <Col>
+                <Row className="mx-5 mt-5">
+                  <VerificationInput
+                    // value={otp}
+                    // onChange={({ target }) => {
+                    //   setOtp(target.value);
+                    // }}
+                    placeholder=""
+                    classNames={{
+                      characterSelected: 'halo',
+                      container: 'container_verification',
+                      character: 'character_verification',
+                    }}
+                  />
+                </Row>
+                <Row className="mt-5">
+                  <div className="countdown-text">
+                    {seconds > 0 ? (
+                      <p>
+                        Mohon Tunggu <span className="text-1">{seconds < 10 ? `0${seconds}` : seconds} Detik</span> Untuk Kirim Ulang kode
+                      </p>
+                    ) : (
+                      <Row className='mx-3'>
+                          <p>Tidak Menerima Kode Verifikasi?</p>
+                        
+                        <Col>
+                          <button
+                            disabled={seconds > 0}
+                            style={{
+                              border: 'none',
+                              background: 'none',
+                              color: seconds > 0 ? '#DFE3E8' : '#FF5630',
+                            }}
+                            onClick={resendOTP}
+                          >
+                            Kirim Ulang
+                          </button>
+                        </Col>
+                      </Row>
+                    )}
+                  </div>
+                </Row>
+              </Col>
+              <Button className="button_modals mt-4" onClick={{}}>
+                Verifikasi
               </Button>
             </Row>
           </Container>

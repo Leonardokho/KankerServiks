@@ -159,8 +159,24 @@
   font-weight: 700;
 }
 
+.container_verification {
+  gap: 35px;
+}
+
+.character_verification {
+  font-size: 30px;
+  border: none;
+  /* background: #D9D9D9; */
+  color: red;
+  box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.25);
+}
+
+.title_verif{
+  font-weight: 600;
+}
+
 .box_modals_input_telepon {
-  transform: translateY(220px) !important;
+  transform: translateY(240px) !important;
   max-width: 40vw !important;
 }
 
@@ -188,7 +204,7 @@
   box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25) !important;
 }
 
-.whatsapp-icon{
+.whatsapp-icon {
   background: rgb(4, 187, 4);
   border-radius: 50%;
   height: 30px;
@@ -196,11 +212,11 @@
   padding-top: 14px;
 }
 
-.title_telepon{
+.title_telepon {
   font-weight: 600;
 }
 
-.envelope-icon{
+.envelope-icon {
   background: linear-gradient(80deg, rgb(4, 187, 4), rgb(93, 161, 238));
   border-radius: 50%;
   height: 40px;
