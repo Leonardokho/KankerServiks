@@ -176,7 +176,7 @@ function InputNomorPonsel(props) {
             </Row>
             <Row>
               <Row className="modalstext">
-                <h1 className='title_telepon'>Masukkan Nomor Ponsel</h1>
+                <h1 className='title_telepon mb-4'>Masukkan Nomor Ponsel</h1>
                 <h6>
                   <span className="text-1">Masukkan Nomor Ponsel</span> Untuk Melanjutkan Proses Konsultasi Di <span className="text-2">Cervicare+</span>{' '}
                 </h6>
