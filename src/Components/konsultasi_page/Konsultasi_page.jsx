@@ -3,17 +3,14 @@ import Footer from '../landing_page/footer/Footer';
 import ccLogo1 from '../../assets/img/cc-logo1.png';
 import fotodocter from '../../assets/img/doctors-day-cute-young-handsome-man-lab-coat-glasses-holding-book-removebg-preview 1.png';
 import Chatpng from '../../assets/img/Chat.png';
-import doktersatu from '../../assets/img/doktersatu.png';
-import dokterdua from '../../assets/img/woman-doctor-wearing-lab-coat-with-stethoscope-isolated-removebg-preview.png';
-import doktertiga from '../../assets/img/cheerful-male-doctor-white-gown-portrait-removebg-preview.png';
-import dokterempat from '../../assets/img/image 17.png';
-import dokterlima from '../../assets/img/image 16.png';
-import dokterenam from '../../assets/img/image 15.png';
 import loginimgmodals from '../../assets/img/Group 111.png';
 import './Konsultasi_page.css';
 import { useRef, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
+import { dokterSpesialist } from '../../model/model_dokter';
+import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
 
 function PemberitahuanLogin(props) {
   return (
@@ -51,44 +48,6 @@ function PemberitahuanLogin(props) {
 }
 
 function ModalLogin() {
-  const dokterSpesialis = [
-    {
-      id: 1,
-      name: 'Dr. Shofiyyah Kamilah',
-      image: doktersatu,
-      specialist: 'Spesialis Onkologi',
-    },
-    {
-      id: 2,
-      name: 'Dr. Anastasya',
-      image: dokterdua,
-      specialist: 'Spesialis Onkologi',
-    },
-    {
-      id: 3,
-      name: 'Dr. Smith Rowe',
-      image: doktertiga,
-      specialist: 'Spesialis Onkologi',
-    },
-    {
-      id: 4,
-      name: 'Dr. Diana Ayu Pratiwi',
-      image: dokterempat,
-      specialist: 'Spesialis Onkologi',
-    },
-    {
-      id: 5,
-      name: 'Dr. Anastasya',
-      image: dokterlima,
-      specialist: 'Spesialis Onkologi',
-    },
-    {
-      id: 6,
-      name: 'Dr. Raden Sanjaya',
-      image: dokterenam,
-      specialist: 'Spesialis Onkologi',
-    },
-  ];
   const [modalShow, setModalShow] = useState(false);
   const [detailDokter, setDetailDokter] = useState(false);
 
@@ -96,7 +55,7 @@ function ModalLogin() {
     <>
       <Col md={12}>
         <div className="card-bungkus-image mt-4">
-          {dokterSpesialis.map((dct) => (
+          {dokterSpesialist.map((dct) => (
             <div key={dct.id} className="card-image mb-4 ">
               <div className="card-image-bayanan">
                 <img className="mt-4 foto-img" src={dct.image} alt="gambar" onClick={() => setModalShow(true)} />
@@ -125,6 +84,7 @@ function ModalLogin() {
 }
 
 function DetailDokter(props) {
+  const [nomorPonsel, setNomorPonsel] = useState(false);
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_detail">
       {/* <Modal.Header closeButton/> */}
@@ -133,7 +93,7 @@ function DetailDokter(props) {
           <Container>
             <Row>
               <Col>
-                <img className="bg-detail-dokter" src={doktersatu} alt="gambar" />
+                <img className="bg-detail-dokter" src={{}} alt="gambar" />
                 <h1 className="name-dok mb-3">Dr. Shofiyyah Kamilah</h1>
                 <i className="fa-solid fa-star fa-stars fa-2xl"></i>
                 <i className="fa-solid fa-star fa-stars fa-2xl"></i>
@@ -175,8 +135,69 @@ function DetailDokter(props) {
             </Row>
             <Row className="mt-5">
               <h1 className="harga_dokter">Rp. 20.000</h1>
-              <Button className="button_modals" onClick={{}}>
+              <Button className="button_modals" onClick={() => setNomorPonsel(faTruckMedical)}>
                 Chat Sekarang
+              </Button>
+            </Row>
+          </Container>
+        </Modal.Body>
+      </div>
+      <InputNomorPonsel show={nomorPonsel} onHide={() => setNomorPonsel(false)} />
+    </Modal>
+  );
+}
+
+function InputNomorPonsel(props) {
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [valid, setValid] = useState(true);
+
+  const handleChange = (value) => {
+    setPhoneNumber(value);
+    setValid(validatePhoneNumber(value));
+  };
+
+  const validatePhoneNumber = (phoneNumber) => {
+    const phoneNumberPattern = /^\d{12}$/;
+    return phoneNumberPattern.test(phoneNumber);
+  };
+
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_input_telepon">
+      {/* <Modal.Header closeButton/> */}
+      <div>
+        <Modal.Body className="grid-example">
+          <Container>
+            <Row>
+              <div>
+                <h1 className="close_modals_input_telepon" onClick={props.onHide}>
+                  x
+                </h1>
+              </div>
+            </Row>
+            <Row>
+              <Row className="modalstext">
+                <h1 className='title_telepon'>Masukkan Nomor Ponsel</h1>
+                <h6>
+                  <span className="text-1">Masukkan Nomor Ponsel</span> Untuk Melanjutkan Proses Konsultasi Di <span className="text-2">Cervicare+</span>{' '}
+                </h6>
+                <Row>
+                  <Col className="mt-3">
+                    <label>
+                      <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" country={'id'} value={phoneNumber} onChange={handleChange} inputProps={{ required: true }} />
+                    </label>
+                    {!valid && <p className="hint_telepon mt-3">Masukkan Nomor Telepon Anda</p>}
+                  </Col>
+                </Row>
+                <h6 className="mt-3">
+                  {' '}
+                  Dengan ini, Saya Menyetujui <a href="">ketentuan Pengguna</a> Dan <a href="">Kebijakan Privasi</a> <span className="text-2">Cervicare+</span>{' '}
+                </h6>
+              </Row>
+              <Button className="button_modals mt-3" onClick={{}}>
+              <i className="fa-brands fa-whatsapp fa-2xl whatsapp-icon"></i> Kirim Kode Melalui WhatsApp
+              </Button>
+              <Button className="button_modals mt-3" onClick={{}}>
+              <i className="fa-regular fa-envelope fa-xl envelope-icon"></i> Kirim Kode Melalui Pesan
               </Button>
             </Row>
           </Container>

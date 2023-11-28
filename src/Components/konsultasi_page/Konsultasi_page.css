@@ -120,16 +120,16 @@
   margin-top: 20px;
 }
 
-.harga_dokter{
+.harga_dokter {
   font-family: Montserrat;
   font-weight: 100;
   font-size: 30px;
 }
 
-.bg-status{
+.bg-status {
   height: 30px !important;
   width: 150px !important;
-  background: #00D22E;
+  background: #00d22e;
   color: white;
   display: flex;
   justify-content: center;
@@ -146,9 +146,85 @@
   border-radius: 20px !important;
 }
 
-.fa-stars{
-  color: #FFE500 !important;
+.fa-stars {
+  color: #ffe500 !important;
+}
 
+.text-1 {
+  font-weight: 700;
+}
+
+.text-2 {
+  color: #f31559;
+  font-weight: 700;
+}
+
+.box_modals_input_telepon {
+  transform: translateY(240px) !important;
+  max-width: 40vw !important;
+}
+
+.box_modals_input_telepon div {
+  border-radius: 20px !important;
+}
+
+.dropdown_country {
+  height: 200px !important;
+}
+
+.input_telepon {
+  width: 500px !important;
+  height: 50px !important;
+  border-radius: 20px !important;
+  margin-left: 30px !important;
+  padding: 20px !important;
+  font-size: 19px !important;
+  border-color: red !important;
+  transform: translateX(30px) !important;
+}
+
+.input_telepon:active,
+.input_telepon:focus {
+  box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25) !important;
+}
+
+.whatsapp-icon{
+  background: rgb(4, 187, 4);
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding-top: 14px;
+}
+
+.title_telepon{
+  font-weight: 600;
+}
+
+.envelope-icon{
+  background: linear-gradient(80deg, rgb(4, 187, 4), rgb(93, 161, 238));
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  padding-top: 18px;
+}
+
+.hint_telepon {
+  color: red;
+  transform: translateX(30px);
+}
+
+.close_modals_input_telepon {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(665px);
+}
+
+.close_modals_input_telepon:hover {
+  cursor: pointer;
 }
 
 .detail_title_desc h1 {
@@ -169,7 +245,7 @@
   transform: translateX(60px);
 }
 
-.close_modals_detail:hover{
+.close_modals_detail:hover {
   cursor: pointer;
 }
 
