@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Col, Container, Row, Tabs, Tab, Form } from "react-bootstrap";
+import { Button, Col, Container, Row, Tabs, Tab, Form ,Nav} from "react-bootstrap";
 import NavbarAuth from "../landing_page/navbar/NavbarAuth";
 import pprofile from "../../../src/assets/img/potoprofil.png";
 import { useNavigate } from "react-router-dom";
@@ -26,16 +26,43 @@ const Janji_saya = () => {
                 <h2 className="status">Mahasiswa</h2>
                 <hr />
                 <h2 className="profil-saya mt-5">
-                  <a href="" onClick={()=> linkProfile ('/profile')}>Profil Saya</a>
+                  <a href="" onClick={() => linkProfile("/profile")}>
+                    Profil Saya
+                  </a>
                 </h2>
                 <h2 className="janji-saya mt-5 mb-5">
-                  <a href="" >Janji Saya</a>
+                  <a href="">Janji Saya</a>
                 </h2>
 
                 <hr />
                 <h2 className="keluar ">
                   <a href="">Keluar</a>
                 </h2>
+
+                <Tab.Container id="example" defaultActiveKey="profil-saya" fill>
+                  <Row>
+                    <Col sm={12} c>
+                      <Nav variant="pills" className="mb-4 gap-4 mx-5" fill>
+                        <Nav.Item>
+                          <Nav.Link eventKey="profil-saya" className=" costum-tab">
+                            profil saya
+                          </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                          <Nav.Link eventKey="janji" className=" costum-tab">
+                            janji saya
+                          </Nav.Link>
+                        </Nav.Item>
+                      </Nav>
+                    </Col>
+                    <Col sm={9}>
+                      <Tab.Content>
+                        <Tab.Pane eventKey="profil-saya">tes1</Tab.Pane>
+                        <Tab.Pane eventKey="janji">\tes2</Tab.Pane>
+                      </Tab.Content>
+                    </Col>
+                  </Row>
+                </Tab.Container>
               </div>
             </Col>
 
@@ -44,24 +71,41 @@ const Janji_saya = () => {
               <div className="card-data-profile-3 mb-4 mt-4">
                 <br />
                 <br />
-                {/* <Form>
-                  <Form.Group className="mb-3 mx-5 " controlId="tanggal_lahir">
-                    <Form.Label className="label">Tanggal Lahir</Form.Label>
-                    <Form.Control type="text" readOnly className="costum-control" />
-                  </Form.Group>
-                  <Form.Group className="mb-3 mx-5" controlId="Jenis-kl">
-                    <Form.Label className="label">Jenis Kelamin</Form.Label>
-                    <Form.Control type="text" readOnly className="costum-control" />
-                  </Form.Group>
-                  <Form.Group className="mb-3 mx-5" controlId="no-hp">
-                    <Form.Label className="label">Nomor Hp</Form.Label>
-                    <Form.Control type="text" readOnly className="costum-control" />
-                  </Form.Group>
-                  <Form.Group className="mb-3 mx-5" controlId="email">
-                    <Form.Label className="label">Alamat Email</Form.Label>
-                    <Form.Control type="text" readOnly className="costum-control" />
-                  </Form.Group>
-                </Form> */}
+                <Tab.Container id="left-tabs-example" defaultActiveKey="semua" fill>
+                  <Row>
+                    <Col sm={12} className="">
+                      <Nav variant="pills" className="mb-4 gap-4 mx-5" fill>
+                        <Nav.Item>
+                          <Nav.Link eventKey="semua" className=" costum-tab">
+                            Semua
+                          </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                          <Nav.Link eventKey="aktif" className=" costum-tab">
+                            Aktif
+                          </Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                          <Nav.Link eventKey="selesai" className=" costum-tab">
+                            Selesai
+                          </Nav.Link>
+                        </Nav.Item>
+
+                        <Nav.Item>
+                          <Nav.Link eventKey="batal" className="costum-tab">
+                            Batal
+                          </Nav.Link>
+                        </Nav.Item>
+                      </Nav>
+                    </Col>
+                    <Col sm={9}>
+                      <Tab.Content>
+                        <Tab.Pane eventKey="semua">tes1</Tab.Pane>
+                        <Tab.Pane eventKey="aktif">\tes2</Tab.Pane>
+                      </Tab.Content>
+                    </Col>
+                  </Row>
+                </Tab.Container>
               </div>
             </Col>
           </Col>

@@ -94,7 +94,7 @@ text-decoration: none;
 
 .card-data-profile-2{
     margin-left: 410px;
-    position: absolute;
+    /* position: absolute; */
     margin-top: -590px;
     width: 839px;
 }
@@ -146,4 +146,37 @@ font-weight: 500;
 .costum-control:focus{
     
     box-shadow: none !important;
+}
+
+
+
+.modal-ubah{
+     /* width: 400px !important; */
+    /* background-color: #F31559; */
+   justify-content: center !important;
+   border: none !important;
+
+   
+   
+}
+
+.ubah-title{
+color:  #061D4A !important;
+font-family: Montserrat !important;
+font-size: 29px !important;
+font-style: normal !important;
+font-weight: 700 !important;
+}
+
+.costum-btn{
+    background-color: #F31559 !important;
+    color: #F7F7F7 !important;
+}
+
+.costum-btn:active{
+   border: none;
+}
+
+.Footer-ubah{
+border: none !important;
 }
