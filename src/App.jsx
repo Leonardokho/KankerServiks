@@ -7,9 +7,10 @@ import HeaderMainAuth from './Components/landing_page/headermain_auth/HeaderMain
 import ArtikelMain from './Components/artikel/artikel_main/ArtikelMain.jsx';
 import Konsultasi_data_page from './Components/user_login/konsultasi_data_page/Konsultasi_data_page.jsx';
 import LayananKesehatan from './Components/layanan_kesehatan/LayananKesehatan.jsx';
-import LayananDetailMain from './Components/layanan_kesehatan_detail/layanan_detail_main/LayananDetailMain.jsx';
+import LayananDetailMain from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailMain.jsx';
 import Profile from './Components/profile/Profile.jsx';
 import Janji_saya from './Components/profile/Janji_saya.jsx';
+import LayananDetailSmear2Main from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailSmear2Main.jsx';
 // import PemberitahuanLogin from './Components/pop_up/PemberitahuanLogin.jsx';
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
           <Route path="/Landing_Page_Auth" element={<HeaderMainAuth />} />
           <Route path="/konsultasi_page" element={<Konsultasi_page />} />
           <Route path="/Layanan_Kesehatan" element={<LayananKesehatan />} />
-          <Route path="/Layanan_Kesehatan_Detail" element={<LayananDetailMain />}></Route>
+          <Route path="/Layanan_Kesehatan_Detail" element={<LayananDetailMain />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/janji_saya" element={<Janji_saya />} />
@@ -29,8 +30,8 @@ function App() {
           <Route path="/Halaman_Konsultasi_data_page" element={<Konsultasi_data_page />} />
           <Route path="/Masuk" element={<Login />} />
           <Route path="/Daftar" element={<Daftar />} />
-          <Route path="/Halaman_Artikel" element={<ArtikelMain />}></Route>
-          {/* <Route path='/Pemberitahuan_Login' element={<PemberitahuanLogin/>}></Route> */}
+          <Route path="/Halaman_Artikel" element={<ArtikelMain />}/>
+          <Route path="/Layanan_Kesehatan_Booking" element={<LayananDetailSmear2Main />} />
         </Routes>
       </Router>
     </>

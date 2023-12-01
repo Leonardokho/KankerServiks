@@ -39,7 +39,7 @@ const Janji_saya = () => {
                   <a href="">Keluar</a>
                 </h2>
 
-                <Tab.Container id="example" defaultActiveKey="profil-saya" fill>
+                {/* <Tab.Container id="example" defaultActiveKey="profil-saya" fill>
                   <Row>
                     <Col sm={12} c>
                       <Nav variant="pills" className="mb-4 gap-4 mx-5" fill>
@@ -62,7 +62,7 @@ const Janji_saya = () => {
                       </Tab.Content>
                     </Col>
                   </Row>
-                </Tab.Container>
+                </Tab.Container> */}
               </div>
             </Col>
 

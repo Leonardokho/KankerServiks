@@ -2,10 +2,11 @@ import { Tab, Container, Row, Col, Button, Form, Nav } from 'react-bootstrap';
 import klinik1 from '../../../assets/img/place1.png';
 import klinik2 from '../../../assets/img/place2.png';
 import klinik3 from '../../../assets/img/place3.png';
-
+import { useNavigate } from 'react-router-dom';
 import './LayananDetail.css';
 
 const LayananDetail = () => {
+  const linkPapSmear2 = useNavigate();
   const klinik = [
     {
       id: 1,
@@ -59,7 +60,7 @@ const LayananDetail = () => {
                 <Row className="mt-5">
                   <Col md={4}>
                     <div className="lokasi_container">
-                      <Row className="mb-3 text_lokasi">
+                      <Row className=" text_lokasi py-3">
                         <Col className="d-flex justify-content-center align-items-center lokasi_space">
                           <i className="fa-solid fa-location-dot location_dot mx-1"></i> Lokasi
                         </Col>
@@ -69,10 +70,8 @@ const LayananDetail = () => {
                           </a>
                         </Col>
                       </Row>
-                      <Row>
-                        <div className="container_lokasi"></div>
-                      </Row>
-                      <Row className="mt-4 mb-2">
+                      <div className="container_lokasi"></div>
+                      <Row className="mt-4 mb-2 px-4">
                         <Form>
                           {['radio'].map((type) => (
                             <div key={`reverse-${type}`} className="mb-3 ">
@@ -82,10 +81,8 @@ const LayananDetail = () => {
                           ))}
                         </Form>
                       </Row>
-                      <Row>
-                        <div className="container_lokasi"></div>
-                      </Row>
-                      <Row className="mt-4 mb-2">
+                      <div className="container_lokasi"></div>
+                      <Row className="mt-4 mb-2 px-4">
                         <Form>
                           {['radio'].map((type) => (
                             <div key={`reverse-${type}`} className="mb-3 ">
@@ -104,16 +101,22 @@ const LayananDetail = () => {
                     {klinik.map((k) => (
                       <div key={k.id} className="container_klinik">
                         <Row>
-                          <Col md={3}>
-                            <img className="image_klinik" src={k.image} alt="" />
+                          <Col md={5}>
+                            <img className="image_klinik" src={k.image} alt="gambar" />
                           </Col>
-                          <Col>
+                          <Col className="pd_box_klinik mt-3">
                             <h1 className="name_klinik">{k.name}</h1>
                             <h1 className="jenis_klinik">{k.jenis}</h1>
-                            <h1 className="lokasi_klinik">{k.lokasi}</h1>
-                            <Col className="d-flex justify-content-end mt-4">
-                              <Button className="button_dokter">Booking Sekarang</Button>
-                            </Col>
+                            <Row className="button_booking_klinik">
+                              <Col>
+                                <h1 className="lokasi_klinik mt-2">{k.lokasi}</h1>
+                              </Col>
+                              <Col className="d-flex justify-content-end ">
+                                <Button className="button_dokter" onClick={() => linkPapSmear2('/Layanan_Kesehatan_Booking')}>
+                                  Booking Sekarang
+                                </Button>
+                              </Col>
+                            </Row>
                           </Col>
                         </Row>
                       </div>
@@ -125,7 +128,7 @@ const LayananDetail = () => {
                 <Row className="mt-5">
                   <Col md={4}>
                     <div className="lokasi_container">
-                      <Row className="mb-3 text_lokasi">
+                      <Row className=" text_lokasi py-3">
                         <Col className="d-flex justify-content-center align-items-center lokasi_space">
                           <i className="fa-solid fa-location-dot location_dot mx-1"></i> Lokasi
                         </Col>
@@ -135,10 +138,8 @@ const LayananDetail = () => {
                           </a>
                         </Col>
                       </Row>
-                      <Row>
-                        <div className="container_lokasi"></div>
-                      </Row>
-                      <Row className="mt-4 mb-2">
+                      <div className="container_lokasi"></div>
+                      <Row className="mt-4 mb-2 px-4">
                         <Form>
                           {['radio'].map((type) => (
                             <div key={`reverse-${type}`} className="mb-3 ">
@@ -148,10 +149,8 @@ const LayananDetail = () => {
                           ))}
                         </Form>
                       </Row>
-                      <Row>
-                        <div className="container_lokasi"></div>
-                      </Row>
-                      <Row className="mt-4 mb-2">
+                      <div className="container_lokasi"></div>
+                      <Row className="mt-4 mb-2 px-4">
                         <Form>
                           {['radio'].map((type) => (
                             <div key={`reverse-${type}`} className="mb-3 ">
@@ -170,16 +169,22 @@ const LayananDetail = () => {
                     {klinik.map((k) => (
                       <div key={k.id} className="container_klinik">
                         <Row>
-                          <Col md={3}>
-                            <img className="image_klinik" src={k.image} alt="" />
+                          <Col md={5}>
+                            <img className="image_klinik" src={k.image} alt="gambar" />
                           </Col>
-                          <Col>
+                          <Col className="pd_box_klinik mt-3">
                             <h1 className="name_klinik">{k.name}</h1>
                             <h1 className="jenis_klinik">{k.jenis}</h1>
-                            <h1 className="lokasi_klinik">{k.lokasi}</h1>
-                            <Col className="d-flex justify-content-end mt-4">
-                              <Button className="button_dokter">Booking Sekarang</Button>
-                            </Col>
+                            <Row className="button_booking_klinik">
+                              <Col>
+                                <h1 className="lokasi_klinik mt-2">{k.lokasi}</h1>
+                              </Col>
+                              <Col className="d-flex justify-content-end ">
+                                <Button className="button_dokter" onClick={{}}>
+                                  Booking Sekarang
+                                </Button>
+                              </Col>
+                            </Row>
                           </Col>
                         </Row>
                       </div>
@@ -191,7 +196,7 @@ const LayananDetail = () => {
                 <Row className="mt-5">
                   <Col md={4}>
                     <div className="lokasi_container">
-                      <Row className="mb-3 text_lokasi">
+                      <Row className=" text_lokasi py-3">
                         <Col className="d-flex justify-content-center align-items-center lokasi_space">
                           <i className="fa-solid fa-location-dot location_dot mx-1"></i> Lokasi
                         </Col>
@@ -201,10 +206,8 @@ const LayananDetail = () => {
                           </a>
                         </Col>
                       </Row>
-                      <Row>
-                        <div className="container_lokasi"></div>
-                      </Row>
-                      <Row className="mt-4 mb-2">
+                      <div className="container_lokasi"></div>
+                      <Row className="mt-4 mb-2 px-4">
                         <Form>
                           {['radio'].map((type) => (
                             <div key={`reverse-${type}`} className="mb-3 ">
@@ -214,10 +217,8 @@ const LayananDetail = () => {
                           ))}
                         </Form>
                       </Row>
-                      <Row>
-                        <div className="container_lokasi"></div>
-                      </Row>
-                      <Row className="mt-4 mb-2">
+                      <div className="container_lokasi"></div>
+                      <Row className="mt-4 mb-2 px-4">
                         <Form>
                           {['radio'].map((type) => (
                             <div key={`reverse-${type}`} className="mb-3 ">
@@ -236,16 +237,22 @@ const LayananDetail = () => {
                     {klinik.map((k) => (
                       <div key={k.id} className="container_klinik">
                         <Row>
-                          <Col md={3}>
-                            <img className="image_klinik" src={k.image} alt="" />
+                          <Col md={5}>
+                            <img className="image_klinik" src={k.image} alt="gambar" />
                           </Col>
-                          <Col>
+                          <Col className="pd_box_klinik mt-3">
                             <h1 className="name_klinik">{k.name}</h1>
                             <h1 className="jenis_klinik">{k.jenis}</h1>
-                            <h1 className="lokasi_klinik">{k.lokasi}</h1>
-                            <Col className="d-flex justify-content-end mt-4">
-                              <Button className="button_dokter">Booking Sekarang</Button>
-                            </Col>
+                            <Row className="button_booking_klinik">
+                              <Col>
+                                <h1 className="lokasi_klinik mt-2">{k.lokasi}</h1>
+                              </Col>
+                              <Col className="d-flex justify-content-end ">
+                                <Button className="button_dokter" onClick={{}}>
+                                  Booking Sekarang
+                                </Button>
+                              </Col>
+                            </Row>
                           </Col>
                         </Row>
                       </div>

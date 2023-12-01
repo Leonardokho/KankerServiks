@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap');
 
-.bg_tabs{
-    background: #F31559;
+.bg_tabs {
+  background: #f31559;
 }
 
-.nav_pill .nav_item .nav_link.active{
-    background: #F31559 !important;
-    color: white !important;
-    font-family: Montserrat;
-    font-weight: 600;
+.nav_pill .nav_item .nav_link.active {
+  background: #f31559 !important;
+  color: white !important;
+  font-family: Montserrat;
+  font-weight: 600;
 }
 
-.nav_pill .nav_item .nav_link{
-    color: #F31559 !important;
-    font-family: Montserrat;
-    font-weight: 600;
+.nav_pill .nav_item .nav_link {
+  color: #f31559 !important;
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+.button_booking_klinik {
+  padding-right: 20px;
+  padding-top: 70px;
 }
 
 .layanan_detail_header {
@@ -26,7 +31,6 @@
 }
 
 .lokasi_container {
-  padding: 1em;
   width: 350px;
   height: 350px;
   border-radius: 20px;
@@ -51,32 +55,36 @@
 }
 
 .container_klinik {
-  width: 100%;
   height: 200px;
   border-radius: 20px;
   border: 2px solid #a9a9a9;
-  padding: 1em;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.box_detail_klinik {
+  margin-left: 50px;
 }
 
 .image_klinik {
-  width: 200px;
-  height: 160px;
+  width: 320px;
+  height: 196px;
+  border-radius: 20px;
 }
 
-.name_klinik{
-    font-family: Montserrat;
-    font-size: 25px;
+.name_klinik {
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.jenis_klinik{
-    font-family: Montserrat;
-    font-size: 20px;
-    color: #4b4a4a
+.jenis_klinik {
+  font-family: Montserrat;
+  font-size: 15px;
+  color: #4b4a4a;
 }
 
-.lokasi_klinik{
-    font-family: Montserrat;
-    font-size: 20px;
-    color: #4b4a4a
+.lokasi_klinik {
+  font-family: Montserrat;
+  font-size: 15px;
+  color: #4b4a4a;
 }
