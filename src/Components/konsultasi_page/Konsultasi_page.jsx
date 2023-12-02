@@ -6,6 +6,14 @@ import loginimgmodals from '../../assets/img/Group 111.png';
 import PhoneInput from 'react-phone-input-2';
 import VerificationInput from 'react-verification-input';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
+import BSI from '../../assets/img/frame 71.png';
+import BCA from '../../assets/img/frame 72.png';
+import Mandiri from '../../assets/img/frame 73.png';
+import BNI from '../../assets/img/frame 74.png';
+import BRI from '../../assets/img/frame 75.png';
+import Dana from '../../assets/img/frame 76.png';
+import Gopay from '../../assets/img/frame 77.png';
+import doktersatu from '../../assets/img/doktersatu.png';
 import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
 import { useRef, useState, useEffect } from 'react';
 import { dokterSpesialist } from '../../model/model_dokter';
@@ -94,7 +102,7 @@ function DetailDokter(props) {
           <Container>
             <Row>
               <Col>
-                <img className="bg-detail-dokter" src={{}} alt="gambar" />
+                <img className="bg-detail-dokter" src={doktersatu} alt="gambar" />
                 <h1 className="name-dok mb-3">Dr. Shofiyyah Kamilah</h1>
                 <i className="fa-solid fa-star fa-stars fa-2xl"></i>
                 <i className="fa-solid fa-star fa-stars fa-2xl"></i>
@@ -148,6 +156,70 @@ function DetailDokter(props) {
   );
 }
 
+function DetailDokterSetelahPembayaran(props) {
+  const [livechat, setLiveChat] = useState(false);
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_detail">
+      {/* <Modal.Header closeButton/> */}
+      <div>
+        <Modal.Body className="grid-example">
+          <Container>
+            <Row>
+              <Col>
+                <img className="bg-detail-dokter" src={doktersatu} alt="gambar" />
+                <h1 className="name-dok mb-3">Dr. Shofiyyah Kamilah</h1>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+              </Col>
+              <Col className=" mt-2">
+                <Row className="detail_title_desc">
+                  <Col>
+                    <h1>Nomor STR</h1>
+                    <p>100100020020002</p>
+                  </Col>
+                  <Col>
+                    <h1 className="close_modals_detail" onClick={props.onHide}>
+                      x
+                    </h1>
+                  </Col>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>Lulusan</h1>
+                  <p>Universitas andalas, 2016</p>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>Lokasi Praktik</h1>
+                  <p>depok, jawa barat</p>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>lama bekerja</h1>
+                  <p>7 tahun</p>
+                </Row>
+                <Row className="detail_title_desc">
+                  <h1>Status</h1>
+                  <div className="bg-status">
+                    <h1>Online</h1>
+                  </div>
+                </Row>
+              </Col>
+            </Row>
+            <Row className="mt-5">
+              <h1 className="harga_dokter">Rp. 20.000</h1>
+              <Button className="button_modals" onClick={() => setLiveChat(faTruckMedical)}>
+                Chat Sekarang
+              </Button>
+            </Row>
+          </Container>
+        </Modal.Body>
+      </div>
+      <NotifTerimaKasih show={livechat} onHide={() => setLiveChat(false)} />
+    </Modal>
+  );
+}
+
 function InputNomorPonsel(props) {
   const [verification, setVerification] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -169,36 +241,37 @@ function InputNomorPonsel(props) {
       <div>
         <Modal.Body className="grid-example">
           <Container>
-            <Row>
+            <Row className="modalstext mt-3">
               <div>
-                <h1 className="close_modals_input_telepon" onClick={props.onHide}>
-                  x
-                </h1>
-              </div>
-            </Row>
-            <Row>
-              <Row className="modalstext">
-                <h1 className="title_telepon mb-4">Masukkan Nomor Ponsel</h1>
+                <Col>
+                  <h1 className="title_telepon">Masukkan Nomor Ponsel</h1>
+                </Col>
+                <Col>
+                  <h1 className="close_modals_input_telepon" onClick={props.onHide}>
+                    x
+                  </h1>
+                </Col>
                 <h6>
                   <span className="text-1">Masukkan Nomor Ponsel</span> Untuk Melanjutkan Proses Konsultasi Di <span className="text-2">Cervicare+</span>{' '}
                 </h6>
-                <Row>
-                  <Col className="mt-3">
-                    <label>
-                      <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" country={'id'} value={phoneNumber} onChange={handleChange} inputProps={{ required: true }} />
-                    </label>
-                    {!valid && <p className="hint_telepon mt-3">Masukkan Nomor Telepon Anda</p>}
-                  </Col>
-                </Row>
-                <h6 className="mt-3">
-                  {' '}
-                  Dengan ini, Saya Menyetujui <a href="">ketentuan Pengguna</a> Dan <a href="">Kebijakan Privasi</a> <span className="text-2">Cervicare+</span>{' '}
-                </h6>
+              </div>
+              <Row>
+                <Col className="mt-4">
+                  <label>
+                    <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" country={'id'} value={phoneNumber} onChange={handleChange} inputProps={{ required: true }} />
+                  </label>
+                  {!valid && <p className="hint_telepon mt-3">Masukkan Nomor Telepon Anda</p>}
+                </Col>
               </Row>
+
+              <h6 className="mt-4">
+                {' '}
+                Dengan ini, Saya Menyetujui <a href="">ketentuan Pengguna</a> Dan <a href="">Kebijakan Privasi</a> <span className="text-2">Cervicare+</span>{' '}
+              </h6>
               <Button className="button_modals mt-3" onClick={() => setVerification(true)}>
                 <i className="fa-brands fa-whatsapp fa-2xl whatsapp-icon"></i> Kirim Kode Melalui WhatsApp
               </Button>
-              <Button className="button_modals mt-3" onClick={{}}>
+              <Button className="button_modals mt-3" onClick={() => setVerification(true)}>
                 <i className="fa-regular fa-envelope fa-xl envelope-icon"></i> Kirim Kode Melalui Pesan
               </Button>
             </Row>
@@ -211,9 +284,10 @@ function InputNomorPonsel(props) {
 }
 
 function VerificationModals(props) {
-  const [otp, setOtp] = useState('');
+  // const [otp, setOtp] = useState('');
   // const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(30);
+  const [pembayaran, setPembayaran] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -242,34 +316,31 @@ function VerificationModals(props) {
   };
 
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_verifikasi">
       {/* <Modal.Header closeButton/> */}
       <div>
         <Modal.Body className="grid-example">
           <Container>
-            <Row>
-              <div>
-                <h1 className="close_modals" onClick={props.onHide}>
-                  x
-                </h1>
-              </div>
-            </Row>
             <Row className="modalstext">
-              <h1 className="title_verif mb-3">Masukkan Kode Verifikasi</h1>
-              <h6>
-                <span className="text-1">Masukkan 6 Digit Kode </span> Yang Dikirim Ke Nomor Yang Kamu Masukkan
-              </h6>
+              <div>
+                <Col>
+                  <h1 className="title_verif mt-3">Masukkan Kode Verifikasi</h1>
+                </Col>
+                <Col>
+                  <h1 className="close_modals_verifikasi" onClick={props.onHide}>
+                    x
+                  </h1>
+                </Col>
+                <h6>
+                  <span className="text-1">Masukkan 6 Digit Kode </span> Yang Dikirim Ke Nomor Yang Kamu Masukkan
+                </h6>
+              </div>
 
               <Col>
                 <Row className="mx-5 mt-5">
                   <VerificationInput
-                    // value={otp}
-                    // onChange={({ target }) => {
-                    //   setOtp(target.value);
-                    // }}
                     placeholder=""
                     classNames={{
-                      characterSelected: 'halo',
                       container: 'container_verification',
                       character: 'character_verification',
                     }}
@@ -282,9 +353,9 @@ function VerificationModals(props) {
                         Mohon Tunggu <span className="text-1">{seconds < 10 ? `0${seconds}` : seconds} Detik</span> Untuk Kirim Ulang kode
                       </p>
                     ) : (
-                      <Row className='mx-3'>
-                          <p>Tidak Menerima Kode Verifikasi?</p>
-                        
+                      <Row className="mx-3">
+                        <p>Tidak Menerima Kode Verifikasi?</p>
+
                         <Col>
                           <button
                             disabled={seconds > 0}
@@ -303,8 +374,111 @@ function VerificationModals(props) {
                   </div>
                 </Row>
               </Col>
-              <Button className="button_modals mt-4" onClick={{}}>
+              <Button className="button_modals mt-4" onClick={() => setPembayaran(true)}>
                 Verifikasi
+              </Button>
+            </Row>
+          </Container>
+        </Modal.Body>
+      </div>
+      <PembayaranModals show={pembayaran} onHide={() => setPembayaran(false)} />
+    </Modal>
+  );
+}
+
+function PembayaranModals(props) {
+  const [dokterDetail, setDokterDetail] = useState(false);
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_pembayaran">
+      {/* <Modal.Header closeButton/> */}
+      <div>
+        <Modal.Body className="grid-example">
+          <Container>
+            <Row>
+              <div className="mt-2">
+                <Row>
+                  <Col>
+                    <h1 className="title-pembayaran">Boleh Selesaikan Proses</h1>
+                    <h1 className="title-pembayaran">Ini Dulu Ya...</h1>
+                  </Col>
+                  <Col>
+                    <h1 className="close_modals_pembayaran" onClick={props.onHide}>
+                      x
+                    </h1>
+                  </Col>
+                </Row>
+              </div>
+              <div className="mt-5">
+                <Row>
+                  <Col>
+                    <h1 className="title-biaya">Biaya Per 30 Menit :</h1>
+                    <h1 className="title-biaya">Biaya Layanan :</h1>
+                  </Col>
+                  <Col>
+                    <h1 className="desc-biaya">Rp. 20.000</h1>
+                    <h1 className="desc-biaya">Rp. 1.000</h1>
+                  </Col>
+                </Row>
+              </div>
+              <div className="mt-5">
+                <h1 className="title-total">Total</h1>
+                <h1 className="total-biaya">Rp 21.000</h1>
+                <h1 className="title-total">Pembayaran Melalui :</h1>
+              </div>
+              <div className="mt-4 button-bank">
+                <img src={BSI} alt="gambar" />
+                <img src={BCA} alt="gambar" />
+                <img src={Mandiri} alt="gambar" />
+                <img src={BNI} alt="gambar" />
+                <img src={BRI} alt="gambar" />
+                <img src={Dana} alt="gambar" />
+                <img src={Gopay} alt="gambar" />
+              </div>
+              <Button className="button_modals mt-5" onClick={() => setDokterDetail(true)}>
+                Bayar
+              </Button>
+            </Row>
+          </Container>
+        </Modal.Body>
+      </div>
+      <DetailDokterSetelahPembayaran show={dokterDetail} onHide={() => setDokterDetail(false)} />
+    </Modal>
+  );
+}
+
+function NotifTerimaKasih(props) {
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
+  return (
+    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_terimakasih">
+      <div>
+        <Modal.Body className="grid-example">
+          <Container>
+            <Row>
+              <div>
+                <Col>
+                  <h1 className="title-terimakasih mt-3">Terimakasih Telah Berkonsultasi</h1>
+                </Col>
+                <Col>
+                  <h1 className="close_modals_terimakasih" onClick={props.onHide}>
+                    x
+                  </h1>
+                </Col>
+              </div>
+              <h1 className="title-manfaat">Semoga Membawa Manfaat Bagi Kamu</h1>
+              <div className="star-rating">
+                {[...Array(5)].map((star, index) => {
+                  index += 1;
+                  return (
+                    <button type="button" key={index} className={index <= (hover || rating) ? 'on' : 'off'} onClick={() => setRating(index)} onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(rating)}>
+                      <span className="star">&#9733;</span>
+                    </button>
+                  );
+                })}
+              </div>
+              <h1 className="title-rating mt-4">Berikan Ratingmu Terhadap Kami</h1>
+              <Button className="button_modals mt-4" onClick={props.onHide}>
+                Kembali
               </Button>
             </Row>
           </Container>
@@ -323,8 +497,6 @@ const Konsultasi_page = () => {
       behavior: 'smooth',
     });
   };
-
-  // const hal_data_page = useNavigate();
 
   return (
     <div>

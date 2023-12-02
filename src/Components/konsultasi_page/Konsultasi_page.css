@@ -160,7 +160,8 @@
 }
 
 .container_verification {
-  gap: 35px;
+  gap: 45px;
+  height: 55px;
 }
 
 .character_verification {
@@ -236,10 +237,34 @@
   height: 58px;
   border-radius: 50px;
   box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
-  transform: translateX(665px);
+  transform: translate(660px, -70px);
 }
 
 .close_modals_input_telepon:hover {
+  cursor: pointer;
+}
+
+.box_modals_verifikasi {
+  transform: translateY(200px) !important;
+  max-width: 40vw !important;
+}
+
+.box_modals_verifikasi div {
+  border-radius: 20px !important;
+}
+
+.close_modals_verifikasi {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
+  transform: translate(660px, -60px);
+}
+
+
+.close_modals_verifikasi:hover {
   cursor: pointer;
 }
 
@@ -380,5 +405,135 @@
 }
 
 .close_modals:hover {
+  cursor: pointer;
+}
+
+.title-pembayaran {
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.title-biaya{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.desc-biaya{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.title-total{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.total-biaya{
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.button-bank {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button-bank:hover {
+  cursor: pointer;
+}
+
+.box_modals_pembayaran {
+  transform: translateY(150px) !important;
+  max-width: 45vw !important;
+}
+
+.box_modals_pembayaran div {
+  border-radius: 20px !important;
+}
+
+.close_modals_pembayaran {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
+  transform: translateX(340px);
+}
+
+.close_modals_pembayaran:hover {
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: rgb(255, 208, 0);
+}
+
+.off {
+  color: #ccc;
+}
+
+.star{
+  font-size: 60px !important;
+}
+
+.star-rating{
+  text-align: center;
+}
+
+.title-terimakasih{
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.title-manfaat{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.title-rating{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.box_modals_terimakasih {
+  transform: translateY(250px) !important;
+  max-width: 40vw !important;
+}
+
+.box_modals_terimakasih div {
+  border-radius: 20px !important;
+}
+
+.close_modals_terimakasih {
+  display: flex;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  border-radius: 50px;
+  box-shadow: 0px 0px 30px 4px rgba(0, 0, 0, 0.25);
+  transform: translate(660px, -55px);
+}
+
+.close_modals_terimakasih:hover {
   cursor: pointer;
 }
