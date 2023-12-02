@@ -158,6 +158,10 @@
   font-weight: 500 !important;
 }
 
+.button_konsultasi_profile:hover {
+  background-color: #b30c3e !important;
+}
+
 .title-belum {
   font-family: Montserrat;
   font-size: 25px;
@@ -211,8 +215,8 @@
   border: 1px solid #615e5e !important;
 }
 
-.costum-control:hover{
-    cursor: default;
+.costum-control:hover {
+  cursor: default;
 }
 
 .costum-control:active,
@@ -329,6 +333,7 @@
   margin-top: -590px;
   width: 839px;
 }
+
 .card-profile-ubah {
   background-color: #061d4a;
 }
