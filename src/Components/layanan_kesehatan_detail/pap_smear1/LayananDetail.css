@@ -17,6 +17,18 @@
   font-weight: 600;
 }
 
+.button_booking {
+  border-radius: 20px;
+  border: none !important;
+  background-color: #f31559 !important;
+  font-family: Montserrat !important;
+  font-weight: 600 !important;
+}
+
+.button_booking:hover {
+  background-color: #b30c3e !important;
+}
+
 .button_booking_klinik {
   padding-right: 20px;
   padding-top: 70px;

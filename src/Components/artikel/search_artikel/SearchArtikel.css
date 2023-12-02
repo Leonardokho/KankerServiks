@@ -24,3 +24,14 @@
    
 }
 
+.button_telusuri_artikel {
+    border-radius: 20px;
+    border: none !important;
+    background-color: #f31559 !important;
+    font-family: Montserrat !important;
+    font-weight: 600 !important;
+  }
+  
+  .button_telusuri_artikel:hover {
+    background-color: #b30c3e !important;
+  }

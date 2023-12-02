@@ -211,6 +211,10 @@
   border: 1px solid #615e5e !important;
 }
 
+.costum-control:hover{
+    cursor: default;
+}
+
 .costum-control:active,
 .costum-control:focus {
   box-shadow: none !important;
@@ -232,6 +236,7 @@
 .costum-btn {
   background-color: #f31559 !important;
   color: #f7f7f7 !important;
+  font-weight: 600 !important;
 }
 
 .costum-btn:active {

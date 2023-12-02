@@ -34,13 +34,14 @@
 
 .button_mulai {
   border-radius: 20px;
+  font-weight: 600 !important;
+  font-family: Montserrat !important;
   border: none !important;
   background-color: #f31559 !important;
-  /* box-shadow: 0px 0px 10px 0px #f31559; */
 }
 
 .button_mulai:hover {
-  background-color: #c6053f !important;
+  background-color: #b30c3e !important;
 }
 
 .foto-docter {
@@ -242,6 +243,8 @@
 
 .close_modals_input_telepon:hover {
   cursor: pointer;
+  border: 1px solid #F31559;
+  color: #F31559;
 }
 
 .box_modals_verifikasi {
@@ -266,6 +269,8 @@
 
 .close_modals_verifikasi:hover {
   cursor: pointer;
+  border: 1px solid #F31559;
+  color: #F31559;
 }
 
 .detail_title_desc h1 {
@@ -288,6 +293,8 @@
 
 .close_modals_detail:hover {
   cursor: pointer;
+  border: 1px solid #F31559;
+  color: #F31559;
 }
 
 .card-image:hover {
@@ -342,18 +349,6 @@
   color: #f68924;
 }
 
-.button-banyak {
-  border-radius: 10px;
-  border: none !important;
-  background: var(--primary) !important;
-  font-family: Montserrat !important;
-  font-weight: 500 !important;
-}
-
-.button-banyak:hover {
-  background-color: #e40447 !important;
-}
-
 @media (max-width: 768px) {
   .foto-docter {
     width: 100%; /* Menggunakan lebar 100% untuk responsif */
@@ -385,6 +380,10 @@
   font-weight: 600 !important;
 }
 
+.button_modals:hover {
+  background-color: #b30c3e !important;
+}
+
 .box_modals {
   transform: translateY(200px) !important;
   max-width: 35vw !important;
@@ -406,6 +405,8 @@
 
 .close_modals:hover {
   cursor: pointer;
+  border: 1px solid #F31559;
+  color: #F31559;
 }
 
 .title-pembayaran {
@@ -470,6 +471,8 @@
 
 .close_modals_pembayaran:hover {
   cursor: pointer;
+  border: 1px solid #F31559;
+  color: #F31559;
 }
 
 button {
@@ -536,4 +539,6 @@ button {
 
 .close_modals_terimakasih:hover {
   cursor: pointer;
+  border: 1px solid #F31559;
+  color: #F31559;
 }

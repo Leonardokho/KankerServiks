@@ -29,7 +29,7 @@ const Header = () => {
                 <h1 style={{ color: '#061D4A' }}>serviks.</h1>
               </div>
               <Col className=" mt-5">
-                <Button onClick={() => goto(linkRef.current)} className="button_dokter mt-3 mb-4">
+                <Button onClick={() => goto(linkRef.current)} className="button_konsultasi_home mt-3 mb-4">
                   Mulai Konsultasi
                 </Button>
               </Col>

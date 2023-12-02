@@ -27,7 +27,7 @@ const SearchArtikel = () => {
           <h1 className="judul-title">Temukan Lebih Banyak Artikel</h1>
           <p className="boxs-layanan">Mengenai pencegahan dini kanker serviks secara lengkap dan akurat</p>
           <Col className="card-ceritakan mb-5">
-            <Button className="button_dokter mt-3 mb-4" onClick={() => goto(linkRef.current)}>
+            <Button className="button_telusuri_artikel mt-3 mb-4" onClick={() => goto(linkRef.current)}>
               {' '}
               Telusuri Sekarang
             </Button>

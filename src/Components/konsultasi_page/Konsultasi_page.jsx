@@ -18,13 +18,15 @@ import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
 import { useRef, useState, useEffect } from 'react';
 import { dokterSpesialist } from '../../model/model_dokter';
 import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 import './Konsultasi_page.css';
 import 'react-phone-input-2/lib/style.css';
 
 function PemberitahuanLogin(props) {
+  const linkLogin = useNavigate()
+  
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
-      {/* <Modal.Header closeButton/> */}
       <div>
         <Modal.Body className="grid-example">
           <Container>
@@ -45,7 +47,7 @@ function PemberitahuanLogin(props) {
               <Col md={5}>
                 <img src={loginimgmodals} alt="" />
               </Col>
-              <Button className="button_modals mt-5" onClick={{}}>
+              <Button className="button_modals mt-5" onClick={() => linkLogin('/login')}>
                 Login
               </Button>
             </Row>
@@ -70,9 +72,6 @@ function ModalLogin() {
                 <img className="mt-4 foto-img" src={dct.image} alt="gambar" onClick={() => setModalShow(true)} />
               </div>
               <h3>
-                {/* <a className="name-docter mt-3" href="#" onClick={() => hal_data_page('/halaman_konsultasi_data_page')}>
-                      {dct.name}
-                    </a> */}
                 <a className="name-docter mt-3" onClick={() => setDetailDokter(true)}>
                   {dct.name}
                 </a>
@@ -550,7 +549,7 @@ const Konsultasi_page = () => {
           <ModalLogin />
 
           <Col>
-            <Button className="button-banyak mt-3 mb-4"> Lebih Banyak</Button>
+            <Button className="button_mulai mt-3 mb-4"> Lebih Banyak</Button>
           </Col>
         </Row>
       </Container>

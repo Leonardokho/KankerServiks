@@ -147,7 +147,7 @@ const IsiArtikel = () => {
           ))}
         </Row>
         <Col className="card-ceritakan mb-5">
-          <Button className="button_dokter mt-3 mb-4"> Lebih Banyak</Button>
+          <Button className="button_artikel_banyak mt-3 mb-4"> Lebih Banyak</Button>
         </Col>
       </Container>
     </div>
