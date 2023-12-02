@@ -10,11 +10,7 @@ import './NavbarNotAuth.css';
 
 function LogOutBox(props) {
   const linkLogin = useNavigate();
-<<<<<<< HEAD
-  const linkProfile = useNavigate()
-=======
   
->>>>>>> 5ac9788f17f6d76a13818a7c8b703d0f49e9fc3a
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_logout">
       <div className="bg_box_logout">
@@ -62,11 +58,7 @@ function DropDownProfile() {
   return (
     <div className="flex flex-col dropdownprofile">
       <div className="flex flex-col">
-<<<<<<< HEAD
-        <h1 onClick={{ }} className="dropdownmenu mb-3">
-=======
-        <h1 onClick={() => linkProfile('/profile')} className="dropdownmenu mb-3">
->>>>>>> 5ac9788f17f6d76a13818a7c8b703d0f49e9fc3a
+        <h1 onClick={() => linkProfile('/Profile')} className="dropdownmenu mb-3">
           Pengaturan
         </h1>
         <div className="bardropdown"></div>
