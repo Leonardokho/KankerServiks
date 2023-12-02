@@ -15,16 +15,39 @@
   font-weight: 500 !important;
 }
 
+.page_navbar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-right: 150px;
+}
+
+.login_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav_text_change {
-  color: #f31559 !important;
   font-family: Montserrat !important;
+  font-size: 18px !important
+}
+
+.nav_text_change:focus,
+.nav_text_change:active {
+  color: #f31559 !important;
+}
+
+.bg_color_navbar{
+  box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
+  background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
 }
 
 .navbar_main {
   position: fixed;
   width: 100%;
   z-index: 99;
-  background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
 }
 
 .profile_name {
@@ -65,7 +88,7 @@
   font-family: Montserrat;
 }
 
-.dropdownmenu:hover{
+.dropdownmenu:hover {
   cursor: pointer;
 }
 
@@ -114,6 +137,6 @@
   width: 100px !important;
 }
 
-.profilephoto:hover{
+.profilephoto:hover {
   cursor: pointer;
 }
