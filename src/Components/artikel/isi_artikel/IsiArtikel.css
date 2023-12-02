@@ -15,6 +15,10 @@
   color: #f31559;
 }
 
+.isi_artikel_container{
+  margin-top: 150px !important;
+}
+
 .bg_topik {
   background: #fbe5e5;
   border-radius: 10px;

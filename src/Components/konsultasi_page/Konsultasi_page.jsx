@@ -6,11 +6,6 @@ import loginimgmodals from '../../assets/img/Group 111.png';
 import PhoneInput from 'react-phone-input-2';
 import VerificationInput from 'react-verification-input';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
-import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
-import { useRef, useState, useEffect } from 'react';
-import { dokterSpesialist } from '../../model/model_dokter';
-import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
 import BSI from '../../assets/img/frame 71.png';
 import BCA from '../../assets/img/frame 72.png';
 import Mandiri from '../../assets/img/frame 73.png';
@@ -19,7 +14,10 @@ import BRI from '../../assets/img/frame 75.png';
 import Dana from '../../assets/img/frame 76.png';
 import Gopay from '../../assets/img/frame 77.png';
 import doktersatu from '../../assets/img/doktersatu.png';
-
+import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
+import { useRef, useState, useEffect } from 'react';
+import { dokterSpesialist } from '../../model/model_dokter';
+import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
 import './Konsultasi_page.css';
 import 'react-phone-input-2/lib/style.css';
 

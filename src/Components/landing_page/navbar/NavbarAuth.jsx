@@ -2,14 +2,15 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../../assets/img/cc-logo2 1.png';
-import { useNavigate } from 'react-router-dom';
 import profileImage from '../../../assets/img/Frame 95.png';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Row, Modal, Col, Button } from 'react-bootstrap';
 import './NavbarNotAuth.css';
 
 function LogOutBox(props) {
   const linkLogin = useNavigate();
+  
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_logout">
       <div className="bg_box_logout">
@@ -52,10 +53,12 @@ function ModalLogOut() {
 }
 
 function DropDownProfile() {
+  const linkProfile = useNavigate();
+
   return (
     <div className="flex flex-col dropdownprofile">
       <div className="flex flex-col">
-        <h1 onClick={{}} className="dropdownmenu mb-3">
+        <h1 onClick={() => linkProfile('/profile')} className="dropdownmenu mb-3">
           Pengaturan
         </h1>
         <div className="bardropdown"></div>

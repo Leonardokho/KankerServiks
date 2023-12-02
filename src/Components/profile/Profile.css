@@ -1,182 +1,359 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;700&display=swap');
-.card-profile{
-    width: auto;
-    
 
-}
-.card-data-profile{
-    /* display: flex; */
-    /* position: relative; */
-    width: 353px;
-height: 592px;
-border-radius: 5px;
-background: #F7F7F7;
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-
+.card-profile {
+  width: auto;
 }
 
-.card-img{
-   display: flex;
-   justify-content: center;
-align-items: center;
+.card-data-profile {
+  width: 353px;
+  height: 555px !important;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.pp-img{
-width: 165px;
-height: 165px;
-display: flex;
-background-color: #F7F7F7;
-border-radius: 99px;
- border: 4px solid #061D4A;
-}
-.edit-img{
-width: 34px ;
-height: 34px;
-background-color: #F31559 !important;
-position: absolute;
-margin-top: 120px;
-margin-left: 110px;
-border-radius: 99px !important;
-border: none !important;
-display: flex !important;
-align-items: center !important;
-justify-content: center !important;
-color: #F7F7F7;
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.name{
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    color: var(--teks-primary, #061D4A);
-    font-family: Montserrat;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-}
-.status{
-color: #000;
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 400;
-}
-.profil-saya-1 > a{
-color: #F31559 ;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-text-decoration: none;
+.pp-img {
+  width: 165px;
+  height: 165px;
+  display: flex;
+  background-color: #f7f7f7;
+  border-radius: 99px;
+  border: 4px solid #061d4a;
 }
 
-.janji-saya-1 > a{
- color: #061D4A;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-text-decoration: none;
+.edit-img {
+  width: 34px;
+  height: 34px;
+  background-color: #f31559 !important;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 110px;
+  border-radius: 99px !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #f7f7f7;
 }
 
-.keluar >a{
-     color: #061D4A;
-font-family: Montserrat;
-font-size: 20px;
-font-style: normal;
-font-weight: 600;
-text-decoration: none;
+.name {
+  color: var(--teks-primary, #061d4a);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
 }
 
-
-
-
-
-.card-data-profile-2{
-    margin-left: 410px;
-    /* position: absolute; */
-    margin-top: -590px;
-    width: 839px;
-}
-.card-profile-ubah{
-    background-color: #061D4A;
-}
-.Profil-saya-2{
-    color:  #061D4A;
-font-family: Montserrat;
-font-size: 35px;
-font-style: normal;
-font-weight: 600;
-}
-.btn-ubah{
-    margin-top: -50px;
-    float: right;
-    width: 125px;
-    background-color: #F7F7F7 !important;
-  color: #F31559 !important;
-  border-color: #F31559 !important;
-}
-.btn-ubah:hover{
-    background-color: #F31559 !important;
-    color: #F7F7F7 !important;
+.status {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 10px !important;
 }
 
-
-
-.card-data-profile-3{
-   
- width: 839px;
-height: 465px;
-border-radius: 5px;
-background: #F7F7F7;
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-}
-.label{
-color: #061D4A;
-font-family: Montserrat;
-font-size: 22px;
-font-style: normal;
-font-weight: 500;
+.profil-saya-1 > a {
+  color: #f31559;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.costum-control{
- border: 1px solid #615E5E !important;
+.janji-saya-1 > a {
+  color: #061d4a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
 }
+
+.keluar {
+  color: #061d4a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.keluar:hover {
+  cursor: pointer;
+}
+
+.card-data-profile-2 {
+  margin-left: 410px;
+  margin-top: -590px;
+  width: 839px;
+}
+
+.margin-profile {
+  margin-top: 90px !important;
+}
+
+.nav_pill_profile .nav_item_profile .nav_link_profile.active {
+  background: none !important;
+  color: #f31559 !important;
+  font-family: Montserrat;
+  font-weight: 600;
+}
+
+.nav_pill_profile .nav_item_profile .nav_link_profile {
+  color: #000 !important;
+  font-size: 20px;
+  font-family: Montserrat;
+  font-weight: 600;
+  height: 60px !important;
+  transform: translateX(-15px);
+}
+
+.card-profile-ubah {
+  background-color: #061d4a;
+}
+
+.Profil-saya-2 {
+  color: #061d4a;
+  font-family: Montserrat;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+  transform: translateY(-90px);
+}
+
+.isi-profile-kanan {
+  transform: translateY(-50px);
+}
+
+.isi-janji-kanan {
+  transform: translateY(-50px);
+}
+
+.row_janjisaya {
+  padding: 50px;
+  margin-top: 50px !important;
+  text-align: center;
+}
+
+.row-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.button_konsultasi_profile {
+  background: #f31559 !important;
+  border: none !important;
+  height: 50px !important;
+  width: 300px !important;
+  font-family: Montserrat !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+}
+
+.title-belum {
+  font-family: Montserrat;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.title-ayo {
+  font-family: Montserrat;
+  font-size: 20px;
+}
+
+.title-proses {
+  font-family: Montserrat;
+  font-size: 20px;
+}
+
+.btn-ubah {
+  margin-top: -50px;
+  float: right;
+  width: 125px;
+  background-color: #f7f7f7 !important;
+  color: #f31559 !important;
+  border-color: #f31559 !important;
+  transform: translateY(-90px);
+}
+
+.btn-ubah:hover {
+  background-color: #f31559 !important;
+  color: #f7f7f7 !important;
+}
+
+.card-data-profile-3 {
+  padding-top: 30px;
+  width: 839px;
+  height: 500px !important;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.label {
+  color: #061d4a;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.costum-control {
+  border: 1px solid #615e5e !important;
+}
+
 .costum-control:active,
-.costum-control:focus{
-    
-    box-shadow: none !important;
+.costum-control:focus {
+  box-shadow: none !important;
 }
 
-
-
-.modal-ubah{
-     /* width: 400px !important; */
-    /* background-color: #F31559; */
-   justify-content: center !important;
-   border: none !important;
-
-   
-   
+.modal-ubah {
+  justify-content: center !important;
+  border: none !important;
 }
 
-.ubah-title{
-color:  #061D4A !important;
-font-family: Montserrat !important;
-font-size: 29px !important;
-font-style: normal !important;
-font-weight: 700 !important;
+.ubah-title {
+  color: #061d4a !important;
+  font-family: Montserrat !important;
+  font-size: 29px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
 }
 
-.costum-btn{
-    background-color: #F31559 !important;
-    color: #F7F7F7 !important;
+.costum-btn {
+  background-color: #f31559 !important;
+  color: #f7f7f7 !important;
 }
 
-.costum-btn:active{
-   border: none;
+.costum-btn:active {
+  border: none;
 }
 
-.Footer-ubah{
-border: none !important;
+.Footer-ubah {
+  border: none !important;
+}
+
+.card-profile {
+  width: auto;
+}
+
+.card-data-profile {
+  width: 353px;
+  height: 592px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pp-img {
+  width: 165px;
+  height: 165px;
+  display: flex;
+  background-color: #f7f7f7;
+  border-radius: 99px;
+  border: 4px solid #061d4a;
+}
+
+.edit-img {
+  width: 34px;
+  height: 34px;
+  background-color: #f31559 !important;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 110px;
+  border-radius: 99px !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: #f7f7f7;
+}
+
+.name {
+  color: var(--teks-primary, #061d4a);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.status {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.profil-saya > a {
+  color: #061d4a;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.janji-saya > a {
+  color: #f31559;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card-data-profile-2 {
+  margin-left: 410px;
+  position: absolute;
+  margin-top: -590px;
+  width: 839px;
+}
+.card-profile-ubah {
+  background-color: #061d4a;
+}
+
+.Profil-saya-2 {
+  color: #061d4a;
+  font-family: Montserrat;
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.card-data-profile-3 {
+  width: 839px;
+  height: 465px;
+  border-radius: 5px;
+  background: #f7f7f7;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.costum-tab.active {
+  color: #f7f7f7 !important;
+  border-radius: 75px !important;
+  background: #061d4a !important;
+}
+
+.costum-tab {
+  color: #061d4a !important;
+  border-radius: 75px !important;
+  border: 1px solid #061d4a !important;
+  text-align: center;
+  width: 150px;
 }

@@ -1,5 +1,4 @@
 import { Button, Col, Container, Row, Card } from 'react-bootstrap';
-import './IsiArtikel.css';
 import image4 from '../../../assets/img/image 4.jpg';
 import image1 from '../../../assets/img/image1.png';
 import image3 from '../../../assets/img/image 3.png';
@@ -14,6 +13,7 @@ import image7 from '../../../assets/img/image 7.png';
 import image8 from '../../../assets/img/image 8.png';
 import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
+import './IsiArtikel.css';
 // import { useNavigate } from 'react-router-dom';
 
 const IsiArtikel = () => {
@@ -65,64 +65,11 @@ const IsiArtikel = () => {
     },
   ];
 
-  const topik = [
-    {
-      id: 1,
-      name: 'Pencegahan Kanker Serviks',
-    },
-    {
-      id: 2,
-      name: 'Tentang Tes Skrinning',
-    },
-    {
-      id: 3,
-      name: 'Tentang Tes HPV',
-    },
-    {
-      id: 4,
-      name: 'Bahaya Kanker Serviks',
-    },
-  ];
-
-  // const numberOfPicture = [1, 2, 3, 4, 5, 6];
-
   return (
     <div>
       <div className="bg-boxs-2"></div>
       <Container>
-        <Row>
-          <div className=" my-3">
-            <h4 className="">Topik Terkini</h4>
-          </div>
-          <Col>
-            <div className="container_topik">
-              <Row>
-                {topik.map((t) => (
-                  <Col md={3} key={t.id}>
-                    <Button className="button_dokter">{t.name}</Button>
-                  </Col>
-                ))}
-                {/* <Col md={4}>
-                  <div onClick={{}} className="bg_topik">
-                    <h5>Macam Macam Kanker</h5>
-                  </div>
-                </Col> */}
-                {/* <Col md={4}>
-                  <div onClick={{}} className="bg_topik">
-                    <h5>Tes Skrining</h5>
-                  </div>
-                </Col> */}
-                {/* <Col md={4}>
-                  <div onClick={{}} className="bg_topik">
-                    <h5>Dampak Kanker</h5>
-                  </div>
-                </Col> */}
-              </Row>
-            </div>
-          </Col>
-        </Row>
-
-        <Row className="mt-5">
+        <Row className="isi_artikel_container">
           <Col md={6}>
             <img src={image4} alt="" />
           </Col>
