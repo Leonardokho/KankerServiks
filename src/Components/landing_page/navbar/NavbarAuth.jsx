@@ -11,13 +11,9 @@ import './NavbarNotAuth.css';
 function LogOutBox(props) {
   const linkLogin = useNavigate();
 
-<<<<<<< HEAD
   const linkProfile = useNavigate()
 
   
-
-=======
->>>>>>> 3292f8dda99b368a3bd9531f65679c3852fb5d2f
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_logout">
       <div className="bg_box_logout">
