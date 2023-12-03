@@ -163,6 +163,10 @@
   font-family: Montserrat;
 }
 
+.linkArtikel:hover {
+  cursor: pointer;
+}
+
 .title_box {
   text-align: center;
   font-size: 50px;

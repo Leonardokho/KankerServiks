@@ -14,10 +14,14 @@ import artikelImgTiga from '../../../assets/img/close-up-hand-with-food-containe
 import reviewSatu from '../../../assets/img/reviewImg.png';
 import reviewDua from '../../../assets/img/reviewdua.png';
 import Slider from 'react-slick';
+import { useNavigate } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const IsiPage = () => {
+  const linkKonsultasi = useNavigate();
+  const linkArtikel = useNavigate();
+
   const data = [
     {
       id: 1,
@@ -162,7 +166,7 @@ const IsiPage = () => {
         </Col>
 
         <Col className="card-ceritakan mt-5">
-          <Button className="button_dokter mt-3 mb-4"> Lihat Semuanya</Button>
+          <Button className="button_konsultasi_home mt-3 mb-4" onClick={() => linkKonsultasi('/Halaman_Konsultasi')}> Lihat Semuanya</Button>
         </Col>
 
         <div className="title_services mt-5">
@@ -223,7 +227,7 @@ const IsiPage = () => {
       <Container>
         <div className="d-flex justify-content-between my-5">
           <h1 className="title_artikel">Baca 100+ Artikel Kesehatan</h1>
-          <a className="linkArtikel">Lihat Semua</a>
+          <a className="linkArtikel" onClick={() => linkArtikel('/Halaman_Artikel')}>Lihat Semua</a>
         </div>
 
         <Row className="my-5">

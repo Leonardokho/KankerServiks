@@ -31,7 +31,7 @@ const LayananKesehatan = () => {
                   </h5>
                 </div>
                 <Col className="mt-5">
-                  <Button onClick={() => linkDetailLayananKesehatan('/Layanan_Kesehatan_Detail')} className="button_dokter mt-3 mb-4">
+                  <Button onClick={() => linkDetailLayananKesehatan('/Layanan_Kesehatan_Detail')} className="button_mulai_layanan mt-3 mb-4">
                     Mulai Sekarang
                   </Button>
                 </Col>
@@ -48,12 +48,13 @@ const LayananKesehatan = () => {
         </Container>
       </div>
       <Container>
-        <div id="services" className="">
+        <div>
           <div className="desc_services my-3 mt-5">
             <h1>Layanan Kesehatan Kami</h1>
             <h5 className="text-center">Pilih layanan kesehatan sesuai kebutuhan anda!</h5>
           </div>
         </div>
+        <div className='isi_layanan'>
 
         <Stack direction="horizontal" gap={5} className="p-5 mx-auto">
           <Card style={{ width: '20rem', height: '20rem' }} className="p-3 shadow-none border-2 rounded-4">
@@ -80,6 +81,8 @@ const LayananKesehatan = () => {
             </Card.Body>
           </Card>
         </Stack>
+        </div>
+
       </Container>
 
       <Container className="py-5">
@@ -89,7 +92,7 @@ const LayananKesehatan = () => {
             <h6 className="desc_faskes">Berbagai pilihan tempat Faskes</h6>
           </div>
           <div className="ms-auto">
-            <a href="" className="linkArtikel">
+            <a onClick={() => linkDetailLayananKesehatan('/Layanan_Kesehatan_Detail')} className="linkArtikel">
               Lihat Semuanya
             </a>
           </div>

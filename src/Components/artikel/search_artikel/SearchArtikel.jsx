@@ -15,6 +15,8 @@ const SearchArtikel = () => {
   return (
     <div className="bg_search">
       <Container className="mt-5">
+        <br />
+        <br />
         <Row>
           <Col className="searchbar">
             <Form.Control type="search" placeholder="Cari artikel berdasarkan judul, kategori, atau topik" className="me-2 rounded-pill search-1" aria-label="Search" />
@@ -27,27 +29,27 @@ const SearchArtikel = () => {
           <h1 className="judul-title">Temukan Lebih Banyak Artikel</h1>
           <p className="boxs-layanan">Mengenai pencegahan dini kanker serviks secara lengkap dan akurat</p>
           <Col className="card-ceritakan mb-5">
-            <Button className="button_dokter mt-3 mb-4" onClick={() => goto(linkRef.current)}>
+            <Button className="button_telusuri_artikel mt-3 mb-4" onClick={() => goto(linkRef.current)}>
               {' '}
               Telusuri Sekarang
             </Button>
           </Col>
         </Row>
         <Row ref={linkRef}>
-          <div className=" my-3">
-            <h4 className="">Topik Terkini</h4>
+          <div className="my-3">
+            <h4 className="title-topik">Topik Terkini</h4>
           </div>
-          <Col>
-            <div className="container_topik">
-              <Row>
+          <div className='hide-scrollbar'>
+            <div className=' scrollbar_topik'>
+              <div className="flex-topik scrollbar-inner">
                 {topik.map((t) => (
-                  <Col md={3} key={t.id}>
-                    <Button className="button_dokter">{t.name}</Button>
+                  <Col key={t.id}>
+                    <Button className="button_topik">{t.name}</Button>
                   </Col>
                 ))}
-              </Row>
+              </div>
             </div>
-          </Col>
+          </div>
         </Row>
       </Container>
     </div>

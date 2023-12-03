@@ -118,8 +118,12 @@
   background: #f31559 !important;
   font-family: Montserrat !important;
   border: none !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   margin-top: 10px;
+}
+
+.janji-button:hover {
+  background-color: #b30c3e !important;
 }
 
 .bardropdown {

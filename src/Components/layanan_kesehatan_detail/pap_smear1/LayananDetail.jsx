@@ -112,7 +112,7 @@ const LayananDetail = () => {
                                 <h1 className="lokasi_klinik mt-2">{k.lokasi}</h1>
                               </Col>
                               <Col className="d-flex justify-content-end ">
-                                <Button className="button_dokter" onClick={() => linkPapSmear2('/Layanan_Kesehatan_Booking')}>
+                                <Button className="button_booking" onClick={() => linkPapSmear2('/Layanan_Kesehatan_Booking')}>
                                   Booking Sekarang
                                 </Button>
                               </Col>

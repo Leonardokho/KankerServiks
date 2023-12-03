@@ -69,12 +69,14 @@ const IsiArtikel = () => {
     <div>
       <div className="bg-boxs-2"></div>
       <Container>
+        <br />
+        <br />
         <Row className="isi_artikel_container">
           <Col md={6}>
             <img src={image4} alt="" />
           </Col>
           <Col md={6}>
-            <div className="container_artikel">
+            <div className="scrollbar container_artikel">
               <Row className="mb-4 shadow_artikel">
                 <Col md={4}>
                   <img src={image2} alt="gambar" />
@@ -147,7 +149,7 @@ const IsiArtikel = () => {
           ))}
         </Row>
         <Col className="card-ceritakan mb-5">
-          <Button className="button_dokter mt-3 mb-4"> Lebih Banyak</Button>
+          <Button className="button_artikel_banyak mt-3 mb-4"> Lebih Banyak</Button>
         </Col>
       </Container>
     </div>

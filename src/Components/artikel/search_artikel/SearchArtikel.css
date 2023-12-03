@@ -1,26 +1,81 @@
 .bg_search {
-    padding-top: 70px;
-    height: 500px;
-    /* display: flex; */
-    background: linear-gradient(0deg, #FBE5E5 0%, rgba(255, 255, 255, 0.00) 114.56%);
+  padding-top: 70px;
+  height: 500px;
+  background: linear-gradient(0deg, #fbe5e5 0%, rgba(255, 255, 255, 0) 114.56%);
 }
 
-.searchbar{
-    margin-left: 150px;
-    margin-right: 150px;
-    display: flex;
+.searchbar {
+  margin-left: 150px;
+  margin-right: 150px;
+  display: flex;
 }
 
-.header_artikel{
-    text-align: center;
+.header_artikel {
+  text-align: center;
 }
 
-.search-1{
-    border: 1px solid #F31559 !important;
+.search-1 {
+  border: 1px solid #f31559 !important;
 }
 .search-1:active,
-.search-1:focus{
-    box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25) !important;
-   
+.search-1:focus {
+  box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25) !important;
 }
 
+.button_telusuri_artikel {
+  border-radius: 20px;
+  border: none !important;
+  background-color: #f31559 !important;
+  font-family: Montserrat !important;
+  font-weight: 600 !important;
+}
+
+.button_telusuri_artikel:hover {
+  background-color: #b30c3e !important;
+}
+
+.button_topik {
+  margin-right: 20px;
+  width: 300px;
+  border-radius: 30px !important;
+  font-weight: 600 !important;
+  font-family: Montserrat !important;
+  border: none !important;
+  background-color: #f31559 !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.button_topik:hover {
+  background-color: #b30c3e !important;
+}
+
+.flex-topik {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.title-topik {
+  font-family: Montserrat;
+}
+
+.hide-scrollbar {
+  overflow: hidden;
+  position: absolute;
+}
+
+.scrollbar_topik {
+  margin-top: 50px;
+  padding-top: 20px;
+  width: 1300px !important;
+  background: #fff;
+  overflow-y: hidden;
+  scrollbar-width: none;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}

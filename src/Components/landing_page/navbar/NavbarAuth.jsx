@@ -11,10 +11,13 @@ import './NavbarNotAuth.css';
 function LogOutBox(props) {
   const linkLogin = useNavigate();
 
+<<<<<<< HEAD
   const linkProfile = useNavigate()
 
   
 
+=======
+>>>>>>> 3292f8dda99b368a3bd9531f65679c3852fb5d2f
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_logout">
       <div className="bg_box_logout">
@@ -89,21 +92,25 @@ const NavbarAuth = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto text-center d-flex justify-content-center align-items-center nav_text">
-              <Nav.Link onClick={() => linkHome('/')} className="text-secondary fw-bold nav_text_change">
-                Home
-              </Nav.Link>
-              <Nav.Link onClick={() => linkKonsultasiPage('/Halaman_Konsultasi')} className="text-secondary fw-bold nav_text_change">
-                Konsultasi
-              </Nav.Link>
-              <Nav.Link onClick={() => linkLayananKesehatan('/Layanan_Kesehatan')} className="text-secondary fw-bold nav_text_change">
-                Layanan Kesehatan
-              </Nav.Link>
-              <Nav.Link onClick={() => linkArtikelPage('/Halaman_Artikel')} className="text-secondary fw-bold nav_text_change">
-                Artikel
-              </Nav.Link>
-              <div className="d-flex justify-content-center align-items-center mt-1 mx-2">
-                <h1 className="profile_name mx-3">Ratna</h1>
-                <img onClick={() => setOpenProfile((prev) => !prev)} src={profileImage} alt="Profile" className="profilephoto" />
+              <div className='page_navbar'>
+                <Nav.Link onClick={() => linkHome('/')} className="text-secondary fw-bold nav_text_change">
+                  Home
+                </Nav.Link>
+                <Nav.Link onClick={() => linkKonsultasiPage('/Halaman_Konsultasi')} className="text-secondary fw-bold nav_text_change">
+                  Konsultasi
+                </Nav.Link>
+                <Nav.Link onClick={() => linkLayananKesehatan('/Layanan_Kesehatan')} className="text-secondary fw-bold nav_text_change">
+                  Layanan Kesehatan
+                </Nav.Link>
+                <Nav.Link onClick={() => linkArtikelPage('/Halaman_Artikel')} className="text-secondary fw-bold nav_text_change">
+                  Artikel
+                </Nav.Link>
+              </div>
+              <div className='login_button'>
+                <div className="d-flex justify-content-center align-items-center mt-1 mx-2">
+                  <h1 className="profile_name mx-3">Ratna</h1>
+                  <img onClick={() => setOpenProfile((prev) => !prev)} src={profileImage} alt="Profile" className="profilephoto" />
+                </div>
               </div>
             </Nav>
           </Navbar.Collapse>

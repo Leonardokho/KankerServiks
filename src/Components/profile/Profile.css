@@ -158,6 +158,10 @@
   font-weight: 500 !important;
 }
 
+.button_konsultasi_profile:hover {
+  background-color: #b30c3e !important;
+}
+
 .title-belum {
   font-family: Montserrat;
   font-size: 25px;
@@ -211,6 +215,10 @@
   border: 1px solid #615e5e !important;
 }
 
+.costum-control:hover {
+  cursor: default;
+}
+
 .costum-control:active,
 .costum-control:focus {
   box-shadow: none !important;
@@ -232,6 +240,7 @@
 .costum-btn {
   background-color: #f31559 !important;
   color: #f7f7f7 !important;
+  font-weight: 600 !important;
 }
 
 .costum-btn:active {
@@ -324,6 +333,7 @@
   margin-top: -590px;
   width: 839px;
 }
+
 .card-profile-ubah {
   background-color: #061d4a;
 }

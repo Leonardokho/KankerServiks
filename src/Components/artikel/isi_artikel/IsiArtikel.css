@@ -1,9 +1,7 @@
-.container_topik {
-  height: 50px;
-}
+
 
 .container_artikel {
-  height: 100%;
+  height: 435px !important;
   width: 100%;
   padding-left: 30px;
   padding-top: 12px;
@@ -19,6 +17,28 @@
   margin-top: 150px !important;
 }
 
+.button_artikel_banyak {
+  border-radius: 20px;
+  border: none !important;
+  background-color: #f31559 !important;
+  font-family: Montserrat !important;
+  font-weight: 600 !important;
+}
+
+.button_artikel_banyak:hover {
+  background-color: #b30c3e !important;
+}
+
+.scrollbar {
+  margin-left: 30px;
+  float: left;
+  height: 90%;
+  width: 100%;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+}
+
 .bg_topik {
   background: #fbe5e5;
   border-radius: 10px;
@@ -31,6 +51,7 @@
 }
 
 .shadow_artikel {
+  padding: 10px;
   border-radius: 10px;
   box-shadow: 10px 10px 15px 0px rgba(134, 134, 134, 0.5);
 }
