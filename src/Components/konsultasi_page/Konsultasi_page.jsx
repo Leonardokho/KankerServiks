@@ -156,7 +156,9 @@ function DetailDokter(props) {
 }
 
 function DetailDokterSetelahPembayaran(props) {
-  const [livechat, setLiveChat] = useState(false);
+  // const [livechat, setLiveChat] = useState(false);
+  const linkLiveChat = useNavigate();
+
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_detail">
       {/* <Modal.Header closeButton/> */}
@@ -207,14 +209,13 @@ function DetailDokterSetelahPembayaran(props) {
             </Row>
             <Row className="mt-5">
               <h1 className="harga_dokter">Rp. 20.000</h1>
-              <Button className="button_modals" onClick={() => setLiveChat(faTruckMedical)}>
+              <Button className="button_modals" onClick={() => linkLiveChat('/live_chat')}>
                 Chat Sekarang
               </Button>
             </Row>
           </Container>
         </Modal.Body>
       </div>
-      <NotifTerimaKasih show={livechat} onHide={() => setLiveChat(false)} />
     </Modal>
   );
 }
@@ -441,48 +442,6 @@ function PembayaranModals(props) {
         </Modal.Body>
       </div>
       <DetailDokterSetelahPembayaran show={dokterDetail} onHide={() => setDokterDetail(false)} />
-    </Modal>
-  );
-}
-
-function NotifTerimaKasih(props) {
-  const [rating, setRating] = useState(0);
-  const [hover, setHover] = useState(0);
-  return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_terimakasih">
-      <div>
-        <Modal.Body className="grid-example">
-          <Container>
-            <Row>
-              <div>
-                <Col>
-                  <h1 className="title-terimakasih mt-3">Terimakasih Telah Berkonsultasi</h1>
-                </Col>
-                <Col>
-                  <h1 className="close_modals_terimakasih" onClick={props.onHide}>
-                    x
-                  </h1>
-                </Col>
-              </div>
-              <h1 className="title-manfaat">Semoga Membawa Manfaat Bagi Kamu</h1>
-              <div className="star-rating">
-                {[...Array(5)].map((star, index) => {
-                  index += 1;
-                  return (
-                    <button type="button" key={index} className={index <= (hover || rating) ? 'on' : 'off'} onClick={() => setRating(index)} onMouseEnter={() => setHover(index)} onMouseLeave={() => setHover(rating)}>
-                      <span className="star">&#9733;</span>
-                    </button>
-                  );
-                })}
-              </div>
-              <h1 className="title-rating mt-4">Berikan Ratingmu Terhadap Kami</h1>
-              <Button className="button_modals mt-4" onClick={props.onHide}>
-                Kembali
-              </Button>
-            </Row>
-          </Container>
-        </Modal.Body>
-      </div>
     </Modal>
   );
 }

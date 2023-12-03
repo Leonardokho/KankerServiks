@@ -9,143 +9,134 @@
   background: linear-gradient(0deg, #fbe5e5 0%, rgba(255, 255, 255, 0) 114.56%);
 }
 
-.card-live{
- border-radius: 15px;
-background: var(--background, #F7F7F7);
-/* height: 500px; */
-/* card */
-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
+.card-live {
+  border-radius: 15px;
+  background: var(--background, #f7f7f7);
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.25);
 }
 
-.card-live-2{
-height: 85px;
-border-radius: 15px 15px 0 0;
-background: var(--background, #F7F7F7);
-    background: linear-gradient(180deg, rgba(243, 21, 89, 0.90) 0%, rgba(251, 229, 229, 0.90) 100%);
+.card-live-2 {
+  height: 85px;
+  border-radius: 15px 15px 0 0;
+  background: var(--background, #f7f7f7);
+  background: linear-gradient(180deg, rgba(243, 21, 89, 0.9) 0%, rgba(251, 229, 229, 0.9) 100%);
 }
 
-
-.img-dokter{
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-background: var(--background, #F7F7F7);
-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
-
+.img-dokter {
+  width: 70px;
+  height: 70px;
+  border-radius: 100px;
+  background: var(--background, #f7f7f7);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
-
-.nama-dokter{
-    margin-top: -80px;
-    margin-left: 90px;
-    color: var(--teks-primary, #061D4A);
-font-family: Montserrat;
-font-size: 25px;
-font-style: normal;
-font-weight: 600;
+.nama-dokter {
+  margin-top: -80px;
+  margin-left: 90px;
+  color: var(--teks-primary, #061d4a);
+  font-family: Montserrat;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 600;
 }
 
-.online{
- margin-left: 90px;
-color: var(--teks-primary, #061D4A);
-font-family: Montserrat;
-font-size: 15px;
-font-style: normal;
-font-weight: 400;
-}
-.btn-akhir{
-    float: right;
-   margin-top: -70px;
- width: 90px !important;
-border-radius: 10px !important;
-background: var(--primary, #F31559) !important;
-box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.25);
-
- color: var(--background, #F7F7F7) !important;
-font-family: Montserrat !important;
-font-size: 15px !important;
-font-style: normal !important;
-font-weight: 600 !important;
-line-height: normal !important;
+.online {
+  margin-left: 90px;
+  color: var(--teks-primary, #061d4a);
+  font-family: Montserrat;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
 }
 
-.btn-akhir{
-    border: none !important;
+.btn-akhir {
+  float: right;
+  margin-top: -70px;
+  width: 90px !important;
+  border-radius: 10px !important;
+  background: var(--primary, #f31559) !important;
+  box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.25);
+  color: var(--background, #f7f7f7) !important;
+  font-family: Montserrat !important;
+  font-size: 15px !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
 }
 
-
-.card-chat-user{
-  background-color: #FBE5E5 ;
-border-radius: 15px 0  30px 15px;
-margin-left: auto;
-
-
-}
-.pesan-chat-user{
-color: var(--teks-primary, #061D4A);
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
+.btn-akhir {
+  border: none !important;
 }
 
-
-.card-chat-dokter{
-  background-color: #F31559 ;
-border-radius: 0px 15px  15px 30px;
-
-
+.card-chat-user {
+  background-color: #fbe5e5;
+  border-radius: 15px 0 30px 15px;
+  margin-left: auto;
 }
 
-.pesan-chat-dokter{
-color: #F7F7F7;
-/* text-align: center; */
-font-family: Montserrat;
-font-size: 18px;
-font-style: normal;
-font-weight: 500;
+.pesan-chat-user {
+  color: var(--teks-primary, #061d4a);
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.card-chat-dokter {
+  background-color: #f31559;
+  border-radius: 0px 15px 15px 30px;
+}
+
+.pesan-chat-dokter {
+  color: #f7f7f7;
+  /* text-align: center; */
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
 }
 
 /* ... (kode CSS sebelumnya) */
 
 .chat-container {
-  height: 500px; 
-max-width: max-content;
+  height: 500px;
+  max-width: max-content;
   overflow-y: auto; /* Aktifkan pen-scroll-an vertikal */
 }
 
 .card-kirim {
-background:  #F7F7F7;
-border-radius:0 0 15px 15px;
-box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.25);
+  background: #f7f7f7;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0px -4px 10px 0px rgba(0, 0, 0, 0.25);
 }
+
 .costum-icon {
- font-size: 50px;
+  font-size: 50px;
 }
 
-.btn{
-border: none !important;
+.btn {
+  border: none !important;
 }
+
 .costum-text:active,
-.costum-text:focus{
+.costum-text:focus {
   box-shadow: none !important;
-border: 1px solid  #BEBEBE !important;
-
+  border: 1px solid #bebebe !important;
 }
 
-@media (max-width: 768px )  {
-  .nama-dokter{
+@media (max-width: 768px) {
+  .nama-dokter {
     font-size: 15px;
-}
-.btn-akhir{
- margin-top: -50px;
-  width:auto !important;
-}
-.chat-container {
-   height: 420px;
-max-height: none;
-   /* Aktifkan pen-scroll-an vertikal */
-}
+  }
 
+  .btn-akhir {
+    margin-top: -50px;
+    width: auto !important;
+  }
+  
+  .chat-container {
+    height: 420px;
+    max-height: none;
+    /* Aktifkan pen-scroll-an vertikal */
+  }
 }
-
