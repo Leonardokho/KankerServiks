@@ -11,6 +11,7 @@ import LayananDetailMain from './Components/layanan_kesehatan_detail/layanan_det
 import Profile from './Components/profile/Profile.jsx';
 import LayananDetailSmear2Main from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailSmear2Main.jsx';
 import IsiArtikelDetailMain from './Components/isi_artikel_detail/isi_artikel_main/IsiArtikelDetailMain.jsx';
+import Live_chat from './Components/live chat/Live_chat.jsx';
 
 function App() {
   return (

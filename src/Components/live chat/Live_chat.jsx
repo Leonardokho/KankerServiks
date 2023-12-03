@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import Footer from "../landing_page/footer/Footer";
 import Doktersatu from "../../assets/img/doktersatu.png";
