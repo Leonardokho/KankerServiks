@@ -31,6 +31,7 @@ function App() {
           <Route path="/Halaman_Artikel" element={<ArtikelMain />}/>
           <Route path="/Halaman_Artikel_Detail" element={<IsiArtikelDetailMain/>}></Route>
           <Route path="/Layanan_Kesehatan_Booking" element={<LayananDetailSmear2Main />} />
+          <Route path="/live_chat" element={<Live_chat />} />
         </Routes>
       </Router>
     </>
