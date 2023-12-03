@@ -8,6 +8,7 @@ import { Col, Row } from 'react-bootstrap';
 import './NavbarHeaderIsiArtikelDetail.css';
 import image3 from '../../../assets/img/image 3.png';
 import userPublish from '../../../assets/img/User.png';
+import { useState } from 'react';
 
 const NavbarHeaderIsiArtikelDetail = () => {
   const linkHome = useNavigate();
@@ -17,19 +18,20 @@ const NavbarHeaderIsiArtikelDetail = () => {
   const linkArtikelPage = useNavigate();
   const linkLayananKesehatan = useNavigate();
 
-  const navbarArtDetail = document.querySelector('.bg_color_navbar_artikeldetail');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
-      navbarArtDetail.classList.add('bg_pinky');
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
     } else {
-      navbarArtDetail.classList.remove('bg_pinky');
+      setColorchange(false);
     }
-  });
+  };
+  window.addEventListener('scroll', changeNavbarColor);
 
   return (
     <div>
       <div className="navbar_main_artikeldetail">
-        <Navbar expand="lg" className="bg_color_navbar_artikeldetail">
+        <Navbar expand="lg" className={!colorChange ? 'bg_color_navbar_artikeldetail' : 'bg_color_navbar_artikeldetail_scroll'}>
           <Container className="halo" style={{ backgroundImage: { image3 } }}>
             <Navbar.Brand href="/">
               <img src={logo} alt="logoaplikasi" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />

@@ -80,6 +80,15 @@
   transform: translate(770px, -570px);
 }
 
+.bg_color_navbar_artikeldetail {
+  background: transparent;
+}
+
+.bg_color_navbar_artikeldetail_scroll {
+  box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
+  background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
+}
+
 .icon-socialmedia {
   display: flex;
   gap: 40px;
@@ -87,10 +96,9 @@
   align-items: center;
 }
 
-.bg_pinky {
+/* .bg_pinky {
   box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
-  background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
-}
+} */
 
 .icon-socialmedia:hover {
   cursor: pointer;
