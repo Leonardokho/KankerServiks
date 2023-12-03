@@ -1,7 +1,7 @@
 .bg_login {
   background: #f31559 !important;
   color: white;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
   padding: 8px 20px;
   border: none !important;
   border-radius: 10%;
@@ -9,13 +9,11 @@
 }
 
 .bg_login:hover {
-  background: white !important;
+  background: transparent !important;
   color: #f31559 !important;
-  font-family: Montserrat !important;
-  font-weight: 500 !important;
 }
 
-.page_navbar{
+.page_navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,15 +29,19 @@
 
 .nav_text_change {
   font-family: Montserrat !important;
-  font-size: 18px !important
+  font-size: 18px !important;
 }
 
-.nav_text_change:focus,
-.nav_text_change:active {
+.nav_text_change:active,
+.nav_text_change:focus {
   color: #f31559 !important;
 }
 
-.bg_color_navbar{
+.nav_text_change:hover {
+  color: #f31559 !important;
+}
+
+.bg_color_navbar {
   box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
   background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
 }

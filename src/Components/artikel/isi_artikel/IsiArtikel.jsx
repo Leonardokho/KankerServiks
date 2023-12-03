@@ -74,7 +74,7 @@ const IsiArtikel = () => {
             <img src={image4} alt="" />
           </Col>
           <Col md={6}>
-            <div className="container_artikel">
+            <div className="scrollbar container_artikel">
               <Row className="mb-4 shadow_artikel">
                 <Col md={4}>
                   <img src={image2} alt="gambar" />

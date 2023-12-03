@@ -23,8 +23,8 @@ import './Konsultasi_page.css';
 import 'react-phone-input-2/lib/style.css';
 
 function PemberitahuanLogin(props) {
-  const linkLogin = useNavigate()
-  
+  const linkLogin = useNavigate();
+
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
       <div>
@@ -500,7 +500,8 @@ const Konsultasi_page = () => {
   return (
     <div>
       <NavbarNotAuth />
-
+      <br />
+      <br />
       <div className="bg-boxs">
         <Container>
           <Row className=" boxs mt-5">

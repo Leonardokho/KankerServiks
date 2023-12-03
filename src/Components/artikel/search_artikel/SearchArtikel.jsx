@@ -34,20 +34,20 @@ const SearchArtikel = () => {
           </Col>
         </Row>
         <Row ref={linkRef}>
-          <div className=" my-3">
-            <h4 className="">Topik Terkini</h4>
+          <div className="my-3">
+            <h4 className="title-topik">Topik Terkini</h4>
           </div>
-          <Col>
-            <div className="container_topik">
-              <Row>
+          <div className='hide-scrollbar'>
+            <div className=' scrollbar_topik'>
+              <div className="flex-topik scrollbar-inner">
                 {topik.map((t) => (
-                  <Col md={3} key={t.id}>
-                    <Button className="button_dokter">{t.name}</Button>
+                  <Col key={t.id}>
+                    <Button className="button_topik">{t.name}</Button>
                   </Col>
                 ))}
-              </Row>
+              </div>
             </div>
-          </Col>
+          </div>
         </Row>
       </Container>
     </div>
