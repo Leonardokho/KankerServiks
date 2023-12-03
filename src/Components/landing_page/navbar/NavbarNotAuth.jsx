@@ -5,7 +5,6 @@ import logo from '../../../assets/img/cc-logo2 1.png';
 import './NavbarNotAuth.css';
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-import { NavLink } from "react-router-dom";
 
 const NavbarNotAuth = () => {
   const linkHome = useNavigate();

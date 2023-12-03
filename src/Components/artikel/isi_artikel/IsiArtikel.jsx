@@ -14,9 +14,11 @@ import image8 from '../../../assets/img/image 8.png';
 import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
 import './IsiArtikel.css';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const IsiArtikel = () => {
+  const linkArtikelDetail = useNavigate();
+
   const artikel = [
     {
       id: '1',
@@ -140,7 +142,7 @@ const IsiArtikel = () => {
                 <img src={art.img} alt="gambar" className="image_artikel" />
                 <Card.Body className="p-3">
                   <h5 style={{fontFamily: 'Montserrat'}}>{art.desc}</h5>
-                  <Card.Link className="d-flex justify-content-end mt-4 linkArtikel">
+                  <Card.Link onClick={() => linkArtikelDetail('/Halaman_Artikel_Detail')} className="d-flex justify-content-end mt-4 linkArtikel">
                     Baca selengkapnya...
                   </Card.Link>
                 </Card.Body>

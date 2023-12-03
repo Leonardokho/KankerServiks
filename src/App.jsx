@@ -10,6 +10,7 @@ import LayananKesehatan from './Components/layanan_kesehatan/LayananKesehatan.js
 import LayananDetailMain from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailMain.jsx';
 import Profile from './Components/profile/Profile.jsx';
 import LayananDetailSmear2Main from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailSmear2Main.jsx';
+import IsiArtikelDetailMain from './Components/isi_artikel_detail/isi_artikel_main/IsiArtikelDetailMain.jsx';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/Masuk" element={<Login />} />
           <Route path="/Daftar" element={<Daftar />} />
           <Route path="/Halaman_Artikel" element={<ArtikelMain />}/>
+          <Route path="/Halaman_Artikel_Detail" element={<IsiArtikelDetailMain/>}></Route>
           <Route path="/Layanan_Kesehatan_Booking" element={<LayananDetailSmear2Main />} />
         </Routes>
       </Router>
