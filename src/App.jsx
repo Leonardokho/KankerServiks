@@ -10,7 +10,7 @@ import LayananKesehatan from './Components/layanan_kesehatan/LayananKesehatan.js
 import LayananDetailMain from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailMain.jsx';
 import Profile from './Components/profile/Profile.jsx';
 import LayananDetailSmear2Main from './Components/layanan_kesehatan_detail/layanan_detail_smear1_main/LayananDetailSmear2Main.jsx';
-
+import Live_chat from './Components/live chat/Live_chat.jsx';
 function App() {
   return (
     <>
@@ -27,8 +27,9 @@ function App() {
           <Route path="/Halaman_Konsultasi_data_page" element={<Konsultasi_data_page />} />
           <Route path="/Masuk" element={<Login />} />
           <Route path="/Daftar" element={<Daftar />} />
-          <Route path="/Halaman_Artikel" element={<ArtikelMain />}/>
+          <Route path="/Halaman_Artikel" element={<ArtikelMain />} />
           <Route path="/Layanan_Kesehatan_Booking" element={<LayananDetailSmear2Main />} />
+          <Route path="/live_chat" element={<Live_chat />} />
         </Routes>
       </Router>
     </>
