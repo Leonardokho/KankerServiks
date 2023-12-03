@@ -69,6 +69,8 @@ const IsiArtikel = () => {
     <div>
       <div className="bg-boxs-2"></div>
       <Container>
+        <br />
+        <br />
         <Row className="isi_artikel_container">
           <Col md={6}>
             <img src={image4} alt="" />

@@ -15,6 +15,8 @@ const SearchArtikel = () => {
   return (
     <div className="bg_search">
       <Container className="mt-5">
+        <br />
+        <br />
         <Row>
           <Col className="searchbar">
             <Form.Control type="search" placeholder="Cari artikel berdasarkan judul, kategori, atau topik" className="me-2 rounded-pill search-1" aria-label="Search" />
