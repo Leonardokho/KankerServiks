@@ -58,11 +58,13 @@
   font-size: 25px;
   text-align: center;
   font-weight: 600;
+  font-family: Montserrat;
 }
 
 .box_desc h1 {
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
+  font-family: Montserrat;
 }
 
 .title_services h1 {
@@ -144,10 +146,10 @@
 
 .shadow_box {
   background: white;
-  box-shadow: 13px 4px 20px 1px rgba(134, 134, 134, 0.5);
+  box-shadow: 5px 4px 20px 1px rgba(134, 134, 134, 0.5);
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
-  margin-left: 90px;
+  margin-left: 58px;
 }
 
 .starr {
@@ -169,12 +171,14 @@
 
 .title_box {
   text-align: center;
-  font-size: 50px;
+  font-size: 45px;
+  font-family: Montserrat;
+  font-weight: 600;
 }
 
 .desc_box {
   text-align: center;
-  font-size: 25px;
+  font-size: 20px;
   font-family: Montserrat !important;
 }
 

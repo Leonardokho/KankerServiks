@@ -45,7 +45,9 @@
   background: white;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  margin-left: 102px;
+  margin-left: 70px;
+  padding-top: 40px !important;
+  box-shadow: 25px 0px 20px -20px rgba(134, 134, 134, 0.5);;
 }
 
 .button_konsultasi_home {

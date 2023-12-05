@@ -72,7 +72,7 @@ const IsiPage = () => {
   return (
     <div>
       <Container>
-        <div style={{ width: '70rem' }} className="border-0 shadow_box">
+        <div style={{ width: '75rem', height: '90px' }} className="border-0 shadow_box px-1">
           <Card.Body>
             <Row className="px-5">
               <Col md={4}>

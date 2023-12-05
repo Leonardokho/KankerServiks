@@ -44,7 +44,7 @@ const Header = () => {
               </div>
             </div>
           </Col>
-          <div style={{ width: '70rem' }} className="border-0 shadow_box_header" ref={linkRef}>
+          <div style={{ width: '75rem', height: '110px' }} className="border-0 shadow_box_header" ref={linkRef}>
             <Card.Body>
               <Row className="px-5">
                 <Col md={4}>

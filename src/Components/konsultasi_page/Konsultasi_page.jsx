@@ -312,7 +312,7 @@ function VerificationModals(props) {
 
   const resendOTP = () => {
     // setMinutes(1);
-    setSeconds(30);
+    setSeconds(5);
   };
 
   return (
@@ -388,6 +388,12 @@ function VerificationModals(props) {
 
 function PembayaranModals(props) {
   const [dokterDetail, setDokterDetail] = useState(false);
+  // const white = '3px solid white';
+  // const [bgColor, setBgColor] = useState(white);
+  // const changeColor = () => {
+  //   const pink = '3px solid #f31559';
+  //   setBgColor(pink);
+  // };
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_pembayaran">
       {/* <Modal.Header closeButton/> */}
@@ -426,13 +432,27 @@ function PembayaranModals(props) {
                 <h1 className="title-total">Pembayaran Melalui :</h1>
               </div>
               <div className="mt-4 button-bank">
-                <img src={BSI} alt="gambar" />
-                <img src={BCA} alt="gambar" />
-                <img src={Mandiri} alt="gambar" />
-                <img src={BNI} alt="gambar" />
-                <img src={BRI} alt="gambar" />
-                <img src={Dana} alt="gambar" />
-                <img src={Gopay} alt="gambar" />
+                <div className="bg_card">
+                  <img src={BSI} alt="gambar" />
+                </div>
+                <div className="bg_card">
+                  <img src={BCA} alt="gambar" />
+                </div>
+                <div className="bg_card">
+                  <img src={Mandiri} alt="gambar" />
+                </div>
+                <div className="bg_card">
+                  <img src={BNI} alt="gambar" />
+                </div>
+                <div className="bg_card">
+                  <img src={BRI} alt="gambar" />
+                </div>
+                <div className="bg_card">
+                  <img src={Dana} alt="gambar" />
+                </div>
+                <div className="bg_card">
+                  <img src={Gopay} alt="gambar" />
+                </div>
               </div>
               <Button className="button_modals mt-5" onClick={() => setDokterDetail(true)}>
                 Bayar

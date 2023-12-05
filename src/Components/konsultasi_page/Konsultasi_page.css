@@ -450,6 +450,10 @@
   cursor: pointer;
 }
 
+.bg_card{
+  padding-top: 5px;
+}
+
 .box_modals_pembayaran {
   transform: translateY(150px) !important;
   max-width: 45vw !important;
