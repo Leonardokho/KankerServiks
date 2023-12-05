@@ -15,7 +15,7 @@
 }
 
 .title h1 {
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: 60px;
   font-family: Montserrat;
 }
@@ -28,6 +28,10 @@
 .head_right .imageContainer {
   width: 100%;
   height: 100%;
+}
+
+.title-headerhome{
+    font-weight: 1000;
 }
 
 .imageContainer .head_rightImg {

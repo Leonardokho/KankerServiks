@@ -21,16 +21,18 @@ const Header = () => {
         <Row className="mt-5">
           <Col md={6}>
             <div className=" head_left">
+              <br />
+              <br />
               <div className="w-200 mt-5 title">
-                <h1 style={{ color: '#061D4A' }}>SOLUSI CEGAH DINI</h1>
-                <h1 style={{ color: '#061D4A' }}>KANKER SERVIKS</h1>
+                <h1 className='title-headerhome' style={{ color: '#061D4A' }}>Solusi Cegah Dini</h1>
+                <h1 className='title-headerhome' style={{ color: '#061D4A' }}>Kanker Serviks</h1>
               </div>
-              <div className="w-200 mt-5 titledua">
+              <div className="w-200 mt-3 titledua">
                 <h1 style={{ color: '#061D4A' }}>Cervicare adalah sebuah platform konsultasi online untuk</h1>
                 <h1 style={{ color: '#061D4A' }}>membantu melakukan pencegahan dini terhadap kanker</h1>
                 <h1 style={{ color: '#061D4A' }}>serviks.</h1>
               </div>
-              <Col className=" mt-5">
+              <Col className=" mt-3">
                 <Button onClick={() => goto(linkRef.current)} className="button_konsultasi_home mt-3 mb-4">
                   Mulai Konsultasi
                 </Button>
