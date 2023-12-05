@@ -58,8 +58,8 @@ html {
 }
 
 .img-dc {
-  width: 552px;
-  height: 467px;
+  width: 650px;
+  height: 460px;
 }
 
 .card-title {
@@ -74,6 +74,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .card-title > p {
   color: var(--primary);
   font-family: Montserrat;
@@ -120,6 +121,7 @@ html {
   border: 1px solid var(--primary) !important;
   background: var(--secondary, #fbe5e5) !important;
 }
+
 .custom-input:focus {
   border: 1px solid var(--primary) !important;
   box-shadow: 0 0 0 0.2rem rgba(199, 0, 57, 0.25) !important;
@@ -135,6 +137,7 @@ html {
   margin-left: 68px; /* Ganti nilai sesuai yang diinginkan */
   margin-right: 68px; /* Ganti nilai sesuai yang diinginkan */
 }
+
 .card-2 .costum-button {
   width: 100%;
   height: 50px;
@@ -156,16 +159,19 @@ html {
 .card-2 .costum-button:active {
   background-color: var(--primary) !important;
 }
+
 .row-line {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
+
 .line-1 {
   background-color: #747272;
   width: 250px;
   height: 1px;
 }
+
 .atau {
   color: #747272;
   font-family: Montserrat;
@@ -222,7 +228,6 @@ html {
 .teks-login-daftar > a:hover {
   color: var(--primary);
 }
-
 
 /* Gaya CSS kustom di sini */
 @media only screen and (max-width: 768px) {

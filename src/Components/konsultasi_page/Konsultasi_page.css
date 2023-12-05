@@ -11,6 +11,7 @@
 }
 
 .judul-title {
+  margin-top: 100px;
   color: #000;
   font-family: Montserrat;
   font-size: 50px;
@@ -46,7 +47,7 @@
 
 .foto-docter {
   height: 533px;
-  margin-top: -330px;
+  margin-top: -350px;
   float: right;
   position: relative;
 }

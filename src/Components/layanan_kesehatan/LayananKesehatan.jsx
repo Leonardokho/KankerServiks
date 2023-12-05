@@ -21,16 +21,19 @@ const LayananKesehatan = () => {
         <Container>
           <Row className="mt-5 py-5">
             <Col md={6}>
+              <br />
+              <br />
+              <br />
               <div className=" head_left">
                 <div className="w-200 mt-5 title">
                   <h1 style={{ color: '#061D4A' }} className="fw-bold">
                     Langkah Awal Melawan Kanker Serviks
                   </h1>
-                  <h5 className="mt-5" style={{ color: '#061D4A', fontFamily: 'Montserrat' }}>
+                  <h5 className="mt-3" style={{ color: '#061D4A', fontFamily: 'Montserrat' }}>
                     Skrining dan Vaksinasi HPV Anda di Sini!
                   </h5>
                 </div>
-                <Col className="mt-5">
+                <Col className="mt-3">
                   <Button onClick={() => linkDetailLayananKesehatan('/Layanan_Kesehatan_Detail')} className="button_mulai_layanan mt-3 mb-4">
                     Mulai Sekarang
                   </Button>
@@ -99,7 +102,7 @@ const LayananKesehatan = () => {
         </Stack>
         <Stack direction="horizontal" className="p-5">
           <div className="p-2">
-            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
+            <Card style={{ width: '23rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={PuskesmasSambas} />
               <Card.Body className='text_fas'>
                 <h5>Puskesmas Desa Sambas</h5>
@@ -108,7 +111,7 @@ const LayananKesehatan = () => {
             </Card>
           </div>
           <div className="p-2 mx-auto">
-            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
+            <Card style={{ width: '23rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={MedikaKedua} />
               <Card.Body className='text_fas'>
                 <h5>RS. Medika Kedua</h5>
@@ -117,7 +120,7 @@ const LayananKesehatan = () => {
             </Card>
           </div>
           <div className="p-2">
-            <Card style={{ width: '22rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
+            <Card style={{ width: '23rem', height: '20rem' }} className="card_faskes rounded-4 border-0">
               <Card.Img style={{ height: '14rem' }} src={KlinikAnNisa} />
               <Card.Body className='text_fas'>
                 <h5>Klinik Penyakit Kelamin An-Nisa</h5>
