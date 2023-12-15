@@ -1,4 +1,4 @@
-import { Button, Col, Container, Row, Card } from 'react-bootstrap';
+import { Button, Col, Container, Row, Card, Spinner } from 'react-bootstrap';
 import image4 from '../../../assets/img/image 4.jpg';
 import image1 from '../../../assets/img/image1.png';
 import image3 from '../../../assets/img/image 3.png';
@@ -15,9 +15,32 @@ import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
 import './IsiArtikel.css';
 import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchArticles, selectAllArticles } from '../../../features/articles/articlesSlices';
+
+const ArticleExcerpt = ({ article }) => {
+  const linkArtikelDetail = useNavigate();
+  return (
+    <Col xs={12} md={4} className="mb-5 holder">
+      <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
+        {article.img ? <img src={article.img} alt="gambar" className="image_artikel" /> : <img src={image2} alt="gambar" className="image_artikel" />}
+        <Card.Body className="p-3">
+          <h5 style={{ fontFamily: 'Montserrat' }}>{article.title}</h5>
+          <Card.Link onClick={() => linkArtikelDetail('/Halaman_artikel_detail', { state: { articleId: article.id } })} className="d-flex justify-content-end mt-4 linkArtikel">
+            Baca selengkapnya...
+          </Card.Link>
+        </Card.Body>
+      </div>
+    </Col>
+  )
+}
 
 const IsiArtikel = () => {
-  const linkArtikelDetail = useNavigate();
+  const dispatch = useDispatch()
+  const articles = useSelector(selectAllArticles)
+  const postStatus = useSelector(state => state.articles.status)
+  const error = useSelector(state => state.articles.error)
 
   const artikel = [
     {
@@ -66,6 +89,25 @@ const IsiArtikel = () => {
       desc: 'Syarat penerima vaksinasi HPV',
     },
   ];
+
+  useEffect(() => {
+    if (postStatus === 'idle') {
+      dispatch(fetchArticles())
+    }
+  }, [postStatus, dispatch, articles])
+
+  let content;
+
+  if (postStatus === 'loading') {
+    content = <Spinner animation="border" variant="danger" />
+  } else if (postStatus === 'succeeded') {
+    // Sort posts in reverse chronological order by datetime string
+    content = articles.map((article, key) => (
+      <ArticleExcerpt key={key} article={article} />
+    ))
+  } else if (postStatus === 'failed') {
+    content = <div>{error}</div>
+  }
 
   return (
     <div>
@@ -136,19 +178,7 @@ const IsiArtikel = () => {
           </div>
         </Row>
         <Row className="artikel_terbaru">
-          {artikel.map((art) => (
-            <Col key={art.id} md={4} className="mb-5 holder">
-              <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-                <img src={art.img} alt="gambar" className="image_artikel" />
-                <Card.Body className="p-3">
-                  <h5 style={{fontFamily: 'Montserrat'}}>{art.desc}</h5>
-                  <Card.Link onClick={() => linkArtikelDetail('/Halaman_Artikel_Detail')} className="d-flex justify-content-end mt-4 linkArtikel">
-                    Baca selengkapnya...
-                  </Card.Link>
-                </Card.Body>
-              </div>
-            </Col>
-          ))}
+          {content}
         </Row>
         <Col className="card-ceritakan mb-5">
           <Button className="button_artikel_banyak mt-3 mb-4"> Lebih Banyak</Button>

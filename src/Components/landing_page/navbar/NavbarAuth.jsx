@@ -10,6 +10,11 @@ import './NavbarNotAuth.css';
 
 function LogOutBox(props) {
   const linkLogin = useNavigate();
+
+  const logout = () => {
+    sessionStorage.clear();
+    linkLogin('/login');
+  }
   
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_logout">
@@ -21,7 +26,7 @@ function LogOutBox(props) {
             </Row>
             <Row className="mt-5 mb-5">
               <Col md={6} className="button_logout">
-                <Button className="button_ya" onClick={() => linkLogin('/login')}>
+                <Button className="button_ya" onClick={() => logout()}>
                   Ya
                 </Button>
               </Col>

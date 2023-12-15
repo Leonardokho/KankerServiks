@@ -10,7 +10,7 @@ import image3 from '../../../assets/img/image 3.png';
 import userPublish from '../../../assets/img/User.png';
 import { useState } from 'react';
 
-const NavbarHeaderIsiArtikelDetail = () => {
+const NavbarHeaderIsiArtikelDetail = (props) => {
   const linkHome = useNavigate();
   const linkLogin = useNavigate();
   const linkDaftar = useNavigate();
@@ -71,7 +71,7 @@ const NavbarHeaderIsiArtikelDetail = () => {
       <img src={image3} alt="gambarartikel" className="imageartikeldetail" />
       <Row className="row_title_artikel">
         <div>
-          <h1 className="judul-title-artikeldetail">Apakah kanker serviks dapat dicegah?</h1>
+          <h1 className="judul-title-artikeldetail">{props.title}</h1>
         </div>
       </Row>
       <div className="bg-artikel-shadow flex-detail-publish">

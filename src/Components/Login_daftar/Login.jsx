@@ -8,10 +8,38 @@ import imgdoctor from '../../assets/img/3dokter.png';
 import imggoogle from '../../assets/img/google.png';
 import '../../assets/style/login.css';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { userLogin } from '../../features/articles/loginSlices';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const Login = () => {
+  const linkLandingPage = useNavigate();    
+
+  useEffect(() => {
+    function getToken() {
+      const tokenString = sessionStorage.getItem('token');
+      return tokenString;
+    }
+  
+    if(getToken()){
+      linkLandingPage('/');
+    }
+  }, [linkLandingPage])
+
+
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
   const linkDaftar = useNavigate();
-  const linkLandingPage = useNavigate();
+  const dispatch = useDispatch()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(userLogin({ email: email, password: password }))
+    linkLandingPage('/');
+  }
+
   return (
     <>
       <Container fluid>
@@ -37,15 +65,15 @@ const Login = () => {
               <Form>
                 <Form.Group className="mb-3 mx-4" controlId="formGroupEmail">
                   <Form.Label className="teks-title">Alamat Email</Form.Label>
-                  <Form.Control className=" custom-input " type="email" placeholder="Enter email" />
+                  <Form.Control className=" custom-input " type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3 mx-4 " controlId="formGroupPassword">
                   <Form.Label className="teks-title">Password</Form.Label>
-                  <Form.Control className="custom-input" type="password" placeholder="Password" />
+                  <Form.Control className="custom-input" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
                 </Form.Group>
 
                 <Form.Group className="mb-3 mx-4 ">
-                  <Button onClick={() => linkLandingPage('/Landing_Page_Auth')} className="costum-button ">
+                  <Button onClick={(e) => handleSubmit(e)} className="costum-button ">
                     Masuk
                   </Button>
                 </Form.Group>
