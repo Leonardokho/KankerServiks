@@ -9,7 +9,7 @@ import imggoogle from '../../assets/img/google.png';
 import '../../assets/style/login.css';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { userLogin } from '../../features/articles/loginSlices';
+import { userLogin } from '../../features/loginSlices';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 

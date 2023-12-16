@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Button, Card, Col, Container, Row, Spinner } from 'react-bootstrap';
 import './IsiPage.css';
 import support from '../../../assets/img/support_7569835 1.png';
 import healthcare from '../../../assets/img/healthcare-medical_9387204.png';
@@ -17,8 +17,54 @@ import Slider from 'react-slick';
 import { useNavigate } from 'react-router-dom';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchArticles, selectAllArticles } from '../../../features/articles/articlesSlice';
+import { useEffect } from 'react';
+
+const ArticleExcerpt = ({ article }) => {
+  return (
+    <Col md={4}>
+      <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
+        {article.img ? <img src={article.img} alt="gambar" className="image_artikel" /> : <img src={artikelImgSatu} alt="" className="image_dokter" />}
+        <Card.Body className="p-3">
+          <h5 className="title_art">{article.title}</h5>
+          <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
+            Baca selengkapnya...
+          </Card.Link>
+        </Card.Body>
+      </div>
+    </Col>
+  )
+}
+
 
 const IsiPage = () => {
+  const articles = useSelector(selectAllArticles);
+
+  const linkArtikelDetail = useNavigate();
+  const postStatus = useSelector(state => state.articles.status)
+  const error = useSelector(state => state.articles.error)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (postStatus === 'idle') {
+      dispatch(fetchArticles())
+    }
+  }, [postStatus, dispatch, articles])
+
+  let content;
+
+  if (postStatus === 'loading') {
+    content = <Spinner animation="grow" variant="danger" />
+  } else if (postStatus === 'succeeded') {
+    // Sort posts in reverse chronological order by datetime string
+    content = articles.slice(0, 3).map((article, key) => (
+      <ArticleExcerpt key={key} article={article} />
+    ))
+  } else if (postStatus === 'failed') {
+    content = <div>{error}</div>
+  }
+
   const linkKonsultasi = useNavigate();
   const linkArtikel = useNavigate();
 
@@ -231,39 +277,7 @@ const IsiPage = () => {
         </div>
 
         <Row className="my-5">
-          <Col md={4}>
-            <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-              <img src={artikelImgSatu} alt="" className="image_dokter" />
-              <Card.Body className="p-3">
-                <h5 className="title_art">7 Tips Mencegah Kanker Serviks</h5>
-                <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
-                  Baca selengkapnya...
-                </Card.Link>
-              </Card.Body>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-              <img src={artikelImgDua} alt="" className="image_dokter" />
-              <Card.Body className="p-3">
-                <h5 className="title_art">Vaksin HPV Bisa Bantu Cegah Kanker Serviks?</h5>
-                <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
-                  Baca selengkapnya...
-                </Card.Link>
-              </Card.Body>
-            </div>
-          </Col>
-          <Col md={4}>
-            <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
-              <img src={artikelImgTiga} alt="" className="image_dokter" />
-              <Card.Body className="p-3">
-                <h5 className="title_art">Tips Menjaga Pola Makan Walaupun Sibuk Bekerja</h5>
-                <Card.Link href="#" className="d-flex justify-content-end mt-4 linkArtikel">
-                  Baca selengkapnya...
-                </Card.Link>
-              </Card.Body>
-            </div>
-          </Col>
+          {content}
         </Row>
       </Container>
     </div>

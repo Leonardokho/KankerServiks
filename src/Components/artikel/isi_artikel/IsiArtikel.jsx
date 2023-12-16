@@ -15,9 +15,9 @@ import image9 from '../../../assets/img/image 9.png';
 import image10 from '../../../assets/img/image 10.png';
 import './IsiArtikel.css';
 import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchArticles, selectAllArticles } from '../../../features/articles/articlesSlices';
+import { fetchArticles, selectAllArticles } from '../../../features/articles/articlesSlice';
 
 const ArticleExcerpt = ({ article }) => {
   const linkArtikelDetail = useNavigate();
@@ -42,54 +42,6 @@ const IsiArtikel = () => {
   const postStatus = useSelector(state => state.articles.status)
   const error = useSelector(state => state.articles.error)
 
-  const artikel = [
-    {
-      id: '1',
-      img: image1,
-      desc: 'Apa itu kanker serviks?',
-    },
-    {
-      id: '2',
-      img: image3,
-      desc: 'Apakah kanker serviks dapat dicegah?',
-    },
-    {
-      id: '3',
-      img: image14,
-      desc: 'Kapan Sebaiknya Melakukan vaksin HPV?',
-    },
-    {
-      id: '4',
-      img: image5,
-      desc: 'Apakah kanker serviks dapat disembuhkan?',
-    },
-    {
-      id: '5',
-      img: image6,
-      desc: 'Metode-metode pengobatan yang bisa digunakan dalam menangani kanker serviks',
-    },
-    {
-      id: '6',
-      img: image7,
-      desc: 'Faktor apa saja yang menyebabkan kanker serviks?',
-    },
-    {
-      id: '7',
-      img: image8,
-      desc: 'Hal-hal yang bisa kita lakukan agar terhindar dari kanker serviks',
-    },
-    {
-      id: '8',
-      img: image9,
-      desc: 'Pada usia berapa perempuan rentan terkena kanker serviks?',
-    },
-    {
-      id: '9',
-      img: image10,
-      desc: 'Syarat penerima vaksinasi HPV',
-    },
-  ];
-
   useEffect(() => {
     if (postStatus === 'idle') {
       dispatch(fetchArticles())
@@ -99,7 +51,7 @@ const IsiArtikel = () => {
   let content;
 
   if (postStatus === 'loading') {
-    content = <Spinner animation="border" variant="danger" />
+    content = <Spinner animation="grow" variant="danger" />
   } else if (postStatus === 'succeeded') {
     // Sort posts in reverse chronological order by datetime string
     content = articles.map((article, key) => (
