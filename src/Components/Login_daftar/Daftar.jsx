@@ -8,9 +8,38 @@ import imgdoctor from "../../assets/img/3dokter.png";
 import imggoogle from "../../assets/img/google.png";
 import "../../assets/style/daftar.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { userLogin } from '../../features/loginSlices';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { userRegister } from "../../features/daftarSlice";
 
 const Daftar = () => {
   const linkLogin = useNavigate();
+
+  useEffect(() => {
+    function getToken() {
+      const tokenString = sessionStorage.getItem('token');
+      return tokenString;
+    }
+  
+    if(getToken()){
+      linkLogin('/login');
+    }
+  }, [linkLogin])
+
+
+  const [name, setName] = useState(); 
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState(); 
+
+  const dispatch = useDispatch()
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    dispatch(userRegister({ name:name, email: email, password: password }))
+    linkLogin('/login');
+  }
   return (
     <>
       <Container fluid>
@@ -36,20 +65,20 @@ const Daftar = () => {
               <Form>
                 <Form.Group className="mb-3 mx-4 card-form" controlId="formGroupNama">
                   <Form.Label className=" teks-title">Nama Lengkap</Form.Label>
-                  <Form.Control className="custom-input" type="text" placeholder="Masukan nama lengkap anda" />
+                  <Form.Control className="custom-input" type="text" placeholder="Masukan nama lengkap anda" onChange={(e) => setName(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3 mx-4" controlId="formGroupEmail">
                   <Form.Label className="teks-title">Alamat Email</Form.Label>
-                  <Form.Control className=" custom-input " type="email" placeholder="Enter email" />
+                  <Form.Control className=" custom-input " type="email" placeholder="Enter email" onChange={(e) => setEmail(e.target.value)} />
                 </Form.Group>
                 <Form.Group className="mb-3 mx-4 " controlId="formGroupPassword">
                   <Form.Label className="teks-title">Password</Form.Label>
-                  <Form.Control className="custom-input" type="password" placeholder="Password" />
+                  <Form.Control className="custom-input" type="password" placeholder="Password"  onChange={(e) => setPassword(e.target.value)}/>
                 </Form.Group>
                 <p className="texs-persetujuan mx-4">Dengan mendaftar Saya telah membaca dan menyetujui Aturan Penggunaan dan Kebijakan Privasi Cervicare</p>
 
                 <Form.Group className="mb-3 mx-4 ">
-                  <Button onClick={() => linkLogin("/login")} className="costum-button ">Daftar</Button>
+                  <Button onClick={(e) => handleSubmit(e)} className="costum-button ">Daftar</Button>
                 </Form.Group>
                 <div className="mt-4 mx-4 row-line">
                   <div className=" line-1"></div>
