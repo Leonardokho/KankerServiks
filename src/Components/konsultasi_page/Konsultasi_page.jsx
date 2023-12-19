@@ -6,6 +6,7 @@ import loginimgmodals from '../../assets/img/Group 111.png';
 import PhoneInput from 'react-phone-input-2';
 import VerificationInput from 'react-verification-input';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
+import NavbarAuth from "../landing_page/navbar/NavbarAuth";
 import BSI from '../../assets/img/frame 71.png';
 import BCA from '../../assets/img/frame 72.png';
 import Mandiri from '../../assets/img/frame 73.png';
@@ -468,6 +469,7 @@ function PembayaranModals(props) {
 
 const Konsultasi_page = () => {
   const linkRef = useRef(null);
+   const token = sessionStorage.getItem("token");
   const goto = (ref) => {
     window.scrollTo({
       top: ref.offsetTop,
@@ -478,7 +480,7 @@ const Konsultasi_page = () => {
 
   return (
     <div>
-      <NavbarNotAuth />
+      {token ? <NavbarAuth /> : <NavbarNotAuth />}
       <br />
       <br />
       <div className="bg-boxs">
@@ -490,7 +492,7 @@ const Konsultasi_page = () => {
               </h1>
               <p className="boxs-layanan mt-3">Layanan live chat yang siap membantu anda dalam mendapatkan informasi pencegahan dini Kanker Serviks dengan lebih mendalam bersama ahlinya.</p>
               <Button className="button_mulai mt-3" onClick={() => goto(linkRef.current)}>
-                {' '}
+                {" "}
                 Mulai Sekarang
               </Button>
             </Col>

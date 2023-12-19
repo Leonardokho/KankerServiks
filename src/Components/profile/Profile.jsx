@@ -175,10 +175,6 @@ const Profile = () => {
               <Form.Label className="label">Tanggal Lahir</Form.Label>
               <Form.Control type="date" className="costum-control" />
             </Form.Group>
-            <Form.Group className="mb-3 mx-5" controlId="Jenis-kl">
-              <Form.Label className="label">Jenis Kelamin</Form.Label>
-              <Form.Control type="text" className="costum-control" />
-            </Form.Group>
 
             <Form.Group className="mb-3 mx-5" controlId="Jenis-kl">
               <Form.Label className="label">Jenis Kelamin</Form.Label>
