@@ -6,6 +6,7 @@ import loginimgmodals from '../../assets/img/Group 111.png';
 import PhoneInput from 'react-phone-input-2';
 import VerificationInput from 'react-verification-input';
 import NavbarNotAuth from '../landing_page/navbar/NavbarNotAuth';
+import NavbarAuth from '../landing_page/navbar/NavbarAuth';
 import BSI from '../../assets/img/frame 71.png';
 import BCA from '../../assets/img/frame 72.png';
 import Mandiri from '../../assets/img/frame 73.png';
@@ -14,17 +15,19 @@ import BRI from '../../assets/img/frame 75.png';
 import Dana from '../../assets/img/frame 76.png';
 import Gopay from '../../assets/img/frame 77.png';
 import doktersatu from '../../assets/img/doktersatu.png';
-import { Container, Col, Row, Button, Modal } from 'react-bootstrap';
+import { Container, Col, Row, Button, Modal, Spinner } from 'react-bootstrap';
 import { useRef, useState, useEffect } from 'react';
 import { dokterSpesialist } from '../../model/model_dokter';
-import { faTruckMedical } from '@fortawesome/free-solid-svg-icons';
+import { faKitMedical, faTruckMedical } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import './Konsultasi_page.css';
 import 'react-phone-input-2/lib/style.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDoctors, selectAllDoctors } from '../../features/doctorSlice';
+import { sendOtpWhatsapp, verifyOtpWhatssapp } from '../../features/consultationSlice';
 
 function PemberitahuanLogin(props) {
   const linkLogin = useNavigate();
-
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals">
       <div>
@@ -58,43 +61,98 @@ function PemberitahuanLogin(props) {
   );
 }
 
-function ModalLogin() {
+const DoctorExcerpt = ({ doctor }) => {
   const [modalShow, setModalShow] = useState(false);
   const [detailDokter, setDetailDokter] = useState(false);
+
+  const token = sessionStorage.getItem('token');
+
+  const handleModalShow = () => {
+    if (token) {
+      setDetailDokter(true);
+    } else {
+      setModalShow(true);
+    }
+  }
+
+  return (
+    <>
+      <div className="card-image mb-4 " onClick={handleModalShow}>
+        <div className="card-image-bayanan">
+          <img className="mt-4 foto-img" src={doktersatu} alt="gambar" />
+        </div>
+        <h3>
+          <a className="name-docter mt-3">
+            {doctor.name}
+          </a>
+        </h3>
+        <h3 className="name-spesialis">Spesialis Onkologi</h3>
+        <h5 className="review ">
+          <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
+        </h5>
+      </div>
+
+
+      <DetailDokter show={detailDokter} doctor={doctor} onHide={() => setDetailDokter(false)} /> <PemberitahuanLogin show={modalShow} onHide={() => setModalShow(false)} />
+
+    </>
+  )
+}
+
+function ModalLogin() {
+  const doctors = useSelector(selectAllDoctors);
+  const doctorStatus = useSelector(state => state.doctors.status);
+  const error = useSelector(state => state.doctors.error);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (doctorStatus === 'idle') {
+      dispatch(fetchDoctors());
+    }
+    return () => {
+
+    }
+  }, [dispatch, doctorStatus, doctors])
+
+  let content;
+
+  if (doctorStatus === 'loading') {
+    content = <Spinner animation="grow" variant='danger' />;
+  } else if (doctorStatus === 'succeeded') {
+    content = doctors.map((doctor, key) => <DoctorExcerpt doctor={doctor} key={key} />)
+  } else if (doctorStatus === 'failed') {
+    content = <div>{error}</div>
+  }
 
   return (
     <>
       <Col md={12}>
         <div className="card-bungkus-image mt-4">
-          {dokterSpesialist.map((dct) => (
-            <div key={dct.id} className="card-image mb-4 ">
-              <div className="card-image-bayanan">
-                <img className="mt-4 foto-img" src={dct.image} alt="gambar" onClick={() => setModalShow(true)} />
-              </div>
-              <h3>
-                <a className="name-docter mt-3" onClick={() => setDetailDokter(true)}>
-                  {dct.name}
-                </a>
-              </h3>
-              <h3 className="name-spesialis ">{dct.specialist}</h3>
-              <h5 className="review ">
-                <i className="fa-solid fa-star"></i> 5.0 (300+ Review){' '}
-              </h5>
-            </div>
-          ))}
+          {content}
         </div>
       </Col>
-
-      <PemberitahuanLogin show={modalShow} onHide={() => setModalShow(false)} />
-      <DetailDokter show={detailDokter} onHide={() => setDetailDokter(false)} />
     </>
   );
 }
 
-function DetailDokter(props) {
+function DetailDokter({ show, doctor, onHide }) {
+
   const [nomorPonsel, setNomorPonsel] = useState(false);
+
+  const formattedName = doctor.name.replace(/(^\w{1})|(\s+\w{1})/g, letter => letter.toUpperCase());
+
+  const chatNow = () => {
+    setNomorPonsel(true)
+    // onHide();
+  }
+
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_detail">
+    <Modal
+      show={show}
+      onHide={onHide}
+      aria-labelledby="contained-modal-title-vcenter"
+      dialogClassName="box_modals_detail"
+    >
       {/* <Modal.Header closeButton/> */}
       <div>
         <Modal.Body className="grid-example">
@@ -102,55 +160,53 @@ function DetailDokter(props) {
             <Row>
               <Col>
                 <img className="bg-detail-dokter" src={doktersatu} alt="gambar" />
-                <h1 className="name-dok mb-3">Dr. Shofiyyah Kamilah</h1>
-                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
-                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
-                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
-                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
-                <i className="fa-solid fa-star fa-stars fa-2xl"></i>
+                <h1 className="name-dok mb-3">{formattedName}</h1>
+                {[1, 2, 3, 4, 5].map((_, index) => (
+                  <i key={index} className="fa-solid fa-star fa-stars fa-2xl"></i>
+                ))}
               </Col>
               <Col className=" mt-2">
                 <Row className="detail_title_desc">
                   <Col>
                     <h1>Nomor STR</h1>
-                    <p>100100020020002</p>
+                    <p>{doctor.registration_certificate}</p>
                   </Col>
                   <Col>
-                    <h1 className="close_modals_detail" onClick={props.onHide}>
+                    <h1 className="close_modals_detail" onClick={onHide}>
                       x
                     </h1>
                   </Col>
                 </Row>
                 <Row className="detail_title_desc">
                   <h1>Lulusan</h1>
-                  <p>Universitas andalas, 2016</p>
+                  <p>{doctor.alumnus}, 2016</p>
                 </Row>
                 <Row className="detail_title_desc">
                   <h1>Lokasi Praktik</h1>
-                  <p>depok, jawa barat</p>
+                  <p>{doctor.practice_location}</p>
                 </Row>
                 <Row className="detail_title_desc">
-                  <h1>lama bekerja</h1>
-                  <p>7 tahun</p>
+                  <h1>Lama Bekerja</h1>
+                  <p>{doctor.work_lifetime} Tahun</p>
                 </Row>
-                <Row className="detail_title_desc">
+                {/* <Row className="detail_title_desc">
                   <h1>Status</h1>
                   <div className="bg-status">
                     <h1>Online</h1>
                   </div>
-                </Row>
+                </Row> */}
               </Col>
             </Row>
             <Row className="mt-5">
               <h1 className="harga_dokter">Rp. 20.000</h1>
-              <Button className="button_modals" onClick={() => setNomorPonsel(faTruckMedical)}>
+              <Button className="button_modals" onClick={chatNow}>
                 Chat Sekarang
               </Button>
             </Row>
           </Container>
         </Modal.Body>
       </div>
-      <InputNomorPonsel show={nomorPonsel} onHide={() => setNomorPonsel(false)} />
+      <InputNomorPonsel show={nomorPonsel} doctorId={doctor.id} hideModal={() => setNomorPonsel(false)} />
     </Modal>
   );
 }
@@ -224,11 +280,26 @@ function InputNomorPonsel(props) {
   const [verification, setVerification] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState('');
   const [valid, setValid] = useState(true);
+  const dispatch = useDispatch();
+  const otpStatus = useSelector(state => state.consultation.status);
+
 
   const handleChange = (value) => {
     setPhoneNumber(value);
     setValid(validatePhoneNumber(value));
   };
+
+  const sendOtp = async () => {
+    const data = {
+      phone_number: phoneNumber
+    }
+    dispatch(sendOtpWhatsapp(data)).unwrap()
+    if (otpStatus === 'succeeded') {
+      setVerification(true);
+      // props.hideModal();
+    }
+
+  }
 
   const validatePhoneNumber = (phoneNumber) => {
     const phoneNumberPattern = /^\d{12}$/;
@@ -236,7 +307,7 @@ function InputNomorPonsel(props) {
   };
 
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_input_telepon">
+    <Modal show={props.show} onHide={props.onHide} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_modals_input_telepon">
       {/* <Modal.Header closeButton/> */}
       <div>
         <Modal.Body className="grid-example">
@@ -258,7 +329,7 @@ function InputNomorPonsel(props) {
               <Row>
                 <Col className="mt-4">
                   <label>
-                    <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" country={'id'} value={phoneNumber} onChange={handleChange} inputProps={{ required: true }} />
+                    <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" disableDropdown={true} onlyCountries={['id']} country={'id'} value={phoneNumber} countryCodeEditable={false} onChange={handleChange} inputProps={{ required: true, autoFocus: true }} />
                   </label>
                   {!valid && <p className="hint_telepon mt-3">Masukkan Nomor Telepon Anda</p>}
                 </Col>
@@ -268,12 +339,12 @@ function InputNomorPonsel(props) {
                 {' '}
                 Dengan ini, Saya Menyetujui <a href="">ketentuan Pengguna</a> Dan <a href="">Kebijakan Privasi</a> <span className="text-2">Cervicare+</span>{' '}
               </h6>
-              <Button className="button_modals mt-3" onClick={() => setVerification(true)}>
+              <Button className="button_modals mt-3" onClick={sendOtp}>
                 <i className="fa-brands fa-whatsapp fa-2xl whatsapp-icon"></i> Kirim Kode Melalui WhatsApp
               </Button>
-              <Button className="button_modals mt-3" onClick={() => setVerification(true)}>
+              {/* <Button className="button_modals mt-3" onClick={() => setVerification(true)}>
                 <i className="fa-regular fa-envelope fa-xl envelope-icon"></i> Kirim Kode Melalui Pesan
-              </Button>
+              </Button> */}
             </Row>
           </Container>
         </Modal.Body>
@@ -288,6 +359,20 @@ function VerificationModals(props) {
   // const [minutes, setMinutes] = useState(1);
   const [seconds, setSeconds] = useState(30);
   const [pembayaran, setPembayaran] = useState(false);
+  const [otp, setOtp] = useState('');
+  const dispatch = useDispatch();
+  const otpStatus = useSelector(state => state.consultation.status);
+  const verifyOtp = () => {
+    const data = {
+      otp_code: otp
+    }
+    dispatch(verifyOtpWhatssapp(data));
+
+    if (otpStatus === 'succeeded') {
+      setPembayaran(true)
+      // props.onHide();
+    }
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -339,11 +424,13 @@ function VerificationModals(props) {
               <Col>
                 <Row className="mx-5 mt-5">
                   <VerificationInput
+                    onChange={(value) => setOtp(value)}
                     placeholder=""
                     classNames={{
                       container: 'container_verification',
                       character: 'character_verification',
                     }}
+                    validChars='0-9'
                   />
                 </Row>
                 <Row className="mt-5">
@@ -374,7 +461,7 @@ function VerificationModals(props) {
                   </div>
                 </Row>
               </Col>
-              <Button className="button_modals mt-4" onClick={() => setPembayaran(true)}>
+              <Button className="button_modals mt-4" onClick={verifyOtp}>
                 Verifikasi
               </Button>
             </Row>
@@ -468,6 +555,8 @@ function PembayaranModals(props) {
 
 const Konsultasi_page = () => {
   const linkRef = useRef(null);
+  const token = sessionStorage.getItem('token');
+
   const goto = (ref) => {
     window.scrollTo({
       top: ref.offsetTop,
@@ -478,7 +567,7 @@ const Konsultasi_page = () => {
 
   return (
     <div>
-      <NavbarNotAuth />
+      {token ? <NavbarAuth /> : <NavbarNotAuth />}
       <br />
       <br />
       <div className="bg-boxs">
