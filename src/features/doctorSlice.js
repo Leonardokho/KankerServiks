@@ -9,7 +9,7 @@ const fetchDoctors = createAsyncThunk('doctors/fetchDoctors', async () => {
 
 const initialState = {
     doctors: [],
-    loading: true,
+    error: null,
     status: 'idle',
 }
 

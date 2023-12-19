@@ -10,7 +10,7 @@ export const fetchHealthFacilities = createAsyncThunk('healthFacilities/fetchHea
 const initialState = {
     healthFacilities: [],
     status: 'idle',
-    loading: true,
+    error: null,
 }
 
 const healthFacilities = createSlice({
