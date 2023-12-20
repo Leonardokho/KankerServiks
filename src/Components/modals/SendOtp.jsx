@@ -27,7 +27,7 @@ const SendOtp = (props) => {
 
     const validatePhoneNumber = (phoneNumber) => {
         // const phoneNumberPattern = /^\d{12}$/;
-        return phoneNumber.length < 14 && phoneNumber.length > 10;
+        return phoneNumber.length < 15 && phoneNumber.length > 10;
     };
 
 
@@ -56,7 +56,7 @@ const SendOtp = (props) => {
                     <Row>
                         <Col className="mt-4">
                             <label>
-                                <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" disableDropdown={true} onlyCountries={['id']} country={'id'} value={phoneNumber} countryCodeEditable={false} onChange={handleChange} inputProps={{ required: true, autoFocus: true }} masks={{ id: '...-....-....' }} />
+                                <PhoneInput inputClass="input_telepon" containerClass="container_telepon" dropdownClass="dropdown_country" disableDropdown={true} onlyCountries={['id']} country={'id'} value={phoneNumber} countryCodeEditable={false} onChange={handleChange} inputProps={{ required: true, autoFocus: true }} masks={{ id: '...-....-.....' }} />
                             </label>
                             {!valid && <p className="hint_telepon mt-3">Masukkan Nomor Telepon Anda</p>}
                         </Col>
