@@ -21,7 +21,7 @@ const doctorSlice = createSlice({
     },
     extraReducers(builder) {
         builder
-            .addCase(fetchDoctors.pending, (state, action) => {
+            .addCase(fetchDoctors.pending, (state) => {
                 state.status = 'loading'
             })
             .addCase(fetchDoctors.fulfilled, (state, action) => {

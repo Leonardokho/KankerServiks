@@ -7,6 +7,8 @@ import doctorReducer from './features/doctorSlice'
 import { applyMiddleware } from 'redux'
 import { thunk } from 'redux-thunk'
 import consultationReducer from './features/consultationSlice'
+import paymentReducer from './features/paymentSlice'
+import modalReducer from './features/modalSlice'
 
 export default configureStore({
   reducer: {
@@ -15,5 +17,7 @@ export default configureStore({
     healthFacilities: healthFacilityReducer,
     doctors: doctorReducer,
     consultation: consultationReducer,
+    payment: paymentReducer,
+    modal: modalReducer
   }
 }, applyMiddleware(thunk))
