@@ -83,14 +83,16 @@ function ModalLogin() {
           {content}
         </div>
       </Col>
+
+      <PemberitahuanLogin show={modalShow} onHide={() => setModalShow(false)} />
+      <DetailDokter show={detailDokter} onHide={() => setDetailDokter(false)} />
     </>
   );
 }
 
 const Konsultasi_page = () => {
   const linkRef = useRef(null);
-  const token = sessionStorage.getItem('token');
-
+   const token = sessionStorage.getItem("token");
   const goto = (ref) => {
     window.scrollTo({
       top: ref.offsetTop,
@@ -113,7 +115,7 @@ const Konsultasi_page = () => {
               </h1>
               <p className="boxs-layanan mt-3">Layanan live chat yang siap membantu anda dalam mendapatkan informasi pencegahan dini Kanker Serviks dengan lebih mendalam bersama ahlinya.</p>
               <Button className="button_mulai mt-3" onClick={() => goto(linkRef.current)}>
-                {' '}
+                {" "}
                 Mulai Sekarang
               </Button>
             </Col>
