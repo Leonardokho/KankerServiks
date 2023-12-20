@@ -6,6 +6,7 @@ import IconeKirim from '../../assets/img/Dm.png';
 import { useNavigate } from 'react-router-dom';
 import './Live_chat.css';
 import { useState } from 'react';
+import { useAbly, useChannel } from 'ably/react';
 
 function NotifTerimaKasih(props) {
   const [rating, setRating] = useState(0);
@@ -54,6 +55,7 @@ function NotifTerimaKasih(props) {
 const Live_chat = () => {
   const imageInputRef = useRef(null);
   const [notifTerimakasih, setNotifTerimakasih] = useState(false);
+  const [myMessage, setMyMessage] = useState('');
 
   const handleImageClick = () => {
     // Memicu klik pada elemen input file yang tersembunyi
@@ -69,43 +71,60 @@ const Live_chat = () => {
     }
   };
 
+  const [messages, updateMessages] = useState([]);
+  const client = useAbly();
+  // Convert the messages to list items to render in a React component
+  const messagePreviews = messages.map((msg, index) => {
+    // <li key={index}>{msg.data.text}</li>
+    return (
+      <>
+        {msg.connectionId === client.connection.id ?
+          <Col md={5} className="card-chat-user mb-3 text-wrap" key={index}>
+            <h2 className="pesan-chat-user mx-4 py-2 text-wrap">{msg.data.text}</h2>
+            <h2 className="pesan-chat-dokter mx-4 py-2 text-break">{msg.clientId}</h2>
+          </Col> :
+          <Col md={5} className="card-chat-dokter mb-3 text-wrap" key={index}>
+            <h2 className="pesan-chat-dokter mx-4 py-2 text-break">{msg.data.text}</h2>
+            <h2 className="pesan-chat-dokter mx-4 py-2 text-break">{msg.clientId}</h2>
+          </Col>
+        }
+      </>
+    )
+  });
+
+  const { channel } = useChannel("halo", (message) => {
+    updateMessages((prev) => [...prev, message]);
+  });
+  const handleSendMessage = () => {
+    channel.publish("halo", { text: myMessage });
+  }
+
+  const handleInputChange = (e) => {
+    setMyMessage(e.target.value);
+  }
   return (
     <div>
       <div className="bg-body">
         <Container>
           <Row className="mt-4 d-flex align-items-center justify-content-center">
-            <Col md={8} className="mb-4">
+            <Col md={6} className="mb-4">
               <Col className="card-live  ">
                 <Col className="card-live-2 ">
                   <Col className="mx-4">
                     <img className="img-dokter my-2" src={Doktersatu} alt="" />
                     <div className="my-2 mx-2">
-                      <h2 className="nama-dokter">Dr. Shofiyyah Kamilah</h2>
+                      <h2 className="nama-dokter">Dr. Anastasya</h2>
                       <p className="online">Online</p>
                       <Button onClick={() => setNotifTerimakasih(true)} className="btn-akhir">
-                        Akhir
+                        Akhiri
                       </Button>
                     </div>
                   </Col>
                 </Col>
 
-                <Col className="mx-4 mt-4 chat-container ">
-                  <Col className="card-user ">
-                    <Col md={5} className="card-chat-user  mb-3 ">
-                      <h2 className="pesan-chat-user mx-4 py-2">Hallo Dok, Saya ingin konsultasi</h2>
-                    </Col>
-                    <Col md={5} className="card-chat-dokter mb-3">
-                      <h2 className="pesan-chat-dokter mx-4 py-2">Baik, bisa diceritakan masalahnya apa ?</h2>
-                    </Col>
-                    <Col md={5} className="card-chat-user  mb-3 ">
-                      <h2 className="pesan-chat-user mx-4 py-2">Jadi gini Dok, beberapa hari kebelakang ini, saya ada beberapa kali merasakan nyeri dibagian kemaluan, apa itu merupakan tanda awal dari Kanker Serviks ?i</h2>
-                    </Col>
-                    <Col md={5} className="card-chat-dokter mb-3">
-                      <h2 className="pesan-chat-dokter  mx-4 py-2 ">
-                        Iya, karena salah satu Gejala kanker serviks yang bisa Anda kenali adalah munculnya rasa nyeri pada area panggul dan perut bagian bawah. Selain itu, rasa nyeri yang muncul saat Anda berhubungan seksual, juga dapat
-                        dicurigai sebagai gejala awal kanker serviks
-                      </h2>
-                    </Col>
+                <Col className="mx-4 mt-4">
+                  <Col className="card-user text-wrap">
+                    {messagePreviews}
                   </Col>
                 </Col>
 
@@ -113,18 +132,18 @@ const Live_chat = () => {
                 <Col className="card-kirim ">
                   <Col className="mx-4 d-flex align-items-center ">
                     {/* Input tersembunyi untuk memilih gambar */}
-                    <input ref={imageInputRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleImageChange} />
+                    {/* <input ref={imageInputRef} type="file" accept="image/*" style={{ display: 'none' }} onChange={handleImageChange} /> */}
 
                     {/* Ikon dan teks yang dapat diklik */}
-                    <div onClick={handleImageClick} style={{ cursor: 'pointer' }}>
+                    {/* <div onClick={handleImageClick} style={{ cursor: 'pointer' }}>
                       <i className="  costum-icon fa-regular fa-image  my-2"></i>
-                    </div>
-                    <Col className="mx-3 mt-3  ">
+                    </div> */}
+                    <Col className="mx-3 mt-3 ">
                       <Form.Group controlId="formFile" className="mb-3 ">
-                        <Form.Control type="text" placeholder="Tuliskan Pesan Kamu.." className="costum-text " />
+                        <Form.Control onChange={(e) => handleInputChange(e)} type="text" placeholder="Tuliskan Pesan Kamu.." className="costum-text " />
                       </Form.Group>
                     </Col>
-                    <img src={IconeKirim} alt="" className="btn  icone-kirim" />
+                    <img src={IconeKirim} width={60} alt="" className="btn  icone-kirim" onClick={handleSendMessage} />
                   </Col>
                 </Col>
               </Col>

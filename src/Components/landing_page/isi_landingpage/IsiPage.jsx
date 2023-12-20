@@ -22,13 +22,14 @@ import { fetchArticles, selectAllArticles } from '../../../features/articles/art
 import { useEffect } from 'react';
 
 const ArticleExcerpt = ({ article }) => {
+  const linkArtikelDetail = useNavigate();
   return (
     <Col md={4}>
       <div style={{ width: '25rem', height: '23rem' }} className="shadow_card rounded-3">
         {article.img ? <img src={article.img} alt="gambar" className="image_artikel" /> : <img src={artikelImgSatu} alt="" className="image_dokter" />}
         <Card.Body className="p-3">
           <h5 className="title_art">{article.title}</h5>
-          <Card.Link href="#" className="d-flex justify-content-end mt-5 linkArtikel">
+          <Card.Link onClick={() => linkArtikelDetail('/Halaman_artikel_detail', { state: { articleId: article.id } })} className="d-flex justify-content-end mt-5 linkArtikel">
             Baca selengkapnya...
           </Card.Link>
         </Card.Body>
@@ -40,8 +41,6 @@ const ArticleExcerpt = ({ article }) => {
 
 const IsiPage = () => {
   const articles = useSelector(selectAllArticles);
-
-  const linkArtikelDetail = useNavigate();
   const postStatus = useSelector(state => state.articles.status)
   const error = useSelector(state => state.articles.error)
   const dispatch = useDispatch();

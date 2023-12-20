@@ -5,6 +5,10 @@ function setToken(userToken) {
     sessionStorage.setItem('token', JSON.stringify(userToken));
 }
 
+function setUserName(username) {
+    sessionStorage.setItem('username', username);
+}
+
 export const userLogin = createAsyncThunk(
     'login/userLogin',
     async initialPost => {
@@ -15,7 +19,9 @@ export const userLogin = createAsyncThunk(
         })
 
         if(response.data.token) {
+            console.log(response);
             setToken(response.data.token)
+            setUserName(response.data.data.name);
         }
         return response.data
     }

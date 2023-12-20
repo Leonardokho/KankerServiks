@@ -146,3 +146,7 @@ background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
 .profilephoto:hover {
   cursor: pointer;
 }
+
+.dropdown-toggle::after {
+  display: none !important; 
+}

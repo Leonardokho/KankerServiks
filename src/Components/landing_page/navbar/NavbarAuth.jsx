@@ -5,7 +5,7 @@ import logo from '../../../assets/img/cc-logo2 1.png';
 import profileImage from '../../../assets/img/Frame 95.png';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { Row, Modal, Col, Button } from 'react-bootstrap';
+import { Row, Modal, Col, Button, NavDropdown, Dropdown, NavItem, NavLink } from 'react-bootstrap';
 import './NavbarNotAuth.css';
 
 function LogOutBox(props) {
@@ -15,7 +15,7 @@ function LogOutBox(props) {
     sessionStorage.clear();
     linkLogin('/login');
   }
-  
+
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" dialogClassName="box_logout">
       <div className="bg_box_logout">
@@ -43,42 +43,14 @@ function LogOutBox(props) {
   );
 }
 
-function ModalLogOut() {
-  const [modalShow, setModalShow] = useState(false);
-
-  return (
-    <>
-      <h1 onClick={() => setModalShow(true)} className="dropdownmenu">
-        Keluar
-      </h1>
-
-      <LogOutBox show={modalShow} onHide={() => setModalShow(false)} />
-    </>
-  );
-}
-
-function DropDownProfile() {
-  const linkProfile = useNavigate();
-
-  return (
-    <div className="flex flex-col dropdownprofile">
-      <div className="flex flex-col">
-        <h1 onClick={() => linkProfile('/profile')} className="dropdownmenu mb-3">
-          Pengaturan
-        </h1>
-        <div className="bardropdown"></div>
-        <ModalLogOut />
-      </div>
-    </div>
-  );
-}
-
 const NavbarAuth = () => {
   const linkHome = useNavigate();
   const linkKonsultasiPage = useNavigate();
   const linkArtikelPage = useNavigate();
   const linkLayananKesehatan = useNavigate();
-  const [openProfile, setOpenProfile] = useState(false);
+  const linkProfile = useNavigate();
+  const [modalShow, setModalShow] = useState(false);
+  const username = sessionStorage.getItem('username') ?? 'User';
 
   return (
     <div className="navbar_main">
@@ -105,16 +77,25 @@ const NavbarAuth = () => {
                 </Nav.Link>
               </div>
               <div className='login_button'>
-                <div className="d-flex justify-content-center align-items-center mt-1 mx-2">
-                  <h1 className="profile_name mx-3">Ratna</h1>
-                  <img onClick={() => setOpenProfile((prev) => !prev)} src={profileImage} alt="Profile" className="profilephoto" />
-                </div>
+                <Dropdown as={NavItem}>
+                  <Dropdown.Toggle as={NavLink}>
+                    <div className="d-flex justify-content-center align-items-center mt-1 mx-2">
+                      <h1 className="profile_name mx-3">{username}</h1>
+                      <img src={profileImage} alt="Profile" className="profilephoto" />
+                    </div>
+                  </Dropdown.Toggle>
+                  <Dropdown.Menu>
+                    <Dropdown.Item onClick={() => linkProfile('/Live_chat')}>Live Chat</Dropdown.Item>
+                    <Dropdown.Item onClick={() => linkProfile('/profile')} >Pengaturan</Dropdown.Item>
+                    <Dropdown.Item onClick={() => setModalShow(true)}>Keluar</Dropdown.Item>
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
             </Nav>
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {openProfile && <DropDownProfile />}
+      <LogOutBox show={modalShow} onHide={() => setModalShow(false)} />
     </div>
   );
 };

@@ -5,8 +5,6 @@ import IsiPage from '../isi_landingpage/IsiPage';
 import NavbarAuth from '../navbar/NavbarAuth';
 import NavbarNotAuth from '../navbar/NavbarNotAuth';
 
-
-
 const HeaderMain = () => {
   const [navbarUserIsLogged, setnavbarUserIsLogged] = useState(false);
   const token = sessionStorage.getItem('token');

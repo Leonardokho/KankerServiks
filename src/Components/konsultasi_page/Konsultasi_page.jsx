@@ -83,9 +83,6 @@ function ModalLogin() {
           {content}
         </div>
       </Col>
-
-      <PemberitahuanLogin show={modalShow} onHide={() => setModalShow(false)} />
-      <DetailDokter show={detailDokter} onHide={() => setDetailDokter(false)} />
     </>
   );
 }
