@@ -52,6 +52,10 @@
   z-index: 99;
 }
 
+.bg-body-tertiary{
+box-shadow: 0 0 15px 0px rgba(134, 134, 134, 0.5);
+background: linear-gradient(29deg, #fbe5e5, rgb(253, 246, 246)) !important;
+}
 .profile_name {
   font-size: 17px;
   font-weight: bold;

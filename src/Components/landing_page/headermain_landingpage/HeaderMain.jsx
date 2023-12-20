@@ -10,7 +10,7 @@ const HeaderMain = () => {
   const token = sessionStorage.getItem('token');
   return (
     <div>
-      {token ? <NavbarAuth /> : <NavbarNotAuth />}
+      {token ? <NavbarAuth/>:<NavbarNotAuth  />}
       <Header />
       <IsiPage />
       <Footer />
